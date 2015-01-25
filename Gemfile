@@ -22,6 +22,18 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'rspec-rails', '~> 3.0'
+end
+
+group :test do
+  gem 'spring-commands-rspec'
+  gem 'capybara'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'shoulda-matchers', require: false
+  gem 'guard-rspec', require: false
+  gem 'guard-spring'
+  gem 'database_cleaner'
+  gem 'faker'
 end
 
 group :production do
