@@ -2,6 +2,7 @@
 %html
   = render 'layouts/head'
   %body
-    #main.container-fluid
+    #main.container
+      = render 'layouts/navbar'
+      = render 'layouts/flash'
       = yield
-    = render 'layouts/flash'
