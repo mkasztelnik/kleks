@@ -4,5 +4,9 @@
   %body
     #main.container
       = render 'layouts/navbar'
-      = render 'layouts/flash'
-      = yield
+      .row
+        .col-md-3
+          = render('layouts/left_menu')
+        .col-md-9
+          = render 'layouts/flash'
+          = yield

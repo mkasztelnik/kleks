@@ -23,3 +23,10 @@ en:
   title: Kleks
   code_name: CES Summer School
   logout: Logout
+  sections:
+    title: Application elements
+    personal_info: Personal informations
+    education: Education
+    academic_experience: Academic experience
+    relevant: Relevant work experience
+    languages: Languages
