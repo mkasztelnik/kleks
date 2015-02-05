@@ -1,0 +1,5 @@
+.login-box.middle{:'data-no-turbolink' => 'data-no-turbolink'}
+  %span Sign in with &nbsp;
+  - resource_class.omniauth_providers.each do |provider|
+    = link_to omniauth_authorize_path(resource_name, provider) do
+      = authicon(provider)

@@ -1,0 +1,16 @@
+.btn {
+  &.btn-create {
+    @extend .wide;
+    @extend .btn-success;
+  }
+
+  &.btn-save {
+    @extend .wide;
+    @extend .btn-primary;
+  }
+
+  &.wide {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

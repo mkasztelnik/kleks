@@ -24,6 +24,10 @@ RSpec.describe User do
     double 'auth',
             provider: 'fb',
             uid: '123',
-            info: double(email: 'a@b.c', name: 'John Doe', image: 'img')
+            info: double(email: 'a@b.c',
+                         first_name: 'John',
+                         last_name: 'Doe',
+                         gender: 'male',
+                         image: 'img')
   end
 end

@@ -1,0 +1,101 @@
+/* Login Page */
+.login-page {
+  margin-top: 50px;
+
+  .login-box{
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 0px 2px #CCC;
+    padding: 15px;
+
+    &:hover {
+      box-shadow: 0 0px 10px #CCC;
+    }
+
+    .login-heading h3 {
+      font-weight: 300;
+      line-height: 1.5;
+      margin: 0;
+      display: none;
+    }
+
+    .login-footer {
+      margin-top: 10px;
+    }
+
+    a.forgot {
+      float: right;
+      padding-top: 6px
+    }
+
+    &.top {
+      border-radius: 10px 10px 0 0;
+    }
+
+    &.bottom {
+      border-radius: 0 0 10px 10px;
+    }
+
+    &.middle {
+      border-radius: 0;
+    }
+  }
+
+  .form-control {
+    font-size: 14px;
+    padding: 10px 8px;
+    width: 100%;
+    height: auto;
+
+    &.top {
+      border-radius: 5px 5px 0 0;
+      margin-bottom: 0px;
+    }
+
+    &.bottom {
+      border-radius: 0 0 5px 5px;
+      border-top: 0;
+      margin-bottom: 20px;
+    }
+
+    &.middle {
+      border-top: 0;
+      margin-bottom:0px;
+      border-radius: 0;
+    }
+
+    &:active, &:focus {
+      background-color: #FFF;
+    }
+  }
+
+  .devise-errors {
+    h2 {
+      font-size: 14px;
+      color: #a00;
+    }
+  }
+
+  .remember-me {
+    margin-top: -10px;
+    padding-left: 20px;
+
+    label {
+      font-weight: normal;
+    }
+  }
+}
+
+.oauth-facebook {
+  font-size: 200%;
+  color: #425f9c !important;
+}
+
+.oauth-google {
+  font-size: 200%;
+  color: #d73d32 !important;
+}
+
+.oauth-sign-in {
+  font-size: 200%;
+}

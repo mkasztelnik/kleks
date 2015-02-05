@@ -6,6 +6,7 @@ RSpec.feature 'User authentication' do
 
   scenario 'existing user signs in using facebook' do
     user = create(:user, provider: :facebook)
+    user.confirm!
 
     sign_in_as(user)
 
@@ -22,6 +23,7 @@ RSpec.feature 'User authentication' do
 
   scenario 'user signs in using email, password' do
     user = create(:user, provider: nil)
+    user.confirm!
 
     sign_in_as(user)
 
@@ -29,7 +31,7 @@ RSpec.feature 'User authentication' do
   end
 
   scenario 'user signs out' do
-    user = create(:user)
+    user = build(:user)
 
     sign_in_as(user)
     find(:linkhref, '/users/sign_out').click

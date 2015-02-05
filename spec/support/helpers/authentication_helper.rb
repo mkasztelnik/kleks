@@ -8,7 +8,8 @@ module AuthenticationHelper
   def omniauth_sign_in(user)
     stub_oauth(
       user.provider.to_sym,
-      name: user.name,
+      first_name: user.first_name,
+      last_name: user.last_name,
       email: user.email
     )
     visit root_path
@@ -18,9 +19,9 @@ module AuthenticationHelper
   def sign_in(user)
     visit root_path
 
-    fill_in('Email', with: user.email)
-    fill_in('Password', with: user.password)
+    fill_in('user_email', with: user.email)
+    fill_in('user_password', with: user.password)
 
-    click_button 'Log in'
+    click_button 'Sign in'
   end
 end

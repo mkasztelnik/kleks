@@ -28,6 +28,7 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'
 
+  gem 'quiet_assets'
   gem 'dotenv-rails'
 end
 
