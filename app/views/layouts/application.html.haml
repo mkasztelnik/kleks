@@ -2,11 +2,14 @@
 %html
   = render 'layouts/head'
   %body
-    #main.container
-      = render 'layouts/navbar'
+    = render 'layouts/navbar'
+    .container
       .row
         .col-md-3
           = render('layouts/left_menu')
         .col-md-9
           = render 'layouts/flash'
           = yield
+        #push
+    = render "layouts/footer"
+
