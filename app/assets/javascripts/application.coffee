@@ -15,6 +15,8 @@
 #= require turbolinks
 #= require bootstrap-sprockets
 #= require bootstrap-datepicker
+#= require nprogress
+#= require nprogress-turbolinks
 #= require_tree .
 
 $ ->

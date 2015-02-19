@@ -10,6 +10,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'turbolinks'
+gem 'nprogress-rails'
 gem 'puma'
 
 gem 'bootstrap-sass', '~> 3.3.1'
