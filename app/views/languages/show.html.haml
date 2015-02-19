@@ -2,6 +2,16 @@
                   url: language_path,
                   html: { class: 'form-horizontal' },
                   wrapper: :horizontal_form do |f|
+  %h3
+    = t('language.title')
+    %span.pull-right
+      .btn-group
+        %button.btn.btn-success(type="submit")
+          = icon('save', t('language.save'))
+        .btn.btn-default
+          = icon('question')
+  %hr
+
   = f.input :understanding_level
   = f.input :speaking_level
   = f.input :writing_level
@@ -19,6 +29,3 @@
 
   = f.input :other
   = f.input :other_description
-
-
-  %input.btn.btn-success(type="submit" name="commit" value="Save")

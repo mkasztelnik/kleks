@@ -1,4 +1,12 @@
 = simple_form_for @motivation, url: motivation_path do |f|
-  = f.input :text
+  %h3
+    = t('motivation.title')
+    %span.pull-right
+      .btn-group
+        %button.btn.btn-success(type="submit")
+          = icon('save', t('motivation.save'))
+        .btn.btn-default
+          = icon('question')
+  %hr
 
-  %input.btn.btn-success(type="submit" name="commit" value="Save")
+  = f.input :text

@@ -1,4 +1,12 @@
 = simple_form_for @presentation, url: presentation_path do |f|
-  = f.input :abstract
+  %h3
+    = t('presentation.title')
+    %span.pull-right
+      .btn-group
+        %button.btn.btn-success(type="submit")
+          = icon('save', t('presentation.save'))
+        .btn.btn-default
+          = icon('question')
+  %hr
 
-  %input.btn.btn-success(type="submit" name="commit" value="Save")
+  = f.input :abstract

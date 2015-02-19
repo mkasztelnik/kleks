@@ -31,14 +31,17 @@ en:
     relevant: Relevant work experience
   profile:
     title: Personal data
+    save: Save personal data
     saved: Personal data has been sucessfully saved
     errors: There are errors in your personal data, please correct them and save again
   motivation:
     title: Motivation
+    save: Save your motivation
     saved: Your motivation has been sucessfully saved
     errors: There are errors in your motivation text, please correct it and save again
   presentation:
     title: Presentation abstract
+    save: Save your presentation abstract
     saved: Your presentation abstract has been sucessfully saved
     errors: There are errors in your presentation abstract, please correct it and save again
   education:
@@ -49,5 +52,6 @@ en:
     title: Relevant work experience
   language:
     title: English language
+    save: Save information about english language
     saved: Information about english language has been sucessfully saved
     errors: There are errors in english language details, please correct them and save again
