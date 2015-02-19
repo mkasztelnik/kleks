@@ -1,33 +1,40 @@
-= simple_form_for @profile,
-                  url: profile_path,
-                  html: { class: 'form-horizontal' },
-                  wrapper: :horizontal_form do |f|
-  %h3
-    = t('profile.title')
-    %span.pull-right
-      .btn-group
-        %button.btn.btn-success(type="submit")
-          = icon('save', t('profile.save'))
-        .btn.btn-default
-          = icon('question')
-  %hr
+.row
+  .col-md-8
+    = simple_form_for @profile,
+                      url: profile_path,
+                      html: { class: 'form-horizontal' },
+                      wrapper: :horizontal_form do |f|
+      %h3
+        = t('profile.title')
+        %span.pull-right
+          %button.btn.btn-success(type="submit")
+            = icon('save', t('profile.save'))
+      %hr
 
-  = f.input :first_name
-  = f.input :middle_name
-  = f.input :last_name
-  = f.input :date_of_birth,
-            as: :string,
-            input_html: { data: {behaviour: 'datepicker' } }
-  = f.input :place_of_birth
-  = f.input :citizenship
-  = f.input :country
 
-  %h4 Passport
-  %hr
+      = f.input :first_name
+      = f.input :middle_name
+      = f.input :last_name
+      = f.input :date_of_birth,
+                as: :string,
+                input_html: { data: {behaviour: 'datepicker' } }
+      = f.input :place_of_birth
+      = f.input :citizenship
+      = f.input :country
 
-  = f.input :passport_number
-  = f.input :passport_date_of_issue,
-            as: :string,
-            input_html: { data: {behaviour: 'datepicker' } }
-  = f.input :passport_place_of_issue
-  = f.input :passport_issuing_agency
+      %h4 Passport
+      %hr
+
+      = f.input :passport_number
+      = f.input :passport_date_of_issue,
+                as: :string,
+                input_html: { data: {behaviour: 'datepicker' } }
+      = f.input :passport_place_of_issue
+      = f.input :passport_issuing_agency
+  .col-md-4
+    %h3= t('help')
+    %hr
+    %ul
+      %li Tips1
+      %li Tips2
+      %li Tips3

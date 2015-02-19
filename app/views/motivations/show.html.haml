@@ -1,12 +1,18 @@
-= simple_form_for @motivation, url: motivation_path do |f|
-  %h3
-    = t('motivation.title')
-    %span.pull-right
-      .btn-group
-        %button.btn.btn-success(type="submit")
-          = icon('save', t('motivation.save'))
-        .btn.btn-default
-          = icon('question')
-  %hr
+.row
+  .col-md-8
+    = simple_form_for @motivation, url: motivation_path do |f|
+      %h3
+        = t('motivation.title')
+        %span.pull-right
+          %button.btn.btn-success(type="submit")
+            = icon('save', t('motivation.save'))
+      %hr
 
-  = f.input :text
+      = f.input :text
+  .col-md-4
+    %h3= t('help')
+    %hr
+    %ul
+      %li Tips1
+      %li Tips2
+      %li Tips3

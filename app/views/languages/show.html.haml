@@ -1,31 +1,38 @@
-= simple_form_for @language,
-                  url: language_path,
-                  html: { class: 'form-horizontal' },
-                  wrapper: :horizontal_form do |f|
-  %h3
-    = t('language.title')
-    %span.pull-right
-      .btn-group
-        %button.btn.btn-success(type="submit")
-          = icon('save', t('language.save'))
-        .btn.btn-default
-          = icon('question')
-  %hr
+.row
+  .col-md-8
+    = simple_form_for @language,
+                      url: language_path,
+                      html: { class: 'form-horizontal' },
+                      wrapper: :horizontal_form do |f|
+      %h3
+        = t('language.title')
+        %span.pull-right
+          %button.btn.btn-success(type="submit")
+            = icon('save', t('language.save'))
+      %hr
 
-  = f.input :understanding_level
-  = f.input :speaking_level
-  = f.input :writing_level
+      = f.input :understanding_level
+      = f.input :speaking_level
+      = f.input :writing_level
 
-  = f.input :native
+      = f.input :native
 
-  = f.input :study
-  = f.input :study_program
-  = f.input :study_url
+      = f.input :study
+      = f.input :study_program
+      = f.input :study_url
 
-  = f.input :certificate
-  = f.input :certificate_name
-  = f.input :certificate_year
-  = f.input :cettificate_score
+      = f.input :certificate
+      = f.input :certificate_name
+      = f.input :certificate_year
+      = f.input :cettificate_score
 
-  = f.input :other
-  = f.input :other_description
+      = f.input :other
+      = f.input :other_description
+
+  .col-md-4
+    %h3= t('help')
+    %hr
+    %ul
+      %li Tips1
+      %li Tips2
+      %li Tips3

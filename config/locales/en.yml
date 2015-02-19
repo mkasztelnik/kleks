@@ -23,6 +23,7 @@ en:
   title: Kleks
   code_name: CES Summer School
   logout: Logout
+  help: Help
   sections:
     title: Application elements
     presentation_abstract: Presentation abstract
