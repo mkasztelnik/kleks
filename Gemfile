@@ -17,6 +17,9 @@ gem 'font-awesome-sass', '~> 4.2.0'
 gem 'autoprefixer-rails'
 
 gem 'haml-rails'
+gem 'simple_form'
+gem 'country_select'
+gem 'bootstrap-datepicker-rails'
 
 gem 'devise'
 gem 'omniauth-facebook'

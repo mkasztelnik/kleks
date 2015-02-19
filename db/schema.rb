@@ -11,10 +11,58 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150126180439) do
+ActiveRecord::Schema.define(version: 20150219193436) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "languages", force: :cascade do |t|
+    t.integer  "understanding_level"
+    t.integer  "speaking_level"
+    t.integer  "writing_level"
+    t.boolean  "native",              default: false
+    t.boolean  "study",               default: false
+    t.string   "study_program"
+    t.string   "study_url"
+    t.boolean  "certificate"
+    t.string   "certificate_name"
+    t.integer  "certificate_year"
+    t.string   "cettificate_score"
+    t.boolean  "other"
+    t.text     "other_description"
+    t.integer  "user_id"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+  end
+
+  create_table "motivations", force: :cascade do |t|
+    t.text     "text",       null: false
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "presentations", force: :cascade do |t|
+    t.text     "abstract",   null: false
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string   "middle_name",             null: false
+    t.date     "date_of_birth",           null: false
+    t.string   "place_of_birth",          null: false
+    t.string   "citizenship",             null: false
+    t.string   "passport_number",         null: false
+    t.date     "passport_date_of_issue",  null: false
+    t.string   "passport_place_of_issue", null: false
+    t.string   "passport_issuing_agency", null: false
+    t.string   "country",                 null: false
+    t.integer  "user_id"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -45,4 +93,7 @@ ActiveRecord::Schema.define(version: 20150126180439) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "languages", "users"
+  add_foreign_key "motivations", "users"
+  add_foreign_key "profiles", "users"
 end

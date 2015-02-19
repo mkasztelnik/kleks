@@ -1,0 +1,24 @@
+= simple_form_for @language,
+                  url: language_path,
+                  html: { class: 'form-horizontal' },
+                  wrapper: :horizontal_form do |f|
+  = f.input :understanding_level
+  = f.input :speaking_level
+  = f.input :writing_level
+
+  = f.input :native
+
+  = f.input :study
+  = f.input :study_program
+  = f.input :study_url
+
+  = f.input :certificate
+  = f.input :certificate_name
+  = f.input :certificate_year
+  = f.input :cettificate_score
+
+  = f.input :other
+  = f.input :other_description
+
+
+  %input.btn.btn-success(type="submit" name="commit" value="Save")

@@ -25,8 +25,29 @@ en:
   logout: Logout
   sections:
     title: Application elements
-    personal_info: Personal informations
+    presentation_abstract: Presentation abstract
     education: Education
     academic_experience: Academic experience
     relevant: Relevant work experience
-    languages: Languages
+  profile:
+    title: Personal data
+    saved: Personal data has been sucessfully saved
+    errors: There are errors in your personal data, please correct them and save again
+  motivation:
+    title: Motivation
+    saved: Your motivation has been sucessfully saved
+    errors: There are errors in your motivation text, please correct it and save again
+  presentation:
+    title: Presentation abstract
+    saved: Your presentation abstract has been sucessfully saved
+    errors: There are errors in your presentation abstract, please correct it and save again
+  education:
+    title: Education
+  academic:
+    title: Academic experience
+  work:
+    title: Relevant work experience
+  language:
+    title: English language
+    saved: Information about english language has been sucessfully saved
+    errors: There are errors in english language details, please correct them and save again

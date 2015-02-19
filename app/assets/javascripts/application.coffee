@@ -14,6 +14,7 @@
 #= require jquery_ujs
 #= require turbolinks
 #= require bootstrap-sprockets
+#= require bootstrap-datepicker
 #= require_tree .
 
 $ ->
@@ -22,3 +23,8 @@ $ ->
     flash.click -> $(@).fadeOut()
     flash.show()
     setTimeout (-> flash.fadeOut()), 5000
+
+  $('[data-behaviour~=datepicker]').datepicker
+    "format": "yyyy-mm-dd",
+    "weekStart": 1,
+    "autoclose": true
