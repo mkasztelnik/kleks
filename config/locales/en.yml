@@ -20,6 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  new: New
+  close: Close
   title: Kleks
   code_name: CES Summer School
   logout: Logout
@@ -47,6 +49,8 @@ en:
     errors: There are errors in your presentation abstract, please correct it and save again
   education:
     title: Education
+    new: Add new education
+    destroy_confirmation: Are you sure you want to remove this education?
   academic:
     title: Academic experience
   work:

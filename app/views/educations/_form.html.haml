@@ -1,0 +1,9 @@
+= simple_form_for @education,
+                  html: { class: 'form-horizontal', role: 'form', id: 'modal_form' },
+                  remote: true,
+                  wrapper: :horizontal_form do |f|
+  = f.input :program_name
+  = f.input :university_name
+  = f.input :education_type
+  = f.input :date, as: :date_interval
+  = f.input :country

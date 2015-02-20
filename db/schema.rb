@@ -11,15 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150219193436) do
+ActiveRecord::Schema.define(version: 20150220185633) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "educations", force: :cascade do |t|
+    t.string   "education_type",  null: false
+    t.date     "start_date",      null: false
+    t.date     "end_date",        null: false
+    t.string   "university_name", null: false
+    t.string   "program_name",    null: false
+    t.string   "country",         null: false
+    t.integer  "user_id",         null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
   create_table "languages", force: :cascade do |t|
-    t.integer  "understanding_level"
-    t.integer  "speaking_level"
-    t.integer  "writing_level"
+    t.string   "understanding_level",                 null: false
+    t.string   "speaking_level",                      null: false
+    t.string   "writing_level",                       null: false
     t.boolean  "native",              default: false
     t.boolean  "study",               default: false
     t.string   "study_program"
@@ -30,21 +42,21 @@ ActiveRecord::Schema.define(version: 20150219193436) do
     t.string   "cettificate_score"
     t.boolean  "other"
     t.text     "other_description"
-    t.integer  "user_id"
+    t.integer  "user_id",                             null: false
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
 
   create_table "motivations", force: :cascade do |t|
     t.text     "text",       null: false
-    t.integer  "user_id"
+    t.integer  "user_id",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "presentations", force: :cascade do |t|
     t.text     "abstract",   null: false
-    t.integer  "user_id"
+    t.integer  "user_id",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -59,7 +71,7 @@ ActiveRecord::Schema.define(version: 20150219193436) do
     t.string   "passport_place_of_issue", null: false
     t.string   "passport_issuing_agency", null: false
     t.string   "country",                 null: false
-    t.integer  "user_id"
+    t.integer  "user_id",                 null: false
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end
@@ -93,7 +105,9 @@ ActiveRecord::Schema.define(version: 20150219193436) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "educations", "users"
   add_foreign_key "languages", "users"
+  add_foreign_key "motivations", "users"
   add_foreign_key "motivations", "users"
   add_foreign_key "profiles", "users"
 end

@@ -1,0 +1,13 @@
+.modal.fade#ajax-modal(tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close(type="button" data-dismiss="modal" aria-label="Close")
+          %span(aria-hidden="true") &times;
+        %h4.modal-title#modalLabel Title
+      .modal-body
+      .modal-footer
+        %button.btn.btn-success#action-button(type="submit" form="modal_form")
+          = icon('plus', t('new'))
+        %button.btn.btn-default(data-dismiss="modal" type="button")
+          = t('close')

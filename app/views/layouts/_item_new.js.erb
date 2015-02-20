@@ -1,0 +1,2 @@
+$('ul.well-list').append('<%= j render("item", item: item) %>');
+$('#item-<%= item.id %>').effect("highlight", {}, 3000);

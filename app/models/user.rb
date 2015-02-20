@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
   has_one :motivation
   has_one :presentation
   has_one :language
+  has_many :educations
 
   def self.from_omniauth(auth)
     where(email: auth.info.email).first_or_create do |user|

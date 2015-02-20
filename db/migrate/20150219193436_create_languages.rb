@@ -1,9 +1,9 @@
 class CreateLanguages < ActiveRecord::Migration
   def change
     create_table :languages do |t|
-      t.string :understanding_level
-      t.string :speaking_level
-      t.string :writing_level
+      t.string :understanding_level,    null: false
+      t.string :speaking_level,         null: false
+      t.string :writing_level,          null: false
 
       t.boolean :native, default: false
 
@@ -19,11 +19,11 @@ class CreateLanguages < ActiveRecord::Migration
       t.boolean :other
       t.text :other_description
 
-      t.references :user
+      t.references :user,               null: false
 
       t.timestamps null: false
     end
 
-    add_foreign_key :languages, :users
+    add_foreign_key :languages, :users, index: true
   end
 end
