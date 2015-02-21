@@ -2,13 +2,13 @@
   .col-md-8
     %h3
       = t('education.title')
-      %span.pull-right
-        /- if can?(current_user.educations.build)
-        = link_to new_education_path,
-                  class: "btn btn-success",
-                  data: { toggle: "modal", target: "#ajax-modal" },
-                  remote: true do
-          = icon('plus', t('education.new'))
+      - if can?(:create, current_user.educations.build)
+        .pull-right
+          = link_to new_education_path,
+                    class: "btn btn-success",
+                    data: { toggle: "modal", target: "#ajax-modal" },
+                    remote: true do
+            = icon('plus', t('education.new'))
     %hr
 
     %ul.well-list

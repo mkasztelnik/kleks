@@ -10,5 +10,6 @@ class Ability
     can [:create, :show, :update], Language, { user_id: user.id }
 
     can :manage, Education, { user_id: user.id }
+    can :manage, Work, { user_id: user.id }
   end
 end

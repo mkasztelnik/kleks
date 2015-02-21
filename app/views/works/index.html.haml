@@ -2,7 +2,18 @@
   .col-md-8
     %h3
       = t('work.title')
+      - if can?(:create, current_user.works.build)
+        .pull-right
+          = link_to new_work_path,
+                    class: "btn btn-success",
+                    data: { toggle: "modal", target: "#ajax-modal" },
+                    remote: true do
+            = icon('plus', t('work.new'))
     %hr
+
+    %ul.well-list
+      - @works.each do |item|
+        =render('item', item: item)
   .col-md-4
     %h3= t('help')
     %hr

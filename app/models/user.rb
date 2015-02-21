@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
   has_one :presentation
   has_one :language
   has_many :educations
+  has_many :works
 
   def self.from_omniauth(auth)
     where(email: auth.info.email).first_or_create do |user|

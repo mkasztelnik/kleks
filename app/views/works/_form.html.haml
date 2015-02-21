@@ -1,0 +1,8 @@
+= simple_form_for @work,
+                  html: { class: 'form-horizontal', role: 'form', id: 'modal_form' },
+                  remote: true,
+                  wrapper: :horizontal_form do |f|
+  = f.input :institution
+  = f.input :responsibility, input_html: { rows: 5 }
+  = f.input :country
+  = f.input :date, as: :date_interval

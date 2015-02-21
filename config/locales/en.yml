@@ -55,6 +55,8 @@ en:
     title: Academic experience
   work:
     title: Relevant work experience
+    new: Add new work experience
+    destroy_confirmation: Are you sure you want to remove this work experience?
   language:
     title: English language
     save: Save information about english language
