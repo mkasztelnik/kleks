@@ -1,9 +1,12 @@
 class Education < ActiveRecord::Base
+  extend Enumerize
   include Countryable
+
+  EDUCATION_TYPES = %w(ba ma phd)
 
   validates :education_type,
             presence: true,
-            inclusion: { in: %w(ba ma phd) }
+            inclusion: { in:  EDUCATION_TYPES }
 
   validates :start_date,
             presence: true,
@@ -26,6 +29,8 @@ class Education < ActiveRecord::Base
             presence: true
 
   belongs_to :user
+
+  enumerize :education_type, in: EDUCATION_TYPES
 
   def title
     "#{education_type} #{program_name}"

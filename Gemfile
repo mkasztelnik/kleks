@@ -23,6 +23,7 @@ gem 'simple_form'
 gem 'country_select'
 gem 'bootstrap-datepicker-rails'
 gem 'date_validator'
+gem 'enumerize'
 
 gem 'devise'
 gem 'omniauth-facebook'

@@ -1,4 +1,6 @@
 class Language < ActiveRecord::Base
+  extend Enumerize
+
   LEVELS = %w(A1 A2 B1 B2 C1 C2)
 
   validates :understanding_level,
@@ -39,4 +41,8 @@ class Language < ActiveRecord::Base
             if: :other
 
   belongs_to :user
+
+  enumerize :understanding_level, in: LEVELS
+  enumerize :speaking_level, in: LEVELS
+  enumerize :writing_level, in: LEVELS
 end
