@@ -3,9 +3,7 @@ class Education < ActiveRecord::Base
 
   validates :education_type,
             presence: true,
-            inclusion: {
-              in: %w(ba ma phd)
-            }
+            inclusion: { in: %w(ba ma phd) }
 
   validates :start_date,
             presence: true,

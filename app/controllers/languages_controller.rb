@@ -27,6 +27,10 @@ class LanguagesController < ApplicationController
   end
 
   def language_params
-    params.require(:language).permit(:text)
+    params.require(:language).
+      permit(:understanding_level, :speaking_level, :writing_level,
+             :native, :study, :study_program, :study_url,
+             :certificate, :certificate_name, :certificate_year,
+             :certificate_score, :other, :other_description)
   end
 end
