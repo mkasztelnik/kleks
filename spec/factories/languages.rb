@@ -3,6 +3,7 @@ FactoryGirl.define do
     understanding_level 'A1'
     speaking_level 'B1'
     writing_level 'C1'
+    native true
 
     user
   end

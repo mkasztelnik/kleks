@@ -40,9 +40,21 @@ class Language < ActiveRecord::Base
             presence: true,
             if: :other
 
+  validate :at_least_one_expertise
+
   belongs_to :user
 
   enumerize :understanding_level, in: LEVELS
   enumerize :speaking_level, in: LEVELS
   enumerize :writing_level, in: LEVELS
+
+  def at_least_one_expertise
+    unless native || study || certificate || other
+      msg = I18n.t('language.one_expertise_needed')
+      errors.add(:native, msg)
+      errors.add(:study, msg)
+      errors.add(:certificate, msg)
+      errors.add(:other, msg)
+    end
+  end
 end

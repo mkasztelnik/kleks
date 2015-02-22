@@ -47,4 +47,14 @@ RSpec.describe Language do
 
     it { should validate_presence_of :other_description }
   end
+
+  it 'at least one language expertise is needed' do
+    language = build(:language,
+                     native: false,
+                     study: false,
+                     certificate: false,
+                     other: false)
+
+    expect(language.valid?).to be_falsy
+  end
 end
