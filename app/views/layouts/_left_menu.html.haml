@@ -6,10 +6,15 @@
   = nav_link(controller: :profiles) do
     = link_to profile_path do
       = t('profile.title')
+      = check_if_ready(current_user.profile)
   = nav_link(controller: :motivations) do
-    = link_to t('motivation.title'), motivation_path
+    = link_to motivation_path do
+      = t('motivation.title')
+      = check_if_ready(current_user.motivation)
   = nav_link(controller: :presentations) do
-    = link_to t('presentation.title'), presentation_path
+    = link_to presentation_path do
+      = t('presentation.title')
+      = check_if_ready(current_user.presentation)
   = nav_link(controller: :educations) do
     = link_to educations_path do
       = t('education.title')
@@ -18,7 +23,9 @@
   = nav_link(controller: :works) do
     = link_to t('work.title'), works_path
   = nav_link(controller: :languages) do
-    = link_to t('language.title'), language_path
+    = link_to language_path do
+      = t('language.title')
+      = check_if_ready(current_user.language)
 
 .btn.btn-lg.btn-primary
   = icon('envelope-o', 'Submit your application')

@@ -3,6 +3,13 @@ module AuthenticationHelper
     user.provider.blank? ? sign_in(user) : omniauth_sign_in(user)
   end
 
+  def user_sign_in
+    create(:user, provider: :google_oauth2).tap do |user|
+      user.confirm!
+      sign_in_as(user)
+    end
+  end
+
   private
 
   def omniauth_sign_in(user)
