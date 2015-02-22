@@ -4,6 +4,13 @@ RSpec.describe User do
   it { should validate_presence_of :first_name }
   it { should validate_presence_of :last_name }
 
+  it { should have_one(:profile).dependent(:destroy) }
+  it { should have_one(:motivation).dependent(:destroy) }
+  it { should have_one(:presentation).dependent(:destroy) }
+  it { should have_one(:language).dependent(:destroy) }
+  it { should have_many(:educations).dependent(:destroy) }
+  it { should have_many(:works).dependent(:destroy) }
+
   it 'creates new user while logging using omniauth' do
       expect { User.from_omniauth(auth) }.to change { User.count }.by(1)
     end

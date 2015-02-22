@@ -12,12 +12,12 @@ class User < ActiveRecord::Base
   validates :first_name, presence: true
   validates :last_name, presence: true
 
-  has_one :profile
-  has_one :motivation
-  has_one :presentation
-  has_one :language
-  has_many :educations
-  has_many :works
+  has_one  :profile,      dependent: :destroy
+  has_one  :motivation,   dependent: :destroy
+  has_one  :presentation, dependent: :destroy
+  has_one  :language,     dependent: :destroy
+  has_many :educations,   dependent: :destroy
+  has_many :works,        dependent: :destroy
 
   def self.from_omniauth(auth)
     where(email: auth.info.email).first_or_create do |user|
