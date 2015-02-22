@@ -2,6 +2,7 @@ class CreatePresentations < ActiveRecord::Migration
   def change
     create_table :presentations do |t|
       t.text :abstract,   null: false
+      t.string :keywords, null: false
 
       t.references :user, null: false
 

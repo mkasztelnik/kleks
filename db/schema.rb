@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20150220230113) do
     t.boolean  "certificate"
     t.string   "certificate_name"
     t.integer  "certificate_year"
-    t.string   "cettificate_score"
+    t.string   "certificate_score"
     t.boolean  "other"
     t.text     "other_description"
     t.integer  "user_id",                             null: false
@@ -56,13 +56,14 @@ ActiveRecord::Schema.define(version: 20150220230113) do
 
   create_table "presentations", force: :cascade do |t|
     t.text     "abstract",   null: false
+    t.string   "keywords",   null: false
     t.integer  "user_id",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "profiles", force: :cascade do |t|
-    t.string   "middle_name",             null: false
+    t.string   "middle_name"
     t.date     "date_of_birth",           null: false
     t.string   "place_of_birth",          null: false
     t.string   "citizenship",             null: false

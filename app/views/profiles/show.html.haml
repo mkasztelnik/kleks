@@ -15,6 +15,10 @@
       = f.input :first_name
       = f.input :middle_name
       = f.input :last_name
+      = f.input :email, disabled: true
+
+      %hr
+
       = f.input :date_of_birth,
                 as: :string,
                 input_html: { data: {behaviour: 'datepicker' } }

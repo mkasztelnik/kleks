@@ -9,6 +9,9 @@ class User < ActiveRecord::Base
          :confirmable,
          omniauth_providers: [:facebook, :google_oauth2]
 
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+
   has_one :profile
   has_one :motivation
   has_one :presentation

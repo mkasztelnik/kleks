@@ -1,0 +1,12 @@
+en:
+  activerecord:
+    errors:
+      models:
+        education:
+          attributes:
+            end_date:
+              after: End date need to be greater than start date
+        work:
+          attributes:
+            end_date:
+              after: End date need to be greater than start date

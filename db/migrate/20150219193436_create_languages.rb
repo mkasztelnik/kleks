@@ -14,7 +14,7 @@ class CreateLanguages < ActiveRecord::Migration
       t.boolean :certificate
       t.string :certificate_name
       t.integer :certificate_year
-      t.string :cettificate_score
+      t.string :certificate_score
 
       t.boolean :other
       t.text :other_description

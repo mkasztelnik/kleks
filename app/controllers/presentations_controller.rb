@@ -1,7 +1,7 @@
 class PresentationsController < ApplicationController
   def show
     @presentation = current_user.presentation ||
-                    Presentation.new(user: current_user)
+                      Presentation.new(user: current_user)
   end
 
   def create
@@ -28,6 +28,6 @@ class PresentationsController < ApplicationController
   end
 
   def presentation_params
-    params.require(:presentation).permit(:abstract)
+    params.require(:presentation).permit(:abstract, :keywords)
   end
 end
