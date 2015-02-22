@@ -32,11 +32,16 @@ en:
     #       email: 'E-mail to sign in.'
     #     edit:
     #       email: 'E-mail.'
-    # hints:
+    hints:
+      profile:
+        passport_issuing_agency: "Some hints for issuing agency input"
     #   defaults:
     #     username: 'User name to sign in.'
     #     password: 'No special characters, please.'
     # include_blanks:
+    placeholders:
+      profile:
+        middle_name: "Middle name"
     #   defaults:
     #     age: 'Rather not say'
     # prompts:
