@@ -18,6 +18,11 @@ en:
         passport_issuing_agency: Issuing agency
       motivation:
         text: "Your motivation"
+      language:
+        understanding_level: Understanding
+        speaking_level: Speaking
+        writing_level: Writing
+        study_program: Program name
     # Examples
     # labels:
     #   defaults:
