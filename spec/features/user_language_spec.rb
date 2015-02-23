@@ -12,6 +12,7 @@ RSpec.feature 'User language' do
     select('A1', from: 'Understanding')
     select('B1', from: 'Speaking')
     select('C1', from: 'Writing')
+    check('Native')
 
     click_button('Save information about english language')
 
