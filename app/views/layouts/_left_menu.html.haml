@@ -18,10 +18,18 @@
   = nav_link(controller: :educations) do
     = link_to educations_path do
       = t('education.title')
+      = education_count
   = nav_link(controller: :academics) do
-    = link_to t('academic.title'), academics_path
+    = link_to academics_path do
+      = t('academic.title')
+      .pull-right
+        %span.badge.badge-success 0
   = nav_link(controller: :works) do
-    = link_to t('work.title'), works_path
+    = link_to works_path do
+      = t('work.title')
+      = count_badge(current_user.works.count,
+                    id: 'work-count',
+                    class: 'badge-success')
   = nav_link(controller: :languages) do
     = link_to language_path do
       = t('language.title')

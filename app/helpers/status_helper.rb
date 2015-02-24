@@ -10,4 +10,18 @@ module StatusHelper
       end
     end
   end
+
+  def education_count
+    count = current_user.educations.count
+    success = count > 0 ? 'badge-success' : ''
+    count_badge(count, id: 'education-count', class: success)
+  end
+
+  def count_badge(count, options = {})
+    classes = "badge #{options.fetch(:class, '')}"
+
+    content_tag(:div, class: 'pull-right') do
+      content_tag(:span, count, id: options[:id], class: classes)
+    end
+  end
 end
