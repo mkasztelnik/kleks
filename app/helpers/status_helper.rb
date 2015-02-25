@@ -6,7 +6,7 @@ module StatusHelper
   def check_if_ready(field)
     if ready?(field)
       content_tag(:div, class: 'pull-right') do
-        content_tag(:i, '', class: 'fa fa-check success')
+        content_tag(:i, '', class: 'fa fa-check success check-in-menu')
       end
     end
   end
