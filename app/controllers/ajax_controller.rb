@@ -18,7 +18,7 @@ class AjaxController < ApplicationController
   def destroy
     @item.destroy
     respond_to do |format|
-      format.html { head :ok }
+      format.js { render_success(:destroy, :ok) }
     end
   end
 
@@ -55,7 +55,10 @@ class AjaxController < ApplicationController
   def render_success(mode, return_code)
     render(partial: "layouts/item_#{mode}",
            locals: {
-             item: @item
+             item: @item,
+             count_id: count_id,
+             count: count,
+             count_class: count_class || ''
            },
            layout: false,
            status: return_code)
@@ -64,5 +67,9 @@ class AjaxController < ApplicationController
   def render_errors
     render json: @item.errors,
            status: :unprocessable_entity
+  end
+
+  def count_class
+    'badge-success'
   end
 end

@@ -18,4 +18,18 @@ class EducationsController < AjaxController
   end
 
   alias_method :item_params, :education_params
+
+  private
+
+  def count_id
+    'education-count'
+  end
+
+  def count
+    @count ||= current_user.educations.count
+  end
+
+  def count_class
+    'badge-success' if count > 0
+  end
 end
