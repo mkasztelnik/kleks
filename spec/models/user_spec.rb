@@ -9,6 +9,7 @@ RSpec.describe User do
   it { should have_one(:presentation).dependent(:destroy) }
   it { should have_one(:language).dependent(:destroy) }
   it { should have_many(:educations).dependent(:destroy) }
+  it { should have_many(:conferences).dependent(:destroy) }
   it { should have_many(:works).dependent(:destroy) }
 
   it 'creates new user while logging using omniauth' do

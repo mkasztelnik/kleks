@@ -1,8 +1,9 @@
 .row
   .col-md-8
-    %h3
-      = t('academic.title')
-    %hr
+    = render('publications/index')
+    = render('conferences/index')
+    = render('trainings/index')
+    = render('others/index')
   .col-md-4
     %h3= t('help')
     %hr

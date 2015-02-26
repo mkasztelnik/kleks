@@ -57,6 +57,16 @@ en:
     type_invalid: "%{value} is no a valid education type"
   academic:
     title: Academic experience
+  publication:
+    title: Publications
+  conference:
+    title: Conferences
+    new: Add new conference
+    destroy_confirmation: Are you sure you want to remove this conference?
+  training:
+    title: Trainings
+  other:
+    title: Others
   work:
     title: Relevant work experience
     new: Add new work experience

@@ -22,8 +22,9 @@
   = nav_link(controller: :academics) do
     = link_to academics_path do
       = t('academic.title')
-      .pull-right
-        %span.badge.badge-success 0
+      = count_badge(current_user.academic_count,
+                    id: 'academic-count',
+                    class: 'badge-success')
   = nav_link(controller: :works) do
     = link_to works_path do
       = t('work.title')

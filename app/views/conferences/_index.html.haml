@@ -1,0 +1,14 @@
+%h3
+  = t('academic.conferences')
+  - if can?(:create, current_user.conferences.build)
+    .pull-right
+      = link_to new_conference_path,
+                class: "btn btn-success",
+                data: { toggle: "modal", target: "#ajax-modal" },
+                remote: true do
+        = icon('plus', t('conference.new'))
+%hr
+
+%ul.well-list
+  - @conferences.each do |item|
+    =render('conferences/item', item: item)

@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
   has_one  :language,     dependent: :destroy
   has_many :educations,   dependent: :destroy
   has_many :works,        dependent: :destroy
+  has_many :conferences,  dependent: :destroy
 
   def self.from_omniauth(auth)
     where(email: auth.info.email).first_or_create do |user|
@@ -34,5 +35,9 @@ class User < ActiveRecord::Base
 
   def name
     "#{first_name} #{last_name}"
+  end
+
+  def academic_count
+    conferences.count
   end
 end

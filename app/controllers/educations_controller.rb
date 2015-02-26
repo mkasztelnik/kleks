@@ -19,8 +19,6 @@ class EducationsController < AjaxController
 
   alias_method :item_params, :education_params
 
-  private
-
   def count_id
     'education-count'
   end
