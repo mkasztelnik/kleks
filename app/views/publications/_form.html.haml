@@ -1,0 +1,10 @@
+= simple_form_for @publication,
+                  html: { class: 'form-horizontal', role: 'form', id: 'modal_form' },
+                  remote: true,
+                  wrapper: :horizontal_form do |f|
+  = f.input :publication_title
+  = f.input :title
+  = f.input :authors
+  = f.input :year
+  = f.input :language
+  = f.input :publisher

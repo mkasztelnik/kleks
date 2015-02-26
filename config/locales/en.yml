@@ -59,6 +59,8 @@ en:
     title: Academic experience
   publication:
     title: Publications
+    new: Add new publication
+    destroy_confirmation: Are you sure you want to remove this publication?
   conference:
     title: Conferences
     new: Add new conference
