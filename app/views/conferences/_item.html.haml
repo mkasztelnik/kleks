@@ -1,7 +1,7 @@
-%li.clearfix(id="item-#{item.id}")
+%li.clearfix(id="conference-#{item.id}")
   .left
     = link_to_if can?(:edit, item), item.title, [:edit, item], title: item.title, remote: true do
-      = link_to title, item, remote: true
+      = link_to item.title, item, remote: true
     %small.light
       #{item.presentation_type} at #{item.conference_name}.
       From #{item.start_date} to #{item.end_date} in #{item.address}.

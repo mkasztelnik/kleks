@@ -1,5 +1,15 @@
 %h3
   = t('other.title')
+  - if can?(:create, current_user.others.build)
+    .pull-right
+      = link_to new_other_path,
+                class: "btn btn-success",
+                data: { toggle: "modal", target: "#ajax-modal" },
+                remote: true do
+        = icon('plus', t('other.new'))
 %hr
 
-TODO
+%ul.well-list#others-list
+  - current_user.others.each do |item|
+    - unless item.new_record?
+      = render('others/item', item: item)

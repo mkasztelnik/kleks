@@ -11,6 +11,7 @@ class Ability
 
     can :manage, Education, { user_id: user.id }
     can :manage, Conference, { user_id: user.id }
+    can :manage, Other, { user_id: user.id }
     can :manage, Work, { user_id: user.id }
   end
 end

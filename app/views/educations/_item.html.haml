@@ -1,4 +1,4 @@
-%li.clearfix(id="item-#{item.id}")
+%li.clearfix(id="education-#{item.id}")
   .left
     = link_to_if can?(:edit, item), item.title, [:edit, item], title: item.title, remote: true do
       = link_to item.title, item, remote: true

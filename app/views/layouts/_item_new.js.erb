@@ -1,4 +1,7 @@
-$('ul.well-list').append('<%= j render("item", item: item) %>');
-$('#item-<%= item.id %>').effect("highlight", {}, 3000);
+$('#<%= item.class.name.downcase %>s-list').
+  append('<%= j render("item", item: item) %>');
+$('#<%= "#{item.class.name.downcase}-#{item.id}" %>').
+  effect("highlight", {}, 3000);
+
 $('#<%= count_id %>').text('<%= count %>')
 $('#<%= count_id %>').attr('class', 'badge <%= count_class %>');

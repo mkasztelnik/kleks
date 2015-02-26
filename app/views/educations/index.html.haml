@@ -11,9 +11,10 @@
             = icon('plus', t('education.new'))
     %hr
 
-    %ul.well-list
+    %ul.well-list#educations-list
       - @educations.each do |item|
-        =render('item', item: item)
+        - unless item.new_record?
+          = render('item', item: item)
   .col-md-4
     %h3= t('help')
     %hr

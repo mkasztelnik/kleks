@@ -67,6 +67,8 @@ en:
     title: Trainings
   other:
     title: Others
+    new: Add other academic experience
+    destroy_confirmation: Are you sure you want to remove this academic experience?
   work:
     title: Relevant work experience
     new: Add new work experience

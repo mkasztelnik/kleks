@@ -1,0 +1,11 @@
+%li.clearfix(id="other-#{item.id}")
+  .left
+    = link_to_if can?(:edit, item), item.title, [:edit, item], title: item.title, remote: true do
+      = link_to title, item, remote: true
+  - if can?(:destroy, item)
+    .pull-right
+      =link_to item, remote: true,
+                     method: :delete,
+                     class: 'delete',
+                     data: { confirm: t('other.destroy_confirmation') } do
+        = icon('times')

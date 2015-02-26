@@ -10,6 +10,7 @@ RSpec.describe User do
   it { should have_one(:language).dependent(:destroy) }
   it { should have_many(:educations).dependent(:destroy) }
   it { should have_many(:conferences).dependent(:destroy) }
+  it { should have_many(:others).dependent(:destroy) }
   it { should have_many(:works).dependent(:destroy) }
 
   it 'creates new user while logging using omniauth' do
@@ -29,6 +30,14 @@ RSpec.describe User do
     create(:user, email: 'a@b.c')
 
     expect { User.from_omniauth(auth) }.to change { User.count }.by(0)
+  end
+
+  it 'calculate academic count' do
+    user = create(:user)
+    create(:conference, user: user)
+    create(:other, user: user)
+
+    expect(user.academic_count).to eq 2
   end
 
   def auth

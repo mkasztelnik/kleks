@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :educations
   resources :academics, only: [:index]
   resources :conferences, only: [:new, :show, :edit, :create, :update, :destroy]
+  resources :others, only: [:new, :show, :edit, :create, :update, :destroy]
   resources :works
   resource :language, only: [:show, :create, :update]
 end

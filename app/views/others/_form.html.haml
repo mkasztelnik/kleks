@@ -1,0 +1,5 @@
+= simple_form_for @other,
+                  html: { class: 'form-horizontal', role: 'form', id: 'modal_form' },
+                  remote: true,
+                  wrapper: :horizontal_form do |f|
+  = f.input :title
