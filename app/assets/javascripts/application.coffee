@@ -13,6 +13,7 @@
 #= require jquery
 #= require jquery_ujs
 #= require turbolinks
+#= require jquery.turbolinks
 #= require jquery-ui
 #= require bootstrap-sprockets
 #= require bootstrap-datepicker
@@ -55,7 +56,7 @@ $ ->
     e.preventDefault()
     e.stopPropagation()
     $.rails.handleRemote( $(this) )
-  #removes whatever is in the modal body content div upon clicking close/outside modal
+  #rITEMemoves whatever is in the modal body content div upon clicking close/outside modal
   $(document).on 'click', '[data-dismiss=modal], .modal-scrollable', ->
     $('.modal-body-content').empty()
   $(document).on 'click', '#ajax-modal', (e) ->
