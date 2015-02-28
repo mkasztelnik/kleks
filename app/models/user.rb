@@ -42,4 +42,9 @@ class User < ActiveRecord::Base
   def academic_count
     conferences.count + others.count + publications.count
   end
+
+  def application_ready?
+    profile && motivation && presentation &&
+      language && educations.count > 0
+  end
 end

@@ -58,7 +58,8 @@ class AjaxController < ApplicationController
              item: @item,
              count_id: count_id,
              count: count,
-             count_class: count_class || ''
+             count_class: count_class || '',
+             application_state: application_state
            },
            layout: false,
            status: return_code)
@@ -71,5 +72,8 @@ class AjaxController < ApplicationController
 
   def count_class
     'badge-success'
+  end
+
+  def application_state
   end
 end

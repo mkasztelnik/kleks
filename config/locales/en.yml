@@ -81,3 +81,6 @@ en:
     saved: Information about english language has been sucessfully saved
     errors: There are errors in english language details, please correct them and save again
     one_expertise_needed: At least one relevant element is needed
+  application:
+    ready: Application is ready, you can submit it. Please note that after submition <strong>no modification will be allowed.</strong>
+    not_ready: Application is <strong>not ready</strong>, fill all required sections

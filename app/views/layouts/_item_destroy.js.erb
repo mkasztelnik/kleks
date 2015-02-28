@@ -1,2 +1,6 @@
 $('#<%= count_id %>').text('<%= count %>')
 $('#<%= count_id %>').attr('class', 'badge <%= count_class %>');
+
+<%- if local_assigns[:application_state] %>
+  $('#submit').html('<%= j render("layouts/#{application_state}") %>')
+<%- end %>

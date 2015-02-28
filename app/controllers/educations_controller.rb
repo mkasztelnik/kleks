@@ -30,4 +30,12 @@ class EducationsController < AjaxController
   def count_class
     'badge-success' if count > 0
   end
+
+  def application_state
+    if current_user.application_ready?
+      'application_ready'
+    else
+      'application_not_ready'
+    end
+  end
 end

@@ -36,5 +36,9 @@
       = t('language.title')
       = check_if_ready(current_user.language)
 
-.btn.btn-lg.btn-primary
-  = icon('envelope-o', 'Submit your application')
+%hr
+#submit
+  - if current_user.application_ready?
+    = render('layouts/application_ready')
+  - else
+    = render('layouts/application_not_ready')
