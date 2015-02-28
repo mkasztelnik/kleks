@@ -40,7 +40,7 @@
 #submit
   -if current_user.submitted
     .alert.alert-success.alert-submit{ role: 'alert' }
-      = t('application.submitted').html_safe
+      = t('application.submitted_html').html_safe
   - else
     - if current_user.application_ready?
       = render('layouts/application_ready')
