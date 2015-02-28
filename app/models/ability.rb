@@ -23,6 +23,6 @@ class Ability
   end
 
   def one_to_many_elements
-    [Education, Conference, Other, Work, Publication]
+    [Education, Conference, Other, Work, Publication, Training]
   end
 end

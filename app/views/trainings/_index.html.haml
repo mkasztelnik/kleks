@@ -1,5 +1,15 @@
 %h3
   = t('training.title')
+  - if can?(:create, current_user.trainings.build)
+    .pull-right
+      = link_to new_training_path,
+                class: "btn btn-success",
+                data: { toggle: "modal", target: "#ajax-modal" },
+                remote: true do
+        = icon('plus', t('training.new'))
 %hr
 
-TODO
+%ul.well-list#trainings-list
+  - current_user.trainings.each do |item|
+    - unless item.new_record?
+      = render('trainings/item', item: item)

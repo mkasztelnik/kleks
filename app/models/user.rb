@@ -21,6 +21,7 @@ class User < ActiveRecord::Base
   has_many :conferences,  dependent: :destroy
   has_many :others,       dependent: :destroy
   has_many :publications, dependent: :destroy
+  has_many :trainings,    dependent: :destroy
 
   def self.from_omniauth(auth)
     where(email: auth.info.email).first_or_create do |user|
@@ -40,7 +41,7 @@ class User < ActiveRecord::Base
   end
 
   def academic_count
-    conferences.count + others.count + publications.count
+    conferences.count + others.count + publications.count + trainings.count
   end
 
   def application_ready?

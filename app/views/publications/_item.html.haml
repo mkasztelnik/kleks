@@ -1,4 +1,4 @@
-%li.clearfix(id="other-#{item.id}")
+%li.clearfix(id="publication-#{item.id}")
   .left
     = link_to_if can?(:edit, item), item.publication_title, [:edit, item], title: item.publication_title, remote: true do
       = link_to item.publication_title, item, remote: true
@@ -7,5 +7,5 @@
       =link_to item, remote: true,
                      method: :delete,
                      class: 'delete',
-                     data: { confirm: t('other.destroy_confirmation') } do
+                     data: { confirm: t('publicaiton.destroy_confirmation') } do
         = icon('times')

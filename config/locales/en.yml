@@ -68,6 +68,8 @@ en:
     destroy_confirmation: Are you sure you want to remove this conference?
   training:
     title: Trainings
+    new: Add new training
+    destroy_confirmation: Are you sure you want to remove this training?
   other:
     title: Others
     new: Add other academic experience

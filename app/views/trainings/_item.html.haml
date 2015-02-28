@@ -1,0 +1,15 @@
+%li.clearfix(id="training-#{item.id}")
+  .left
+    = link_to_if can?(:edit, item), item.gained_experience, [:edit, item], title: item.gained_experience, remote: true do
+      = link_to item.gained_experience, item, remote: true
+    %br
+    %small.light
+      From #{item.start_date} to #{item.end_date} at
+      #{item.institution}, #{item.country_name}.
+  - if can?(:destroy, item)
+    .pull-right
+      =link_to item, remote: true,
+                     method: :delete,
+                     class: 'delete',
+                     data: { confirm: t('training.destroy_confirmation') } do
+        = icon('times')

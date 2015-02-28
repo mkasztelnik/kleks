@@ -1,18 +1,15 @@
-class Work < ActiveRecord::Base
+class Training < ActiveRecord::Base
   include Countryable
 
   validates :institution,
             presence: true
 
-  validates :responsibility,
-            presence: true
-
-  validates :country,
+  validates :gained_experience,
             presence: true
 
   validates :start_date,
-            presence: true,
-            date: true
+              presence: true,
+              date: true
 
   validates :end_date,
             presence: true,
@@ -20,8 +17,4 @@ class Work < ActiveRecord::Base
 
   belongs_to :user,
              required: true
-
-  def title
-    "#{institution} in #{country_name} from #{start_date} to #{end_date}"
-  end
 end

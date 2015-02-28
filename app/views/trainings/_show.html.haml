@@ -1,0 +1,11 @@
+%table.table.table-hover.table-bordered.show-table
+  %tbody
+    %tr
+      %td= t('simple_form.labels.training.gained_experience')
+      %td= @training.gained_experience
+    %tr
+      %td= t('simple_form.labels.training.institution')
+      %td= @training.institution
+    %tr
+      %td= t('simple_form.labels.training.date')
+      %td #{@training.start_date} - #{@training.end_date}

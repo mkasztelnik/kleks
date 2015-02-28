@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150228132137) do
+ActiveRecord::Schema.define(version: 20150228184244) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -119,6 +119,17 @@ ActiveRecord::Schema.define(version: 20150228132137) do
     t.datetime "updated_at",        null: false
   end
 
+  create_table "trainings", force: :cascade do |t|
+    t.string   "institution",       null: false
+    t.text     "gained_experience", null: false
+    t.date     "start_date",        null: false
+    t.date     "end_date",          null: false
+    t.string   "country",           null: false
+    t.integer  "user_id",           null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
@@ -170,4 +181,5 @@ ActiveRecord::Schema.define(version: 20150228132137) do
   add_foreign_key "profiles", "addresses"
   add_foreign_key "profiles", "users"
   add_foreign_key "publications", "users"
+  add_foreign_key "trainings", "users"
 end
