@@ -23,8 +23,18 @@
                 as: :string,
                 input_html: { data: {behaviour: 'datepicker' } }
       = f.input :place_of_birth
-      = f.input :citizenship
       = f.input :country
+      = f.input :citizenship
+
+      %h4 Address
+      %hr
+
+      = f.simple_fields_for :address do |address|
+        = address.input :address
+        = address.input :city
+        = address.input :country
+        = address.input :state
+        = address.input :postcode
 
       %h4 Passport
       %hr

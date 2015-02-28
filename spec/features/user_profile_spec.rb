@@ -14,12 +14,21 @@ RSpec.feature 'User profile' do
     fill_in('Last name', with: 'Doe')
     fill_in('Date of birth', with: '2013-02-03')
     fill_in('Place of birth', with: 'Lodygowice')
+    select('Poland', from: 'profile_country')
     fill_in('Citizenship', with: 'Polish')
-    select('Poland', from: 'Country')
+
+
+
     fill_in('Number', with: '123')
     fill_in('Date of issue', with: '2014-03-12')
     fill_in('Place of issue', with: 'Krakow')
     fill_in('Issuing agency', with: 'ABC')
+
+    fill_in('Address', with: '123 str')
+    fill_in('City', with: 'Cracow')
+    select('Poland', from: 'profile_address_attributes_country')
+    fill_in('State', with: 'Malopolskie')
+    fill_in('Postcode', with: '12-345')
 
     click_button('Save personal data')
 

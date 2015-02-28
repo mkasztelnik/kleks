@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150226211210) do
+ActiveRecord::Schema.define(version: 20150228132137) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "addresses", force: :cascade do |t|
+    t.string   "address",    null: false
+    t.string   "city",       null: false
+    t.string   "country",    null: false
+    t.string   "state",      null: false
+    t.string   "postcode",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "conferences", force: :cascade do |t|
     t.text     "title",             null: false
@@ -92,6 +102,7 @@ ActiveRecord::Schema.define(version: 20150226211210) do
     t.string   "passport_issuing_agency", null: false
     t.string   "country",                 null: false
     t.integer  "user_id",                 null: false
+    t.integer  "address_id",              null: false
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end
@@ -155,6 +166,7 @@ ActiveRecord::Schema.define(version: 20150226211210) do
   add_foreign_key "motivations", "users"
   add_foreign_key "motivations", "users"
   add_foreign_key "others", "users"
+  add_foreign_key "profiles", "addresses"
   add_foreign_key "profiles", "users"
   add_foreign_key "publications", "users"
 end

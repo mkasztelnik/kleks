@@ -13,6 +13,7 @@ RSpec.describe Profile do
   it { should validate_presence_of :passport_place_of_issue }
   it { should validate_presence_of :passport_issuing_agency }
   it { should validate_presence_of :country }
+  it { should validate_presence_of :address }
 
   it 'has first and last names delegated from the user' do
     user = build(:user)

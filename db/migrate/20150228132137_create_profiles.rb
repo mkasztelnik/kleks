@@ -12,10 +12,12 @@ class CreateProfiles < ActiveRecord::Migration
       t.string :country,                    null: false
 
       t.references :user,                   null: false
+      t.references :address,                null: false
 
       t.timestamps null: false
     end
 
     add_foreign_key :profiles, :users, index: true
+    add_foreign_key :profiles, :addresses, index: true
   end
 end

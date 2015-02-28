@@ -10,5 +10,6 @@ FactoryGirl.define do
     country { Faker::Address.country }
 
     user
+    address
   end
 end

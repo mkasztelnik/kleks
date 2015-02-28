@@ -31,11 +31,15 @@ class Profile < ActiveRecord::Base
   validates :last_name,
             presence: true
 
-  validates :user,
-            presence: true
-
   belongs_to :user,
+             required: true,
              autosave: true
+
+  belongs_to :address,
+             required: true,
+             autosave: true
+
+  accepts_nested_attributes_for :address
 
   delegate :first_name, :first_name=,
            :last_name, :last_name=,

@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
   def show
-    @profile = current_user.profile || Profile.new(user: current_user)
+    @profile = current_user.profile ||
+                Profile.new(user: current_user).tap { |p| p.build_address }
   end
 
   def create
@@ -31,6 +32,10 @@ class ProfilesController < ApplicationController
       permit(:first_name, :last_name, :middle_name,
              :date_of_birth, :place_of_birth, :citizenship, :country,
              :passport_number, :passport_date_of_issue,
-             :passport_place_of_issue, :passport_issuing_agency)
+             :passport_place_of_issue, :passport_issuing_agency,
+             address_attributes: [
+                :address, :city,
+                :country, :state, :postcode
+             ])
   end
 end
