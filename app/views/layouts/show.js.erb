@@ -1,0 +1,7 @@
+var actionBtn = '#action-button';
+$(actionBtn).html('');
+$(actionBtn).hide();
+
+$('.modal-title').html('<%= title %>');
+$('.modal-body').show().html('<%= j render(form) %>');
+$('#ajax-modal').modal();

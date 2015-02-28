@@ -1,0 +1,51 @@
+%h3
+  = t('language.title')
+%hr
+
+%table.table.table-hover.table-bordered.show-table
+  %tbody
+    %tr
+      %td= t('simple_form.labels.language.understanding_level')
+      %td= @language.understanding_level_text
+    %tr
+      %td= t('simple_form.labels.language.speaking_level')
+      %td= @language.speaking_level_text
+    %tr
+      %td= t('simple_form.labels.language.writing_level')
+      %td= @language.writing_level_text
+    %tr
+      %td= t('simple_form.labels.language.native')
+      %td #{@language.native ? t('yes') : t('no')}
+
+- if @language.study
+  %h4= t('simple_form.labels.language.study')
+  %hr
+  %table.table.table-hover.table-bordered.show-table
+    %tbody
+      %tr
+        %td= t('simple_form.labels.language.study_program')
+        %td= @language.study_program
+      %tr
+        %td= t('simple_form.labels.language.study_url')
+        %td
+          %a{ href: @language.study_url }= t('link')
+
+- if @language.certificate
+  %h4= t('simple_form.labels.language.certificate')
+  %hr
+  %table.table.table-hover.table-bordered.show-table
+    %tbody
+      %tr
+        %td= t('simple_form.labels.language.certificate_name')
+        %td= @language.certificate_name
+      %tr
+        %td= t('simple_form.labels.language.certificate_year')
+        %td= @language.certificate_year
+      %tr
+        %td= t('simple_form.labels.language.certificate_score')
+        %td= @language.certificate_score
+
+- if @language.other
+  %h4= t('simple_form.labels.language.other')
+  %hr
+  %p= @language.other_description

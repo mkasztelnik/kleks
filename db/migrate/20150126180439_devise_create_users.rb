@@ -38,6 +38,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :gender
       t.string :image
 
+      t.boolean :submitted, default: false
+
       t.timestamps
     end
 

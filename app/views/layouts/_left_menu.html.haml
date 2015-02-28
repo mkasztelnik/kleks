@@ -38,7 +38,11 @@
 
 %hr
 #submit
-  - if current_user.application_ready?
-    = render('layouts/application_ready')
+  -if current_user.submitted
+    .alert.alert-success.alert-submit{ role: 'alert' }
+      = t('application.submitted').html_safe
   - else
-    = render('layouts/application_not_ready')
+    - if current_user.application_ready?
+      = render('layouts/application_ready')
+    - else
+      = render('layouts/application_not_ready')

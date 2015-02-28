@@ -1,0 +1,17 @@
+%table.table.table-hover.table-bordered.show-table
+  %tbody
+    %tr
+      %td= t('simple_form.labels.education.program_name')
+      %td= @education.program_name
+    %tr
+      %td= t('simple_form.labels.education.university_name')
+      %td= @education.university_name
+    %tr
+      %td= t('simple_form.labels.education.education_type')
+      %td= @education.education_type_text
+    %tr
+      %td= t('simple_form.labels.education.date')
+      %td #{@education.start_date} - #{@education.end_date}
+    %tr
+      %td= t('simple_form.labels.education.country')
+      %td= @education.country_name

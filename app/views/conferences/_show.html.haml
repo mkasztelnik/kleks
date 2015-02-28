@@ -1,0 +1,17 @@
+%table.table.table-hover.table-bordered.show-table
+  %tbody
+    %tr
+      %td= t('simple_form.labels.conference.title')
+      %td= @conference.title
+    %tr
+      %td= t('simple_form.labels.conference.presentation_type')
+      %td= @conference.presentation_type_text
+    %tr
+      %td= t('simple_form.labels.conference.conference_name')
+      %td= @conference.conference_name
+    %tr
+      %td= t('simple_form.labels.conference.address')
+      %td= @conference.address
+    %tr
+      %td= t('simple_form.labels.conference.date')
+      %td #{@conference.start_date} - #{@conference.end_date}

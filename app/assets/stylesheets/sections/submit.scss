@@ -1,3 +1,8 @@
 .alert-submit {
   margin-right: 15px;
 }
+
+table.show-table tbody > tr > td:first-child {
+  width: 30%;
+  font-weight: bold;
+}

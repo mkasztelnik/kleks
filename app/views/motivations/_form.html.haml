@@ -1,0 +1,9 @@
+= simple_form_for @motivation, url: motivation_path do |f|
+  %h3
+    = t('motivation.title')
+    %span.pull-right
+      %button.btn.btn-success(type="submit")
+        = icon('save', t('motivation.save'))
+  %hr
+
+  = f.input :text, input_html: { rows: 36 }

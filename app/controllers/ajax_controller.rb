@@ -42,6 +42,14 @@ class AjaxController < ApplicationController
     end
   end
 
+  def show
+    respond_to do |format|
+      format.js do
+        render_modal(:show, 'show')
+      end
+    end
+  end
+
   private
 
   def render_modal(mode, form='form')

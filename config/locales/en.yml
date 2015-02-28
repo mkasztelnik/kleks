@@ -26,6 +26,7 @@ en:
   code_name: CES Summer School
   logout: Logout
   help: Help
+  link: Hyperlink
   sections:
     title: Application elements
     presentation_abstract: Presentation abstract
@@ -84,3 +85,4 @@ en:
   application:
     ready: Application is ready, you can submit it. Please note that after submition <strong>no modification will be allowed.</strong>
     not_ready: Application is <strong>not ready</strong>, fill all required sections
+    submitted: Your application is submitted <strong>sucessfully</strong>

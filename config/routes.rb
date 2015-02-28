@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   resources :publications, only: [:new, :show, :edit, :create, :update, :destroy]
   resources :works
   resource :language, only: [:show, :create, :update]
+
+  post '/submit', to: 'submit#submit', as: :submit
 end

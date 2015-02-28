@@ -2,7 +2,7 @@
   .col-md-8
     %h3
       = t('education.title')
-      - if can?(:create, current_user.educations.build)
+      - if can?(:new, current_user.educations.build)
         .pull-right
           = link_to new_education_path,
                     class: "btn btn-success",

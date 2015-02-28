@@ -4,15 +4,25 @@ class Ability
   def initialize(user)
     user ||= User.new
 
-    can [:create, :show, :update], Profile, { user_id: user.id }
-    can [:create, :show, :update], Motivation, { user_id: user.id }
-    can [:create, :show, :update], Presentation, { user_id: user.id }
-    can [:create, :show, :update], Language, { user_id: user.id }
+    can :read, elements, { user_id: user.id}
 
-    can :manage, Education, { user_id: user.id }
-    can :manage, Conference, { user_id: user.id }
-    can :manage, Other, { user_id: user.id }
-    can :manage, Work, { user_id: user.id }
-    can :manage, Publication, { user_id: user.id }
+    unless user.submitted
+      can [:create, :update], one_to_one_elements, { user_id: user.id }
+      can :manage, one_to_many_elements, { user_id: user.id }
+    end
+  end
+
+  private
+
+  def elements
+    one_to_one_elements + one_to_many_elements
+  end
+
+  def one_to_one_elements
+    [Profile, Motivation, Presentation, Language]
+  end
+
+  def one_to_many_elements
+    [Education, Conference, Other, Work, Publication]
   end
 end

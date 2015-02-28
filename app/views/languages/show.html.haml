@@ -1,37 +1,9 @@
 .row
   .col-md-8
-    = simple_form_for @language,
-                      url: language_path,
-                      html: { class: 'form-horizontal' },
-                      wrapper: :horizontal_form do |f|
-      %h3
-        = t('language.title')
-        %span.pull-right
-          %button.btn.btn-success(type="submit")
-            = icon('save', t('language.save'))
-      %hr
-
-      = f.input :understanding_level
-      = f.input :speaking_level
-      = f.input :writing_level
-
-      = f.input :native
-      %hr
-
-      = f.input :study
-      = f.input :study_program
-      = f.input :study_url
-      %hr
-
-      = f.input :certificate
-      = f.input :certificate_name
-      = f.input :certificate_year
-      = f.input :certificate_score
-      %hr
-
-      = f.input :other
-      = f.input :other_description
-
+    - if can?(:update, @language)
+      = render('form')
+    - else
+      = render('show')
   .col-md-4
     %h3= t('help')
     %hr

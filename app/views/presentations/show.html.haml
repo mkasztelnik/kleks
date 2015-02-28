@@ -1,15 +1,9 @@
 .row
   .col-md-8
-    = simple_form_for @presentation, url: presentation_path do |f|
-      %h3
-        = t('presentation.title')
-        %span.pull-right
-          %button.btn.btn-success(type="submit")
-            = icon('save', t('presentation.save'))
-      %hr
-
-      = f.input :abstract, input_html: { rows: 22 }
-      = f.input :keywords
+    - if can?(:update, @presentation)
+      = render('form')
+    - else
+      = render('show')
 
   .col-md-4
     %h3= t('help')

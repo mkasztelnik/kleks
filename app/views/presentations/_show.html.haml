@@ -1,0 +1,9 @@
+%h3
+  = t('presentation.title')
+%hr
+  %p
+    = @presentation.abstract
+  %p
+    %strong
+      #{t('simple_form.labels.presentation.keywords')}:
+    = @presentation.keywords

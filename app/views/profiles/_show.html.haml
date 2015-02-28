@@ -1,0 +1,69 @@
+%h3
+  = t('profile.title')
+%hr
+
+%table.table.table-hover.table-bordered.show-table
+  %tbody
+    %tr
+      %td= t('simple_form.labels.profile.first_name')
+      %td= @profile.first_name
+    %tr
+      %td= t('simple_form.labels.profile.middle_name')
+      %td= @profile.middle_name
+    %tr
+      %td= t('simple_form.labels.profile.last_name')
+      %td= @profile.last_name
+    %tr
+      %td= t('simple_form.labels.profile.email')
+      %td= @profile.email
+    %tr
+      %td= t('simple_form.labels.profile.date_of_birth')
+      %td= @profile.date_of_birth
+    %tr
+      %td= t('simple_form.labels.profile.place_of_birth')
+      %td= @profile.place_of_birth
+    %tr
+      %td= t('simple_form.labels.profile.country')
+      %td= @profile.country
+    %tr
+      %td= t('simple_form.labels.profile.citizenship')
+      %td= @profile.citizenship
+
+%h4 Address
+%hr
+
+%table.table.table-hover.table-bordered.show-table
+  %tbody
+    %tr
+      %td= t('simple_form.labels.adress.address')
+      %td= @profile.address.address
+    %tr
+      %td= t('simple_form.labels.adress.city')
+      %td= @profile.address.city
+    %tr
+      %td= t('simple_form.labels.adress.country')
+      %td= @profile.address.country
+    %tr
+      %td= t('simple_form.labels.adress.state')
+      %td= @profile.address.state
+    %tr
+      %td= t('simple_form.labels.adress.postcode')
+      %td= @profile.address.postcode
+
+%h4 Passport
+%hr
+
+%table.table.table-hover.table-bordered.show-table
+  %tbody
+    %tr
+      %td= t('simple_form.labels.profile.passport_number')
+      %td= @profile.passport_number
+    %tr
+      %td= t('simple_form.labels.profile.passport_date_of_issue')
+      %td= @profile.passport_date_of_issue
+    %tr
+      %td= t('simple_form.labels.profile.passport_place_of_issue')
+      %td= @profile.passport_place_of_issue
+    %tr
+      %td= t('simple_form.labels.profile.passport_issuing_agency')
+      %td= @profile.passport_issuing_agency
