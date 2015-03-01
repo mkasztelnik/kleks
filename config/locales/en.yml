@@ -90,3 +90,5 @@ en:
     submitted: Your application is submitted sucessfully
     not_ready_html: Application is <strong>not ready</strong>, fill all required sections
     submitted_html: Your application is submitted <strong>sucessfully</strong>
+    submit: Submit your application
+    submit_confirmation: Are you sure you want to submit your application? Please note that after submition no modification will be allowed.

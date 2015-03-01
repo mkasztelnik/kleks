@@ -1,6 +1,8 @@
 %p
-  = link_to submit_path, class: 'btn btn-lg btn-primary', method: :post do
-    = icon('envelope-o', 'Submit your application')
+  = link_to submit_path, method: :post,
+            class: 'btn btn-lg btn-primary',
+            data: { confirm: t('application.submit_confirmation') } do
+    = icon('envelope-o', t('application.submit'))
 
 .alert.alert-info.alert-submit{ role: 'alert' }
   = t('application.ready').html_safe
