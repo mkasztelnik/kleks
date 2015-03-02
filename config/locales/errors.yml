@@ -2,6 +2,10 @@ en:
   activerecord:
     errors:
       models:
+        profile:
+          attributes:
+            date_of_birth:
+              before: You must be older than 18 years
         education:
           attributes:
             end_date:

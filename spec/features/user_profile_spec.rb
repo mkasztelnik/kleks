@@ -12,7 +12,7 @@ RSpec.feature 'User profile' do
 
     fill_in('First name', with: 'John')
     fill_in('Last name', with: 'Doe')
-    fill_in('Date of birth', with: '2013-02-03')
+    fill_in('Date of birth', with: '1995-02-03')
     fill_in('Place of birth', with: 'Lodygowice')
     select('Poland', from: 'profile_country')
     fill_in('Citizenship', with: 'Polish')

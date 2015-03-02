@@ -3,7 +3,9 @@ class Profile < ActiveRecord::Base
 
   validates :date_of_birth,
             presence: true,
-            date: true
+            date: {
+              before: Proc.new { 18.years.ago }
+            }
 
   validates :place_of_birth,
             presence: true
