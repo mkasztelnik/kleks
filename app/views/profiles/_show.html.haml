@@ -59,6 +59,9 @@
 %table.table.table-hover.table-bordered.show-table
   %tbody
     %tr
+      %td= t('simple_form.labels.profile.need_visa')
+      %td #{@profile.need_visa ? t('yes') : t('no')}
+    %tr
       %td= t('simple_form.labels.profile.passport_number')
       %td= @profile.passport_number
     %tr
