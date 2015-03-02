@@ -23,7 +23,7 @@ RSpec.feature 'User profile' do
     fill_in('Place of issue', with: 'Krakow')
     fill_in('Issuing agency', with: 'ABC')
 
-    fill_in('Address', with: '123 str')
+    fill_in('profile_address_attributes_address', with: '123 str')
     fill_in('City', with: 'Cracow')
     select('Poland', from: 'profile_address_attributes_country')
     fill_in('State', with: 'Malopolskie')

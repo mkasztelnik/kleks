@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20150228184244) do
     t.string   "address",    null: false
     t.string   "city",       null: false
     t.string   "country",    null: false
-    t.string   "state",      null: false
+    t.string   "state"
     t.string   "postcode",   null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -93,18 +93,19 @@ ActiveRecord::Schema.define(version: 20150228184244) do
 
   create_table "profiles", force: :cascade do |t|
     t.string   "middle_name"
-    t.date     "date_of_birth",           null: false
-    t.string   "place_of_birth",          null: false
-    t.string   "citizenship",             null: false
-    t.string   "passport_number",         null: false
-    t.date     "passport_date_of_issue",  null: false
-    t.string   "passport_place_of_issue", null: false
-    t.string   "passport_issuing_agency", null: false
-    t.string   "country",                 null: false
-    t.integer  "user_id",                 null: false
-    t.integer  "address_id",              null: false
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.date     "date_of_birth",                           null: false
+    t.string   "place_of_birth",                          null: false
+    t.string   "citizenship",                             null: false
+    t.string   "country",                                 null: false
+    t.boolean  "need_visa",               default: false
+    t.string   "passport_number",                         null: false
+    t.date     "passport_date_of_issue",                  null: false
+    t.string   "passport_place_of_issue",                 null: false
+    t.string   "passport_issuing_agency",                 null: false
+    t.integer  "user_id",                                 null: false
+    t.integer  "address_id",                              null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
   end
 
   create_table "publications", force: :cascade do |t|

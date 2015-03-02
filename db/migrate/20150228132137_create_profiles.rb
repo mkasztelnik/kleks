@@ -5,11 +5,13 @@ class CreateProfiles < ActiveRecord::Migration
       t.date   :date_of_birth,              null: false
       t.string :place_of_birth,             null: false
       t.string :citizenship,                null: false
+      t.string :country,                    null: false
+
+      t.boolean :need_visa,                default: false
       t.string :passport_number,            null: false
       t.date   :passport_date_of_issue,     null: false
       t.string :passport_place_of_issue,    null: false
       t.string :passport_issuing_agency,    null: false
-      t.string :country,                    null: false
 
       t.references :user,                   null: false
       t.references :address,                null: false

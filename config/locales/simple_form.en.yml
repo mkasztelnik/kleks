@@ -12,18 +12,21 @@ en:
       default_message: "Please review the problems below:"
     labels:
       profile:
+        need_visa: I need visa
         passport_number: Number
         passport_date_of_issue: Date of issue
         passport_place_of_issue: Place of issue
         passport_issuing_agency: Issuing agency
         gender: Sex
       motivation:
-        text: "Your motivation"
+        text: "Personal statement"
       language:
         understanding_level: Understanding
         speaking_level: Speaking
         writing_level: Writing
         study_program: Program name
+      address:
+        address: Street & number
     # Examples
     # labels:
     #   defaults:
@@ -36,6 +39,7 @@ en:
     hints:
       profile:
         passport_issuing_agency: "Some hints for issuing agency input"
+      motivation:
     #   defaults:
     #     username: 'User name to sign in.'
     #     password: 'No special characters, please.'

@@ -9,7 +9,7 @@ RSpec.feature 'User motivation' do
     user_sign_in
 
     visit motivation_path
-    fill_in('Your motivation', with: 'ASDF')
+    fill_in('motivation_text', with: 'ASDF')
 
     click_button('Save your motivation')
 

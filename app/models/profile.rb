@@ -14,17 +14,21 @@ class Profile < ActiveRecord::Base
             presence: true
 
   validates :passport_number,
-            presence: true
+            presence: true,
+            if: :need_visa
 
   validates :passport_date_of_issue,
             presence: true,
-            date: true
+            date: true,
+            if: :need_visa
 
   validates :passport_place_of_issue,
-            presence: true
+            presence: true,
+            if: :need_visa
 
   validates :passport_issuing_agency,
-            presence: true
+            presence: true,
+            if: :need_visa
 
   validates :country,
             presence: true
