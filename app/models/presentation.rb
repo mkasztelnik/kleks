@@ -1,4 +1,7 @@
 class Presentation < ActiveRecord::Base
+  validates :title,
+            presence: true
+
   validates :abstract,
             presence: true,
             length: {

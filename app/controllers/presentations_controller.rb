@@ -28,6 +28,6 @@ class PresentationsController < ApplicationController
   end
 
   def presentation_params
-    params.require(:presentation).permit(:abstract, :keywords)
+    params.require(:presentation).permit(:title, :abstract, :keywords)
   end
 end

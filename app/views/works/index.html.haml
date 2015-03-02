@@ -1,24 +1,15 @@
-.row
-  .col-md-8
-    %h3
-      = t('work.title')
-      - if can?(:create, current_user.works.build)
-        .pull-right
-          = link_to new_work_path,
-                    class: "btn btn-success",
-                    data: { toggle: "modal", target: "#ajax-modal" },
-                    remote: true do
-            = icon('plus', t('work.new'))
-    %hr
+%h3
+  = t('work.title')
+  - if can?(:create, current_user.works.build)
+    .pull-right
+      = link_to new_work_path,
+                class: "btn btn-success",
+                data: { toggle: "modal", target: "#ajax-modal" },
+                remote: true do
+        = icon('plus', t('work.new'))
+%hr
 
-    %ul.well-list#works-list
-      - @works.each do |item|
-        - unless item.new_record?
-          = render('item', item: item)
-  .col-md-4
-    %h3= t('help')
-    %hr
-    %ul
-      %li Tips1
-      %li Tips2
-      %li Tips3
+%ul.well-list#works-list
+  - @works.each do |item|
+    - unless item.new_record?
+      = render('item', item: item)

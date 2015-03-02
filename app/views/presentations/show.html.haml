@@ -1,14 +1,4 @@
-.row
-  .col-md-8
-    - if can?(:update, @presentation)
-      = render('form')
-    - else
-      = render('show')
-
-  .col-md-4
-    %h3= t('help')
-    %hr
-    %ul
-      %li Tips1
-      %li Tips2
-      %li Tips3
+- if can?(:update, @presentation)
+  = render('form')
+- else
+  = render('show')

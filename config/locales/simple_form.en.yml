@@ -40,6 +40,10 @@ en:
       profile:
         passport_issuing_agency: "Some hints for issuing agency input"
       motivation:
+        text: 'Maximum numer of characters: 2500.'
+      presentation:
+        abstract: "Maximum numer of characters: 1500"
+        keywords: Maximum 4 keywords separated by comma
     #   defaults:
     #     username: 'User name to sign in.'
     #     password: 'No special characters, please.'

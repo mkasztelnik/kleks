@@ -9,6 +9,7 @@ RSpec.feature 'User presentation' do
     user_sign_in
 
     visit presentation_path
+    fill_in('Title', with: 'presentation title')
     fill_in('Abstract', with: 'ASDF')
     fill_in('Keywords', with: 'a, b, c')
 

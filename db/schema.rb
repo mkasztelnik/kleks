@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(version: 20150228184244) do
   end
 
   create_table "presentations", force: :cascade do |t|
+    t.string   "title",      null: false
     t.text     "abstract",   null: false
     t.string   "keywords",   null: false
     t.integer  "user_id",    null: false

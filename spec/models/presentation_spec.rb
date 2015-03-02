@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Presentation do
+  it { should validate_presence_of :title }
   it { should validate_presence_of :abstract }
   it do
     should validate_length_of(:abstract).

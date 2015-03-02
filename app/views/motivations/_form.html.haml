@@ -6,4 +6,6 @@
         = icon('save', t('motivation.save'))
   %hr
 
-  = f.input :text, input_html: { rows: 36 }
+  %p.help-block= t('help.motivation')
+
+  = f.input :text, input_html: { rows: 19 }

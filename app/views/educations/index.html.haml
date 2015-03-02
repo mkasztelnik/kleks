@@ -1,24 +1,15 @@
-.row
-  .col-md-8
-    %h3
-      = t('education.title')
-      - if can?(:new, current_user.educations.build)
-        .pull-right
-          = link_to new_education_path,
-                    class: "btn btn-success",
-                    data: { toggle: "modal", target: "#ajax-modal" },
-                    remote: true do
-            = icon('plus', t('education.new'))
-    %hr
+%h3
+  = t('education.title')
+  - if can?(:new, current_user.educations.build)
+    .pull-right
+      = link_to new_education_path,
+                class: "btn btn-success",
+                data: { toggle: "modal", target: "#ajax-modal" },
+                remote: true do
+        = icon('plus', t('education.new'))
+%hr
 
-    %ul.well-list#educations-list
-      - @educations.each do |item|
-        - unless item.new_record?
-          = render('item', item: item)
-  .col-md-4
-    %h3= t('help')
-    %hr
-    %ul
-      %li Tips1
-      %li Tips2
-      %li Tips3
+%ul.well-list#educations-list
+  - @educations.each do |item|
+    - unless item.new_record?
+      = render('item', item: item)
