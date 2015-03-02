@@ -10,6 +10,9 @@ class DateIntervalInput < SimpleForm::Inputs::TextInput
       @builder.text_field("end_#{attribute_name}", input_html_options)
     end
   end
+
+  def errors_on_attribute
+    object.errors["start_#{attribute_name}"] +
+      object.errors["end_#{attribute_name}"]
+  end
 end
-
-
