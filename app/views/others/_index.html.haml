@@ -9,6 +9,8 @@
         = icon('plus', t('other.new'))
 %hr
 
+%p.help-block= t('help.other')
+
 %ul.well-list#others-list
   - current_user.others.each do |item|
     - unless item.new_record?

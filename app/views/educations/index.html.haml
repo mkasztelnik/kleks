@@ -9,6 +9,8 @@
         = icon('plus', t('education.new'))
 %hr
 
+%p.help-block= t('help.education')
+
 %ul.well-list#educations-list
   - @educations.each do |item|
     - unless item.new_record?

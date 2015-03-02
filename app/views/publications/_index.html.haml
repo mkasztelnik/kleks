@@ -9,6 +9,8 @@
         = icon('plus', t('publication.new'))
 %hr
 
+%p.help-block= t('help.publication')
+
 %ul.well-list#publications-list
   - current_user.publications.each do |item|
     - unless item.new_record?

@@ -9,6 +9,8 @@
         = icon('plus', t('conference.new'))
 %hr
 
+  %p.help-block= t('help.conference')
+
 %ul.well-list#conferences-list
   - current_user.conferences.each do |item|
     - unless item.new_record?

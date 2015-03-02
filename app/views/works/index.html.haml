@@ -9,6 +9,8 @@
         = icon('plus', t('work.new'))
 %hr
 
+%p.help-block= t('help.work')
+
 %ul.well-list#works-list
   - @works.each do |item|
     - unless item.new_record?
