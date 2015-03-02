@@ -74,8 +74,7 @@ class AjaxController < ApplicationController
   end
 
   def render_errors
-    render json: @item.errors,
-           status: :unprocessable_entity
+    render("layouts/error")
   end
 
   def count_class

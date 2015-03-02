@@ -11,33 +11,7 @@ $(actionBtn).html('<i class="fa fa-edit" /> <%= t("edit") %>');
 $(actionBtn).show();
 $(modal).modal();
 
-$(form).on('ajax:beforeSend', function(evt, xhr, settings) {
-  $("" + form + " div.alert-danger").remove();
-  return console.debug("form before send");
-});
-
 $(form).on('ajax:success', function(evt, data, status, xhr) {
   $(modal).modal('hide');
   return $(content).empty();
-});
-
-$(form).on('ajax:error', function(evt, data, status, xhr) {
-  var err, errorText, errors, key, value;
-  console.debug(data.responseText);
-  errorText = '<div class="alert alert-danger"><ul>';
-  try {
-    errors = $.parseJSON(data.responseText);
-    console.debug(errors);
-  } catch (_error) {
-    err = _error;
-    errors = {
-      message: "Please reload page and try again"
-    };
-  }
-  for (key in errors) {
-    value = errors[key];
-    errorText += "<li>" + value + "</li>";
-  }
-  errorText += '</ul></div>';
-  return $(form).prepend(errorText);
 });
