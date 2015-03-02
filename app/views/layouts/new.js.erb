@@ -6,7 +6,7 @@ var form = "" + content + " form";
 $('.modal-title').html('<%= title %>');
 $(actionBtn).attr('form', 'modal_form');
 $(content).show().html('<%= j render(form) %>');
-$(actionBtn).html('<i class="fa fa-plus" /> <%= t("new") %>');
+$(actionBtn).html('<i class="fa fa-save" /> <%= t("save") %>');
 
 $(actionBtn).show();
 $(modal).modal();

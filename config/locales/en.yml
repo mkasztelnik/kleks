@@ -20,7 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  new: New
+  save: Save
   close: Close
   title: Kleks
   code_name: CES Summer School
