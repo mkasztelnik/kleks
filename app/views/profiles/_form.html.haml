@@ -38,10 +38,11 @@
   %h4 Passport
   %hr
 
-  = f.input :need_visa
-  = f.input :passport_number
-  = f.input :passport_date_of_issue,
-            as: :string,
-            input_html: { data: {behaviour: 'datepicker' } }
-  = f.input :passport_place_of_issue
-  = f.input :passport_issuing_agency
+  = f.input :need_visa, input_html: { 'data-hidden' => 'need-visa' }
+  #need-visa{ class: ('hidden' unless @profile.need_visa) }
+    = f.input :passport_number
+    = f.input :passport_date_of_issue,
+              as: :string,
+              input_html: { data: {behaviour: 'datepicker' } }
+    = f.input :passport_place_of_issue
+    = f.input :passport_issuing_agency

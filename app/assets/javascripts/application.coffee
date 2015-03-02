@@ -64,3 +64,10 @@ $ ->
 
   ## datepicker defaults ##
   $.fn.datepicker.defaults.autoclose = true
+
+  $(document).on 'click', '[data-hidden]', (e)->
+    section = $('#' + $(this).attr('data-hidden'))
+    if this.checked
+      section.removeClass('hidden')
+    else
+      section.addClass('hidden')
