@@ -6,7 +6,27 @@ en:
           attributes:
             end_date:
               after: End date need to be greater than start date
+              not_a_date: wrong date format
+            start_date:
+              not_a_date: wrong date format
         work:
           attributes:
             end_date:
+              not_a_date: wrong date format
               after: End date need to be greater than start date
+            start_date:
+              not_a_date: wrong date format
+        conference:
+          attributes:
+            end_date:
+              not_a_date: wrong date format
+              after: End date need to be greater than start date
+            start_date:
+              not_a_date: wrong date format
+        training:
+          attributes:
+            end_date:
+              not_a_date: wrong date format
+              after: End date need to be greater than start date
+            start_date:
+              not_a_date: wrong date format
