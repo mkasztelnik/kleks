@@ -55,7 +55,7 @@ class AjaxController < ApplicationController
   def render_modal(mode, form='form')
     render("layouts/#{mode}",
            locals: {
-             title: t('education.new'),
+             title: t("#{model_name}.#{mode}"),
              form: form
            })
   end
@@ -83,5 +83,9 @@ class AjaxController < ApplicationController
   end
 
   def application_state
+  end
+
+  def model_name
+    @model_name ||= controller_name.classify.downcase
   end
 end
