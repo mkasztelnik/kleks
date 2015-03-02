@@ -1,4 +1,6 @@
 class Profile < ActiveRecord::Base
+  GENDER_TYPES = %w(Male Female)
+
   validates :date_of_birth,
             presence: true,
             date: true
@@ -31,6 +33,10 @@ class Profile < ActiveRecord::Base
   validates :last_name,
             presence: true
 
+  validates :gender,
+            presence: true,
+            inclusion: { in:  GENDER_TYPES }
+
   belongs_to :user,
              required: true,
              autosave: true
@@ -44,6 +50,7 @@ class Profile < ActiveRecord::Base
 
   delegate :first_name, :first_name=,
            :last_name, :last_name=,
+           :gender, :gender=,
            :email,
            to: :user
 end

@@ -16,6 +16,7 @@ en:
         passport_date_of_issue: Date of issue
         passport_place_of_issue: Place of issue
         passport_issuing_agency: Issuing agency
+        gender: Sex
       motivation:
         text: "Your motivation"
       language:

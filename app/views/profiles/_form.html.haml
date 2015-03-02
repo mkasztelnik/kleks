@@ -17,6 +17,7 @@
 
   %hr
 
+  = f.input :gender, collection: Profile::GENDER_TYPES
   = f.input :date_of_birth,
             as: :string,
             input_html: { data: {behaviour: 'datepicker' } }

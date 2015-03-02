@@ -17,8 +17,7 @@ RSpec.feature 'User profile' do
     select('Poland', from: 'profile_country')
     fill_in('Citizenship', with: 'Polish')
 
-
-
+    select('Male', from: 'Sex')
     fill_in('Number', with: '123')
     fill_in('Date of issue', with: '2014-03-12')
     fill_in('Place of issue', with: 'Krakow')

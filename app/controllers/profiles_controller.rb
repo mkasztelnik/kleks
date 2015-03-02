@@ -29,7 +29,7 @@ class ProfilesController < ApplicationController
 
   def profile_params
     params.require(:profile).
-      permit(:first_name, :last_name, :middle_name,
+      permit(:first_name, :last_name, :middle_name, :gender,
              :date_of_birth, :place_of_birth, :citizenship, :country,
              :passport_number, :passport_date_of_issue,
              :passport_place_of_issue, :passport_issuing_agency,
