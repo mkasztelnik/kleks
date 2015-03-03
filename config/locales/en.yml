@@ -59,6 +59,7 @@ en:
     edit: Edit education
     destroy_confirmation: Are you sure you want to remove this education?
     type_invalid: "%{value} is no a valid education type"
+    help:
   academic:
     title: Academic experience
   publication:

@@ -6,7 +6,12 @@ class Publication < ActiveRecord::Base
             presence: true
 
   validates :year,
-            presence: true
+            presence: true,
+            numericality: {
+              only_integer: true,
+              less_than_or_equal_to: Time.now.year
+            }
+
 
   validates :language,
             presence: true

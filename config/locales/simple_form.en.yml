@@ -27,6 +27,10 @@ en:
         study_program: Program name
       address:
         address: Street & number
+      publication:
+        publication_title: Article/chapter title
+        title: Publication title/journal
+        authors: Author(s)
     # Examples
     # labels:
     #   defaults:
@@ -56,3 +60,10 @@ en:
     # prompts:
     #   defaults:
     #     age: 'Select your age'
+
+  enumerize:
+    education:
+      education_type:
+        ba: BA
+        ma: MA
+        phd: PhD
