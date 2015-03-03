@@ -10,8 +10,7 @@ class ConferencesController < AjaxController
 
   def conference_params
     params.require(:conference).
-      permit(:title, :address, :conference_name,
-             :presentation_type, :start_date, :end_date)
+      permit(:title, :address, :conference_name, :presentation_type, :year)
   end
 
   alias_method :item_params, :conference_params

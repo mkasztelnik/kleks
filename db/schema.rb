@@ -28,11 +28,10 @@ ActiveRecord::Schema.define(version: 20150228184244) do
 
   create_table "conferences", force: :cascade do |t|
     t.text     "title",             null: false
-    t.text     "address",           null: false
+    t.string   "country",           null: false
     t.string   "conference_name",   null: false
     t.string   "presentation_type", null: false
-    t.date     "start_date",        null: false
-    t.date     "end_date",          null: false
+    t.integer  "year",              null: false
     t.integer  "user_id",           null: false
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false

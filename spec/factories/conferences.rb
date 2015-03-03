@@ -1,11 +1,10 @@
 FactoryGirl.define do
   factory :conference do
     title { Faker::Lorem.sentence }
-    address { Faker::Address.street_address }
+    country { Faker::Address.country }
     conference_name { Faker::Lorem.sentence }
     presentation_type :oral
-    start_date { 1.day.ago }
-    end_date { Time.now }
+    year { Time.now.year }
 
     user
   end

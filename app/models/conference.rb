@@ -6,7 +6,7 @@ class Conference < ActiveRecord::Base
   validates :title,
             presence: true
 
-  validates :address,
+  validates :country,
             presence: true
 
   validates :conference_name,
@@ -16,13 +16,12 @@ class Conference < ActiveRecord::Base
             presence: true,
             inclusion: { in:  PRESENTATION_TYPES }
 
-  validates :start_date,
+  validates :year,
             presence: true,
-            date: true
-
-  validates :end_date,
-            presence: true,
-            date: { after: :start_date }
+            numericality: {
+              only_integer: true,
+              less_than_or_equal_to: Time.now.year
+            }
 
   belongs_to :user
 

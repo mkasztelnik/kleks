@@ -31,6 +31,8 @@ en:
         publication_title: Article/chapter title
         title: Publication title/journal
         authors: Author(s)
+      conference:
+        title: Presentation/ poster title
     # Examples
     # labels:
     #   defaults:
@@ -67,3 +69,7 @@ en:
         ba: BA
         ma: MA
         phd: PhD
+    conference:
+      presentation_type:
+        oral: Presentation
+        poster: Poster
