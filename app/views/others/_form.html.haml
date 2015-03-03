@@ -1,5 +1,7 @@
 = simple_form_for @other,
-                  html: { class: 'form-horizontal', role: 'form', id: 'modal_form' },
+                  html: { role: 'form', id: 'modal_form' },
                   remote: true,
                   wrapper: :horizontal_form do |f|
-  = f.input :title
+  .form-group
+    = f.input_field :title, class: 'form-control', rows: 4
+
