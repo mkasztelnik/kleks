@@ -12,10 +12,6 @@ class Publication < ActiveRecord::Base
               less_than_or_equal_to: Time.now.year
             }
 
-
-  validates :language,
-            presence: true
-
   validates :user,
             presence: true
 

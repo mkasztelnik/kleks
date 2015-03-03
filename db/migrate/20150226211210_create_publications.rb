@@ -5,7 +5,7 @@ class CreatePublications < ActiveRecord::Migration
       t.text :publication_title,  null: false
       t.string :authors,          null: false
       t.integer :year,            null: false
-      t.string :language,         null: false
+      t.string :language
       t.string :publisher
 
       t.references :user,         null: false

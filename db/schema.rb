@@ -113,7 +113,7 @@ ActiveRecord::Schema.define(version: 20150228184244) do
     t.text     "publication_title", null: false
     t.string   "authors",           null: false
     t.integer  "year",              null: false
-    t.string   "language",          null: false
+    t.string   "language"
     t.string   "publisher"
     t.integer  "user_id",           null: false
     t.datetime "created_at",        null: false
