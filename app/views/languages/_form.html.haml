@@ -20,7 +20,7 @@
 
   = f.input :study, input_html: { 'data-hidden' => 'study-section' }
   #study-section{ class: ('hidden' unless @language.study) }
-    = f.input :study_program
+    = f.input :study_program, as: :text, input_html: { rows: 2 }
     = f.input :study_url
   %hr
 

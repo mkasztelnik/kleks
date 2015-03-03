@@ -30,6 +30,10 @@ class Language < ActiveRecord::Base
 
   validates :certificate_year,
             presence: true,
+            numericality: {
+              only_integer: true,
+              less_than_or_equal_to: Time.now.year
+            },
             if: :certificate
 
   validates :certificate_score,

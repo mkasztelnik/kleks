@@ -26,6 +26,7 @@ en:
         writing_level: Writing
         study_program: Program name
         study: "English is not my native language, but I have completed a University-level degree taught entirely in English"
+        study_url: Programme website url
       address:
         address: Street & number
       publication:
