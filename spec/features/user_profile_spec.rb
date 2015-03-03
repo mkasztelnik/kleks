@@ -18,10 +18,10 @@ RSpec.feature 'User profile' do
     fill_in('Citizenship', with: 'Polish')
 
     select('Male', from: 'Sex')
-    fill_in('Number', with: '123')
-    fill_in('Date of issue', with: '2014-03-12')
-    fill_in('Place of issue', with: 'Krakow')
-    fill_in('Issuing agency', with: 'ABC')
+    fill_in('Passport number', with: '123')
+    fill_in('Passport date of issue', with: '2014-03-12')
+    fill_in('Passport place of issue', with: 'Krakow')
+    fill_in('Passport issuing agency', with: 'ABC')
 
     fill_in('profile_address_attributes_address', with: '123 str')
     fill_in('City', with: 'Cracow')
