@@ -1,1 +1,6 @@
 $('#modal-body').html('<%= j render("form") %>');
+
+$(form).on('ajax:success', function(evt, data, status, xhr) {
+  $(modal).modal('hide');
+  return $(content).empty();
+});
