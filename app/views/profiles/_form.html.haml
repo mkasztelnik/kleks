@@ -25,7 +25,7 @@
   = f.input :country
   = f.input :citizenship
 
-  %h4 Address
+  %h4= t('profile.address')
   %hr
 
   = f.simple_fields_for :address do |address|
@@ -39,6 +39,7 @@
 
   = f.input :need_visa, input_html: { 'data-hidden' => 'need-visa' }
   #need-visa{ class: ('hidden' unless @profile.need_visa) }
+    %p.help-block= t('profile.visa_description')
     = f.input :passport_number
     = f.input :passport_date_of_issue,
               as: :string,

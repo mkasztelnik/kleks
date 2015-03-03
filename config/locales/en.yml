@@ -38,6 +38,8 @@ en:
     save: Save personal data
     saved: Personal data has been sucessfully saved
     errors: There are errors in your personal data, please correct them and save again
+    address: Coresspondence adress
+    visa_description: In case you will need a visa to participate in the Summer School please include data below which will be used fot the invitation letter
   motivation:
     title: Motivation
     save: Save your motivation
@@ -98,3 +100,4 @@ en:
     submitted_html: Your application is submitted <strong>sucessfully</strong>
     submit: Submit your application
     submit_confirmation: Are you sure you want to submit your application? Please note that after submition no modification will be allowed.
+    can_change_until_submit: Until the closing date for submissions (4 May 2015, 23:30 CET), you can update your details. The last uploaded version must be submitted before the deadline – otherwise it will not be considered for review.
