@@ -27,10 +27,13 @@
       %td= @profile.place_of_birth
     %tr
       %td= t('simple_form.labels.profile.country')
-      %td= @profile.country
+      %td= @profile.country_name
     %tr
       %td= t('simple_form.labels.profile.citizenship')
       %td= @profile.citizenship
+    %tr
+      %td= t('simple_form.labels.profile.need_visa')
+      %td #{@profile.need_visa ? t('yes') : t('no')}
 
 %h4 Address
 %hr
@@ -53,23 +56,21 @@
       %td= t('simple_form.labels.adress.postcode')
       %td= @profile.address.postcode
 
-%h4 Passport
-%hr
+- if @profile.need_visa
+  %h4 Passport
+  %hr
 
-%table.table.table-hover.table-bordered.show-table
-  %tbody
-    %tr
-      %td= t('simple_form.labels.profile.need_visa')
-      %td #{@profile.need_visa ? t('yes') : t('no')}
-    %tr
-      %td= t('simple_form.labels.profile.passport_number')
-      %td= @profile.passport_number
-    %tr
-      %td= t('simple_form.labels.profile.passport_date_of_issue')
-      %td= @profile.passport_date_of_issue
-    %tr
-      %td= t('simple_form.labels.profile.passport_place_of_issue')
-      %td= @profile.passport_place_of_issue
-    %tr
-      %td= t('simple_form.labels.profile.passport_issuing_agency')
-      %td= @profile.passport_issuing_agency
+  %table.table.table-hover.table-bordered.show-table
+    %tbody
+      %tr
+        %td= t('simple_form.labels.profile.passport_number')
+        %td= @profile.passport_number
+      %tr
+        %td= t('simple_form.labels.profile.passport_date_of_issue')
+        %td= @profile.passport_date_of_issue
+      %tr
+        %td= t('simple_form.labels.profile.passport_place_of_issue')
+        %td= @profile.passport_place_of_issue
+      %tr
+        %td= t('simple_form.labels.profile.passport_issuing_agency')
+        %td= @profile.passport_issuing_agency

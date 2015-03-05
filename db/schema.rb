@@ -98,10 +98,10 @@ ActiveRecord::Schema.define(version: 20150228184244) do
     t.string   "citizenship",                             null: false
     t.string   "country",                                 null: false
     t.boolean  "need_visa",               default: false
-    t.string   "passport_number",                         null: false
-    t.date     "passport_date_of_issue",                  null: false
-    t.string   "passport_place_of_issue",                 null: false
-    t.string   "passport_issuing_agency",                 null: false
+    t.string   "passport_number"
+    t.date     "passport_date_of_issue"
+    t.string   "passport_place_of_issue"
+    t.string   "passport_issuing_agency"
     t.integer  "user_id",                                 null: false
     t.integer  "address_id",                              null: false
     t.datetime "created_at",                              null: false

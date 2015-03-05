@@ -1,4 +1,6 @@
 class Profile < ActiveRecord::Base
+  include Countryable
+
   GENDER_TYPES = %w(Male Female)
 
   validates :date_of_birth,

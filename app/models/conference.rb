@@ -1,5 +1,6 @@
 class Conference < ActiveRecord::Base
   extend Enumerize
+  include Countryable
 
   PRESENTATION_TYPES = %w(oral poster)
 
