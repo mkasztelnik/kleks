@@ -6,7 +6,8 @@ class Ability
 
     can :read, elements, { user_id: user.id}
 
-    unless user.submitted
+    unless user.submitted || !Kleks.open?
+      can :submit, User
       can [:create, :update], one_to_one_elements, { user_id: user.id }
       can :manage, one_to_many_elements, { user_id: user.id }
     end

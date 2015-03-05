@@ -35,4 +35,8 @@ module Kleks
 
     config.close_time = Time.parse(config.constants['close_time'])
   end
+
+  def self.open?
+    Rails.configuration.close_time > Time.now
+  end
 end

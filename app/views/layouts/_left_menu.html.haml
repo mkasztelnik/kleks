@@ -41,9 +41,5 @@
       = check_if_ready(current_user.language)
 
 %hr
-#submit
-  - if can?(:submit, current_user)
-    = render('layouts/submit')
-  - else
-    .alert.alert-danger.alert-submit{ role: 'alert' }
-      = t('application.submission_closed', close_date: close_human_date).html_safe
+
+= render('layouts/submit')
