@@ -19,6 +19,8 @@
 #= require bootstrap-datepicker
 #= require nprogress
 #= require nprogress-turbolinks
+#=require jquery.cookie
+#=require jquery.cookiecuttr
 #= require_tree .
 
 $ ->
@@ -71,3 +73,10 @@ $ ->
       section.removeClass('hidden')
     else
       section.addClass('hidden')
+
+  $.cookieCuttr
+    cookieNotificationLocationBottom: true,
+    cookieAnalytics: false,
+    cookiePolicyLink: 'http://www.allaboutcookies.org',
+    cookieAcceptButtonText: 'OK',
+    cookieMessage: 'We use cookies on this website, you can <a href="{{cookiePolicyLink}}" title="read about our cookies">read about them here</a>'
