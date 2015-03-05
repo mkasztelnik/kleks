@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'profiles#show'
+  root 'generals#show'
 
   devise_for :users,
              controllers: {
