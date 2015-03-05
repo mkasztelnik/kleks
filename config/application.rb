@@ -32,5 +32,7 @@ module Kleks
     config.active_record.raise_in_transactional_callbacks = true
 
     config.constants = config_for(:application)
+
+    config.close_time = Time.parse(config.constants['close_time'])
   end
 end

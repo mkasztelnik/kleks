@@ -1,0 +1,10 @@
+-if current_user.submitted
+  .alert.alert-success.alert-submit{ role: 'alert' }
+    = t('application.submitted_html').html_safe
+- else
+  - if current_user.application_ready?
+    = render('layouts/application_ready')
+  - else
+    = render('layouts/application_not_ready')
+  .alert.alert-info.alert-submit{ role: 'alert' }
+    = t('application.can_change_until_submit', close_date: close_human_date)

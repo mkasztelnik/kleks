@@ -108,4 +108,5 @@ en:
     submitted_html: Your application is submitted <strong>sucessfully</strong>
     submit: Submit your application
     submit_confirmation: Are you sure you want to submit your application? Please note that after submition no modification will be allowed.
-    can_change_until_submit: Until the closing date for submissions (4 May 2015, 23:30 CET), you can update your details. The last uploaded version must be submitted before the deadline – otherwise it will not be considered for review.
+    can_change_until_submit: "Until the closing date for submissions (%{close_date}), you can update your details. The last uploaded version must be submitted before the deadline – otherwise it will not be considered for review."
+    submission_closed: Application submission is closed since the deadline has passed on <strong>%{close_date}</strong>. Your application was <strong>not submitted</strong>.
