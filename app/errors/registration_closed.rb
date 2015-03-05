@@ -1,0 +1,2 @@
+class RegistrationClosed < StandardError
+end

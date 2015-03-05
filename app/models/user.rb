@@ -26,6 +26,8 @@ class User < ActiveRecord::Base
 
   def self.from_omniauth(auth)
     where(email: auth.info.email).first_or_create do |user|
+      raise RegistrationClosed if user.new_record? && !Kleks.open?
+
       user.provider = auth.provider
       user.uid = auth.uid
       user.first_name = auth.info.first_name || auth.info.given_name

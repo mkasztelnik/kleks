@@ -10,6 +10,11 @@ class ApplicationController < ActionController::Base
     redirect_to root_url, alert: exception.message
   end
 
+  rescue_from RegistrationClosed do
+    redirect_to(new_user_session_path,
+                alert: I18n.t('devise.registrations.closed'))
+  end
+
   protected
 
   def configure_permitted_parameters

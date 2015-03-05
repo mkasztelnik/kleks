@@ -1,13 +1,6 @@
 module Users
   class RegistrationsController < Devise::RegistrationsController
-
-    def new
-      autorize_open! && super
-    end
-
-    def create
-      autorize_open! && super
-    end
+    before_action :authorize_open!
 
     def after_sign_up_path_for(_resource)
       new_user_session_path
@@ -19,14 +12,8 @@ module Users
 
     private
 
-    def autorize_open!
-      unless Kleks.open?
-        redirect_to(new_user_session_path,
-                    alert: I18n.t('devise.registrations.closed'))
-        false
-      else
-        true
-      end
+    def authorize_open!
+      raise RegistrationClosed unless Kleks.open?
     end
 
     def sign_up_params
