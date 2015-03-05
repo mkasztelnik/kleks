@@ -11,6 +11,8 @@ en:
     error_notification:
       default_message: "Please review the problems below:"
     labels:
+      general:
+        accept: I certify that all of the information provided in this application package is complete and accurate.
       profile:
         need_visa: I need visa
         passport_number: Passport number

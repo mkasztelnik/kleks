@@ -33,6 +33,13 @@ en:
     education: Education
     academic_experience: Academic experience
     relevant: Relevant work experience
+  general:
+    title: General
+    save: Save general information
+    saved: General information has been successfully saved
+    errors: There are errors in you general information, please correct them and save again
+    accept_conditions: Some text about policy, etc.
+    how_hear: How did your hear about the summer school?
   profile:
     title: Personal data
     save: Save personal data

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150228184244) do
+ActiveRecord::Schema.define(version: 20150305093644) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,13 @@ ActiveRecord::Schema.define(version: 20150228184244) do
     t.integer  "user_id",         null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "generals", force: :cascade do |t|
+    t.boolean  "accept"
+    t.integer  "user_id",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "languages", force: :cascade do |t|
@@ -175,6 +182,7 @@ ActiveRecord::Schema.define(version: 20150228184244) do
   add_foreign_key "conferences", "users"
   add_foreign_key "educations", "users"
   add_foreign_key "educations", "users"
+  add_foreign_key "generals", "users"
   add_foreign_key "languages", "users"
   add_foreign_key "motivations", "users"
   add_foreign_key "motivations", "users"

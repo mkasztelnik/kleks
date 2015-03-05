@@ -7,6 +7,7 @@ Rails.application.routes.draw do
                 registrations: 'users/registrations'
               }
 
+  resource :general, only: [:show, :create, :update]
   resource :profile, only: [:show, :create, :update]
   resource :motivation, only: [:show, :create, :update]
   resource :presentation, only: [:show, :create, :update]

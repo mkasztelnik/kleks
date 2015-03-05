@@ -3,6 +3,10 @@
 %hr
 
 %ul.nav.nav-pills.nav-stacked
+  = nav_link(controller: :generals) do
+    = link_to general_path do
+      = t('general.title')
+      = check_if_ready(current_user.general)
   = nav_link(controller: :profiles) do
     = link_to profile_path do
       = t('profile.title')

@@ -19,7 +19,7 @@ class Ability
   end
 
   def one_to_one_elements
-    [Profile, Motivation, Presentation, Language]
+    [General, Profile, Motivation, Presentation, Language]
   end
 
   def one_to_many_elements

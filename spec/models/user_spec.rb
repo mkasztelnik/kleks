@@ -4,6 +4,7 @@ RSpec.describe User do
   it { should validate_presence_of :first_name }
   it { should validate_presence_of :last_name }
 
+  it { should have_one(:general).dependent(:destroy) }
   it { should have_one(:profile).dependent(:destroy) }
   it { should have_one(:motivation).dependent(:destroy) }
   it { should have_one(:presentation).dependent(:destroy) }

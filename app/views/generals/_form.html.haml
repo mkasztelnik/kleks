@@ -1,0 +1,18 @@
+= simple_form_for @general,
+                  url: general_path,
+                  html: { class: 'form-horizontal' },
+                  wrapper: :horizontal_form do |f|
+  %h3
+    = t('general.title')
+    %span.pull-right
+      %button.btn.btn-success(type="submit")
+        = icon('save', t('general.save'))
+  %hr
+
+  %p.help-block= t('general.accept_conditions')
+  = f.input :accept
+
+  %h4.form-header= t('general.how_hear')
+  %hr
+
+  %p Please give me possible answers

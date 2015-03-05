@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   validates :first_name, presence: true
   validates :last_name, presence: true
 
+  has_one  :general,      dependent: :destroy
   has_one  :profile,      dependent: :destroy
   has_one  :motivation,   dependent: :destroy
   has_one  :presentation, dependent: :destroy
@@ -45,7 +46,11 @@ class User < ActiveRecord::Base
   end
 
   def application_ready?
-    profile && motivation && presentation &&
-      language && educations.count > 0
+    ready?(general) && ready?(profile) && ready?(motivation) &&
+      ready?(presentation) && language && educations.count > 0
+  end
+
+  def ready?(element)
+    element && !element.new_record?
   end
 end
