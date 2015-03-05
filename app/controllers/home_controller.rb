@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
-  def index
+  def show
+    redirect_to general_path
   end
 end
