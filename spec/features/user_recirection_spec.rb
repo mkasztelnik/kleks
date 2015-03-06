@@ -11,4 +11,12 @@ RSpec.feature 'User redirection' do
 
     expect(page.current_path).to eq general_path
   end
+
+  scenario 'reviewer is redirected into users list' do
+    sign_in_as(create(:user, reviewer: true).tap { |u| u.confirm! })
+
+    visit root_path
+
+    expect(page.current_path).to eq users_path
+  end
 end

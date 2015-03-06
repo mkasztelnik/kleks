@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305093644) do
+ActiveRecord::Schema.define(version: 20150306124241) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -127,6 +127,21 @@ ActiveRecord::Schema.define(version: 20150305093644) do
     t.datetime "updated_at",        null: false
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "user_id",            null: false
+    t.integer  "reviewer_id",        null: false
+    t.integer  "general_score"
+    t.integer  "profile_score"
+    t.integer  "motivation_score"
+    t.integer  "presentation_score"
+    t.integer  "education_score"
+    t.integer  "academic_score"
+    t.integer  "work_score"
+    t.integer  "language_score"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
   create_table "trainings", force: :cascade do |t|
     t.string   "title"
     t.string   "institution",       null: false
@@ -161,6 +176,7 @@ ActiveRecord::Schema.define(version: 20150305093644) do
     t.string   "gender"
     t.string   "image"
     t.boolean  "submitted",              default: false
+    t.boolean  "reviewer",               default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -191,5 +207,7 @@ ActiveRecord::Schema.define(version: 20150305093644) do
   add_foreign_key "profiles", "addresses"
   add_foreign_key "profiles", "users"
   add_foreign_key "publications", "users"
+  add_foreign_key "reviews", "users"
+  add_foreign_key "reviews", "users", column: "reviewer_id"
   add_foreign_key "trainings", "users"
 end

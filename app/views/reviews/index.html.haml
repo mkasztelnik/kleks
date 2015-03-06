@@ -1,0 +1,23 @@
+= simple_form_for Review.new, url: reviews_path do |f|
+
+  %h3
+    = t('reviews.title')
+    %span.pull-right
+      %button.btn.btn-success(type="submit")
+        = icon('save', t('reviews.save'))
+  %hr
+
+  %table.table.table-bordered
+    %thead
+      %tr
+        %th
+        - @reviewers.each do |reviewer|
+          %th= reviewer.name
+    %tbody
+      - @applicants.each do |applicant|
+        %tr
+          %th= applicant.name
+          - existing_reviewers = @existing_reviewers_hsh[applicant.id]
+          - @reviewers.each do |reviewer|
+            %th
+              %input{ type: :checkbox, name: "reviews[#{applicant.id}][]", value: reviewer.id, checked: existing_reviewers.include?(reviewer.id)}

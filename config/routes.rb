@@ -21,4 +21,6 @@ Rails.application.routes.draw do
   resource :language, only: [:show, :create, :update]
 
   post '/submit', to: 'submit#submit', as: :submit
+
+  resources :reviews
 end

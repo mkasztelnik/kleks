@@ -39,6 +39,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :image
 
       t.boolean :submitted, default: false
+      t.boolean :reviewer, default: false
 
       t.timestamps
     end

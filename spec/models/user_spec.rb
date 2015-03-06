@@ -15,6 +15,7 @@ RSpec.describe User do
   it { should have_many(:works).dependent(:destroy) }
   it { should have_many(:publications).dependent(:destroy) }
   it { should have_many(:trainings).dependent(:destroy) }
+  it { should have_many(:reviews).dependent(:destroy) }
 
   it 'creates new user while logging using omniauth' do
       expect { User.from_omniauth(auth) }.to change { User.count }.by(1)

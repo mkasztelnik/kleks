@@ -24,6 +24,17 @@ class User < ActiveRecord::Base
   has_many :publications, dependent: :destroy
   has_many :trainings,    dependent: :destroy
 
+  has_many :reviews,
+           dependent: :destroy
+
+  has_many :application_reviews,
+           dependent: :nullify,
+           class_name: 'Review',
+           foreign_key: 'reviewer_id'
+
+  scope :applicants, -> { where(reviewer: false) }
+  scope :reviewers, -> { where(reviewer: true) }
+
   def self.from_omniauth(auth)
     where(email: auth.info.email).first_or_create do |user|
       raise RegistrationClosed if user.new_record? && !Kleks.open?

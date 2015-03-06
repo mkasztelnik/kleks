@@ -1,0 +1,12 @@
+!!! 5
+%html
+  = render 'layouts/head'
+  %body
+    = render 'layouts/reviewer_navbar'
+    .container
+      = yield
+      #push
+    = render 'layouts/modal'
+    = render 'layouts/footer'
+    = render 'layouts/google_analytics'
+
