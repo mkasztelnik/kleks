@@ -1,6 +1,9 @@
 class Training < ActiveRecord::Base
   include Countryable
 
+  validates :title,
+            presence: true
+
   validates :institution,
             presence: true
 

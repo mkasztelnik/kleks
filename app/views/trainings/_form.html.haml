@@ -2,6 +2,7 @@
                   html: { class: 'form-horizontal', role: 'form', id: 'modal_form' },
                   remote: true,
                   wrapper: :horizontal_form do |f|
+  = f.input :title
   = f.input :gained_experience, input_html: { rows: 5 }
   = f.input :institution
   = f.input :country

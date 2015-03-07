@@ -1,6 +1,7 @@
 class CreateTrainings < ActiveRecord::Migration
   def change
     create_table :trainings do |t|
+      t.string :title
       t.string :institution, null: false
       t.text :gained_experience, null: false
       t.date :start_date, null: false

@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Training do
+  it { should validate_presence_of :title }
   it { should validate_presence_of :institution }
   it { should validate_presence_of :gained_experience }
   it { should validate_presence_of :start_date }

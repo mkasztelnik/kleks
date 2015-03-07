@@ -128,6 +128,7 @@ ActiveRecord::Schema.define(version: 20150305093644) do
   end
 
   create_table "trainings", force: :cascade do |t|
+    t.string   "title"
     t.string   "institution",       null: false
     t.text     "gained_experience", null: false
     t.date     "start_date",        null: false
