@@ -46,3 +46,8 @@
               input_html: { data: {behaviour: 'datepicker' } }
     = f.input :passport_place_of_issue
     = f.input :passport_issuing_agency
+
+  .bottom-buttons
+    %span.pull-right
+      %button.btn.btn-success(type="submit")
+        = icon('save', t('profile.save'))
