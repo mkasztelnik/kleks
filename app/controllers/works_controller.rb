@@ -3,6 +3,7 @@ class WorksController < AjaxController
   before_action :set_item, except: [:index]
 
   def index
+    @works = @works.order(:start_date, :end_date)
   end
 
   def set_item
