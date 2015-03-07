@@ -13,7 +13,7 @@ class Training < ActiveRecord::Base
 
   validates :end_date,
             presence: true,
-            date: { after: :start_date }
+            date: { after_or_equal_to: :start_date }
 
   belongs_to :user,
              required: true
