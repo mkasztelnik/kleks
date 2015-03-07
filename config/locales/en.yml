@@ -46,7 +46,7 @@ en:
     saved: Personal data has been sucessfully saved
     errors: There are errors in your personal data, please correct them and save again
     address: Coresspondence adress
-    visa_description: In case you will need a visa to participate in the Summer School please include data below which will be used fot the invitation letter
+    visa_description: In case you will need a visa to participate in the Summer School please include data below which will be used for the invitation letter
   motivation:
     title: Motivation
     save: Save your motivation

@@ -11,6 +11,8 @@ en:
     error_notification:
       default_message: "Please review the problems below:"
     labels:
+      defaults:
+        date: Dates
       general:
         accept: I certify that all of the information provided in this application package is complete and accurate.
       profile:
@@ -27,7 +29,7 @@ en:
         speaking_level: Speaking
         writing_level: Writing
         study_program: Program name
-        study: "English is not my native language, but I have completed a University-level degree taught entirely in English"
+        study: 'English is not my native language, but I have completed a University-level degree taught <span class="very-important">entirely</span> in English'
         study_url: Programme website url
       address:
         address: Street & number
@@ -52,7 +54,7 @@ en:
       motivation:
         text: 'Maximum numer of characters: 2500.'
       presentation:
-        abstract: "Maximum numer of characters: 1500"
+        abstract: "Maximum number of characters: 1500"
         keywords: Maximum 4 keywords separated by comma
     #   defaults:
     #     username: 'User name to sign in.'
