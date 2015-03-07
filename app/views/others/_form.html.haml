@@ -3,5 +3,5 @@
                   remote: true,
                   wrapper: :horizontal_form do |f|
   .form-group
-    = f.input_field :title, class: 'form-control', rows: 4
+    = f.input :title, wrapper: :without_label, input_html: { rows: 4 }
 

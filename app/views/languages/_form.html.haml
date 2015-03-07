@@ -34,5 +34,4 @@
 
   = f.input :other, input_html: { 'data-hidden' => 'other-section' }
   #other-section{ class: ('hidden' unless @language.other) }
-    .form-group
-      = f.input_field :other_description, class: 'form-control raw-element', rows: 4
+    = f.input :other_description, wrapper: :without_label, input_html: { rows: 4 }
