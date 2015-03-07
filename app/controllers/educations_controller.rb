@@ -3,6 +3,7 @@ class EducationsController < AjaxController
   before_action :set_item, except: [:index]
 
   def index
+    @educations = @educations.order(:start_date, :end_date)
   end
 
   private
