@@ -29,7 +29,7 @@ RSpec.feature 'User profile' do
     fill_in('State', with: 'Malopolskie')
     fill_in('Postcode', with: '12-345')
 
-    click_button('Save personal data')
+    click_button('profile-submit')
 
     expect(page).to have_content 'sucessfully saved'
     expect_ready(page, 'profile')
