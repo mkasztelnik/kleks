@@ -5,7 +5,6 @@ RSpec.describe Work do
   it { should validate_presence_of :responsibility }
   it { should validate_presence_of :country }
   it { should validate_presence_of :start_date }
-  it { should validate_presence_of :end_date }
   it { should validate_presence_of :user }
 
   it 'validates start and end dates interval' do

@@ -15,7 +15,6 @@ class Work < ActiveRecord::Base
             date: true
 
   validates :end_date,
-            presence: true,
             date: { after: :start_date }
 
   belongs_to :user,
