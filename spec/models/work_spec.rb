@@ -12,6 +12,12 @@ RSpec.describe Work do
                  start_date: Time.now,
                  end_date: 1.day.ago)
 
-    expect(work.valid?).to be_falsy
+    expect(work).to_not be_valid
+  end
+
+  it 'dont need end date' do
+    work = build(:work, end_date: nil)
+
+    expect(work).to be_valid
   end
 end

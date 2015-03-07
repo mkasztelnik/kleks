@@ -15,12 +15,16 @@ class Work < ActiveRecord::Base
             date: true
 
   validates :end_date,
-            date: { after: :start_date }
+            date: { after: :start_date },
+            if: :end_date
 
   belongs_to :user,
              required: true
 
   def title
-    "#{institution} in #{country_name} from #{start_date} to #{end_date}"
+    title = "#{institution} in #{country_name} from #{start_date}"
+    title = "#{title} to #{end_date}" if end_date
+
+    title
   end
 end
