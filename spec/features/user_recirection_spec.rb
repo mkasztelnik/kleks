@@ -17,6 +17,6 @@ RSpec.feature 'User redirection' do
 
     visit root_path
 
-    expect(page.current_path).to eq users_path
+    expect(page.current_path).to eq reviews_path
   end
 end
