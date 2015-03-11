@@ -76,30 +76,35 @@ en:
     edit: Edit publication
     destroy_confirmation: Are you sure you want to remove this publication?
     empty: No publication given
+    show: Publication
   conference:
     title: Conferences
     new: Add new conference
     edit: Edit conference
     destroy_confirmation: Are you sure you want to remove this conference?
     empty: No conference given
+    show: Conference
   training:
     title: Trainings
     new: Add new training
     edit: Edit training
     destroy_confirmation: Are you sure you want to remove this training?
     empty: No training given
+    show: Training
   other:
     title: Others
     new: Add other academic experience
     edit: Edit other academic experience
     destroy_confirmation: Are you sure you want to remove this academic experience?
     empty: No other academic experience given
+    show: Other academic experience
   work:
     title: Relevant work experience
     new: Add new work experience
     edit: Edit work experience
     destroy_confirmation: Are you sure you want to remove this work experience?
     empty : No relevant work experience given
+    show: Relevant work experience
   language:
     title: English language
     save: Save information about english language
