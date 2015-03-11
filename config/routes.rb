@@ -22,5 +22,16 @@ Rails.application.routes.draw do
 
   post '/submit', to: 'submit#submit', as: :submit
 
-  resources :reviews
+  resources :reviews, only: [:index, :show, :create] do
+    scope module: :review_process do
+      resource :general, only: :show
+      resource :profile, only: :show
+      resource :motivation, only: :show
+      resource :presentation, only: :show
+      resources :educations, only: :index
+      resources :academics, only: :index
+      resources :works, only: :index
+      resource :language, only: :show
+    end
+  end
 end

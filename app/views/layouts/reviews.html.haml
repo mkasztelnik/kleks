@@ -4,12 +4,10 @@
   %body
     = render 'layouts/reviewer_navbar'
     .container
-      .row
-        .col-md-3
-          = render('layouts/review_left_menu')
-        .col-md-9
-          = render 'layouts/flash'
-          = yield
+      = render 'layouts/flash'
+      = yield
       #push
     = render 'layouts/modal'
     = render 'layouts/footer'
+    = render 'layouts/google_analytics'
+

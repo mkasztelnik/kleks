@@ -1,0 +1,34 @@
+%h3
+  = t('publication.title')
+%hr
+
+%ul.well-list
+  - @review.publications.each do |item|
+    = render('publications/item', item: item)
+
+
+%h3
+  = t('academic.conferences')
+%hr
+
+%ul.well-list
+  - @review.conferences.each do |item|
+    = render('conferences/item', item: item)
+
+
+%h3
+  = t('academic.trainings')
+%hr
+
+%ul.well-list
+  - @review.trainings.each do |item|
+    = render('trainings/item', item: item)
+
+
+%h3
+  = t('academic.others')
+%hr
+
+%ul.well-list
+  - @review.others.each do |item|
+    = render('others/item', item: item)

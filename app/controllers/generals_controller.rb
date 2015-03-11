@@ -21,8 +21,6 @@ class GeneralsController < ApplicationController
     if @general.update_attributes(general_params)
       redirect_to general_path, notice: I18n.t('general.saved')
     else
-      puts ">>>>>>>>>>>> #{@general.accept}"
-      puts ">>>>>>>>>>>> #{@general.errors.to_json}"
       flash.now[:alert] = I18n.t('general.errors')
       render action: 'show'
     end

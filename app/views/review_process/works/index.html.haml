@@ -1,0 +1,7 @@
+%h3
+  = t('work.title')
+%hr
+
+%ul.well-list
+  - @works.each do |item|
+    = render('works/item', item: item)

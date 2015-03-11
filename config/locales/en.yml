@@ -64,6 +64,7 @@ en:
     title: Education
     new: Add new education
     edit: Edit education
+    show: Education
     destroy_confirmation: Are you sure you want to remove this education?
     type_invalid: "%{value} is no a valid education type"
     help:
@@ -115,3 +116,5 @@ en:
     title: Reviewer assigment
     save: Save review assigments
     assigned: Reviewers have been sucessfully assigned to applicants
+  review:
+    title: Do the review

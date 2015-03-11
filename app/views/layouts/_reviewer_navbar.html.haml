@@ -4,6 +4,14 @@
 
     %ul.nav.navbar-nav.pull-right
       - if user_signed_in?
+        - first_review = current_user.application_reviews.first
+        - if first_review
+          = nav_link controller: :reviews, action: :show do
+            = link_to first_review,
+                      data: { placement: 'bottom' },
+                      title: t('review.title') do
+              = icon('eye')
+
         = nav_link controller: :reviews, action: :index do
           = link_to reviews_path,
                     data: { placement: 'bottom' },

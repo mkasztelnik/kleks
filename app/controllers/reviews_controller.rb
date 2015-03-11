@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  layout 'review'
+  layout 'reviews'
 
   def index
     @reviewers = User.reviewers
@@ -10,6 +10,10 @@ class ReviewsController < ApplicationController
       @existing_reviewers_hsh[applicant.id] =
         applicant.reviews.map(&:reviewer_id)
     end
+  end
+
+  def show
+    redirect_to review_general_path(review_id: params[:id])
   end
 
   def create

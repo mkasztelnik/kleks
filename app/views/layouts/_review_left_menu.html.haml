@@ -1,0 +1,29 @@
+%h3
+  = t('sections.title')
+%hr
+
+%ul.nav.nav-pills.nav-stacked
+  = nav_link(controller: :generals) do
+    = link_to review_general_path(review_id: @review.id) do
+      = t('general.title')
+  = nav_link(controller: :profiles) do
+    = link_to review_profile_path(review_id: @review.id) do
+      = t('profile.title')
+  = nav_link(controller: :motivations) do
+    = link_to review_motivation_path(review_id: @review.id) do
+      = t('motivation.title')
+  = nav_link(controller: :presentations) do
+    = link_to review_presentation_path(review_id: @review.id) do
+      = t('presentation.title')
+  = nav_link(controller: :educations) do
+    = link_to review_educations_path(review_id: @review.id) do
+      = t('education.title')
+  = nav_link(controller: :academics) do
+    = link_to review_academics_path(review_id: @review.id) do
+      = t('academic.title')
+  = nav_link(controller: :works) do
+    = link_to review_works_path(review_id: @review.id) do
+      = t('work.title')
+  = nav_link(controller: :languages) do
+    = link_to review_language_path(review_id: @review.id) do
+      = t('language.title')
