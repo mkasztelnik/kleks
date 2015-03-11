@@ -15,6 +15,6 @@ class ReviewsController < ApplicationController
   def create
     UpdateReviewersService.new(params[:reviews]).execute
 
-    redirect_to reviews_path
+    redirect_to reviews_path, notice: I18n.t('reviews.assigned')
   end
 end
