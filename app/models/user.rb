@@ -33,6 +33,7 @@ class User < ActiveRecord::Base
            foreign_key: 'reviewer_id'
 
   scope :applicants, -> { where(reviewer: false) }
+  scope :submitted, -> { where(submitted: true) }
   scope :reviewers, -> { where(reviewer: true) }
 
   def self.from_omniauth(auth)

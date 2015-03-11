@@ -15,7 +15,7 @@ class Ability
     if user.reviewer
       can :read, User
       can :read, elements
-      can :create, Review
+      can :create, Review, user: { submitted: true }
       can :read, Review, reviewer_id: user.id
     end
   end

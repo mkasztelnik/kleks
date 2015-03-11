@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
 
   def index
     @reviewers = User.reviewers
-    @applicants = User.applicants.includes(:reviews).references(:reviews)
+    @applicants = User.submitted.includes(:reviews).references(:reviews)
 
     @existing_reviewers_hsh = {}
     @applicants.each do |applicant|
