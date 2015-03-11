@@ -3,5 +3,4 @@
 %hr
 
 %ul.well-list
-  - @educations.each do |item|
-    = render('educations/item', item: item)
+  = render(partial: 'educations/item', collection: @educations) || render('review_process/empty', message: t('education.empty'))

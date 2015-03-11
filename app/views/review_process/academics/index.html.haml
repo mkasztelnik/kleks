@@ -1,34 +1,18 @@
-%h3
-  = t('publication.title')
+%h3= t('academic.title')
 %hr
 
+%h4= t('publication.title')
 %ul.well-list
-  - @review.publications.each do |item|
-    = render('publications/item', item: item)
+  = render(partial: 'publications/item', collection: @review.publications) || render('review_process/empty', message: t('publication.empty'))
 
-
-%h3
-  = t('academic.conferences')
-%hr
-
+%h4= t('academic.conferences')
 %ul.well-list
-  - @review.conferences.each do |item|
-    = render('conferences/item', item: item)
+  = render(partial: 'conferences/item', collection: @review.conferences) || render('review_process/empty', message: t('conference.empty'))
 
-
-%h3
-  = t('academic.trainings')
-%hr
-
+%h4= t('academic.trainings')
 %ul.well-list
-  - @review.trainings.each do |item|
-    = render('trainings/item', item: item)
+  = render(partial: 'trainings/item', collection: @review.trainings) || render('review_process/empty', message: t('training.empty'))
 
-
-%h3
-  = t('academic.others')
-%hr
-
+%h4= t('academic.others')
 %ul.well-list
-  - @review.others.each do |item|
-    = render('others/item', item: item)
+  = render(partial: 'others/item', collection: @review.others) || render('review_process/empty', message: t('other.empty'))
