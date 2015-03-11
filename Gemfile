@@ -24,6 +24,7 @@ gem 'country_select'
 gem 'bootstrap-datepicker-rails'
 gem 'date_validator'
 gem 'enumerize'
+gem 'select2-rails'
 
 gem 'devise'
 gem 'omniauth-facebook'

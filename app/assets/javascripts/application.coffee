@@ -19,8 +19,9 @@
 #= require bootstrap-datepicker
 #= require nprogress
 #= require nprogress-turbolinks
-#=require jquery.cookie
-#=require jquery.cookiecuttr
+#= require jquery.cookie
+#= require jquery.cookiecuttr
+#= require select2
 #= require_tree .
 
 $ ->

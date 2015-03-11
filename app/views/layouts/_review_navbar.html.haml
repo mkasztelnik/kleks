@@ -2,17 +2,19 @@
   .container
     = link_to t('code_name'), root_path, class: 'navbar-brand'
 
+    =select('reviews', :id, current_user.application_reviews.collect { |r| [r.user.name, r.id] }, { selected: @review.id }, class: 'col-xs-3 nav-select')
+
     %ul.nav.navbar-nav.pull-right
       - if user_signed_in?
         - first_review = current_user.application_reviews.first
         - if first_review
-          = nav_link controller: :reviews, action: :show do
+          %li.active
             = link_to first_review,
                       data: { placement: 'bottom' },
                       title: t('review.title') do
               = icon('eye')
 
-        = nav_link controller: :reviews, action: :index do
+        %li
           = link_to reviews_path,
                     data: { placement: 'bottom' },
                     title: t('reviews.title') do
@@ -24,3 +26,11 @@
                     data: { placement: 'bottom' },
                     title: t('logout'), method: :delete do
             =icon 'sign-out'
+  :javascript
+    $("#reviews_id").select2({
+      width: 'resolve',
+    })
+
+    $("#reviews_id").on('change', function(e) {
+      window.location = '#{reviews_path}/' + e.val
+    });
