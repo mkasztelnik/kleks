@@ -1,6 +1,6 @@
 /* Login Page */
 .login-page {
-  margin-top: 50px;
+  // margin-top: 50px;
 
   .login-box{
     background: #fafafa;
@@ -84,6 +84,10 @@
     label {
       font-weight: normal;
     }
+  }
+
+  .description {
+    font-size: 18px;
   }
 }
 

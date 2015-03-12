@@ -1,12 +1,21 @@
 !!! 5
 %html
-  = render 'layouts/head'
+  = render('layouts/head')
   %body.login-page
+    = render('layouts/navbar')
     .container
-      = render 'layouts/flash'
+      = render('layouts/flash')
       .row.prepend-top-20
-        .col-sm-5.pull-right
+        .col-sm-4.pull-right
           = yield
-        .col-sm-7.pull-left
-          Some introduction
-    = render 'layouts/google_analytics'
+        .col-sm-8.pull-left
+          %center
+            %h1
+              = t('landing.title')
+              %hr
+            %h2= t('landing.school_title')
+            %p.description= t('landing.description', close_date: close_human_date).html_safe
+            %p= t('landing.organizers').html_safe
+      #push
+    = render('layouts/footer')
+    = render('layouts/google_analytics')

@@ -1,0 +1,8 @@
+en:
+  landing:
+    title: Resproject Summer School 2015
+    school_title: "Democracy, expertise and power: making new Europe in the era of globalisation"
+    description: |
+      This website will lead you to the application form for the Resproject Summer School 2015: „Democracy, expertise and power: making new Europe in the era of globalisation” which will take place 15 – 26 June 2015 in Kraków, Poland. Inside you will find several application elements to fill out. The deadline to send the application is <strong>%{close_date}</strong>.
+    organizers: |
+      The Resproject Summer School is organised by <a href="http://www.ces.uj.edu.pl/academics/ma-in-european-studies/central-eastern-european-studies-research-track">Centre for European Studies, Jagiellonian University (CES)</a>  in collaboration with <a href="http://www.sv.uio.no/arena/english/about/news-and-events/news/news-2014/ma-european-studies-admissions-open.html">ARENA – Centre for European Studies, University of Oslo</a> and it is one of the activities within a wider project on: “Research and Expertise in Society”. The project is supported by a grant from Iceland, Liechtenstein and Norway through the EEA and Norway Grants and co-financed by the Polish funds.
