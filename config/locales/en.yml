@@ -128,3 +128,5 @@ en:
     assigned: Reviewers have been sucessfully assigned to applicants
   review:
     title: Do the review
+    registered: Number of registered users
+    submitted: Number of subbmited applications

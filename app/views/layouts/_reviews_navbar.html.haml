@@ -2,7 +2,9 @@
   .container
     = link_to t('code_name'), root_path, class: 'navbar-brand'
 
-    %ul.nav.navbar-nav.pull-right
+    = render('layouts/status')
+
+    %ul.nav.navbar-nav.pull-right.pull-right
       - if user_signed_in?
         - first_review = current_user.application_reviews.first
         - if first_review

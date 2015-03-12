@@ -81,3 +81,11 @@ $ ->
     cookiePolicyLink: 'http://www.allaboutcookies.org',
     cookieAcceptButtonText: 'OK',
     cookieMessage: 'We use cookies on this website, you can <a href="{{cookiePolicyLink}}" title="read about our cookies">read about them here</a>'
+
+  # Tooltips
+  $('body').tooltip
+    delay:
+      show: 300
+      hide: 0
+    container: 'body'
+    selector: '[title]'

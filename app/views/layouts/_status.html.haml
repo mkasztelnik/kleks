@@ -1,0 +1,3 @@
+.btn-group.navbar-btn
+  %a.btn.btn-success{ title: t('review.submitted'), data: { placement: :bottom } }= User.submitted.count
+  .btn.btn-warning{ title: t('review.registered'), data: { placement: :bottom } }= User.applicants.count

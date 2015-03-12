@@ -4,28 +4,31 @@
 
     =select('reviews', :id, current_user.application_reviews.collect { |r| [r.user.name, r.id] }, { selected: @review.id }, class: 'col-xs-3 nav-select')
 
-    %ul.nav.navbar-nav.pull-right
-      - if user_signed_in?
-        - first_review = current_user.application_reviews.first
-        - if first_review
-          %li.active
-            = link_to first_review,
+    = render('layouts/status')
+
+    .pull-right
+      %ul.nav.navbar-nav
+        - if user_signed_in?
+          - first_review = current_user.application_reviews.first
+          - if first_review
+            %li.active
+              = link_to first_review,
+                        data: { placement: 'bottom' },
+                        title: t('review.title') do
+                = icon('eye')
+
+          %li
+            = link_to reviews_path,
                       data: { placement: 'bottom' },
-                      title: t('review.title') do
-              = icon('eye')
+                      title: t('reviews.title') do
+              = icon('magnet')
 
-        %li
-          = link_to reviews_path,
-                    data: { placement: 'bottom' },
-                    title: t('reviews.title') do
-            = icon('magnet')
-
-        %p.navbar-text= current_user.name
-        %li
-          = link_to destroy_user_session_path,
-                    data: { placement: 'bottom' },
-                    title: t('logout'), method: :delete do
-            =icon 'sign-out'
+          %p.navbar-text= current_user.name
+          %li
+            = link_to destroy_user_session_path,
+                      data: { placement: 'bottom' },
+                      title: t('logout'), method: :delete do
+              =icon 'sign-out'
   :javascript
     $("#reviews_id").select2({
       width: 'resolve',
