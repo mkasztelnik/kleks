@@ -27,6 +27,11 @@ class GeneralsController < ApplicationController
   end
 
   def general_params
-    params.require(:general).permit(:accept)
+    params.require(:general).
+      permit(:accept, :accept_travel, :accept_insurance,
+             :know_from_ces_www, :know_from_ces_facebook,
+             :know_from_facebook, :know_from_newsletter,
+             :know_from_leaflet, :know_from_friends,
+             :other_websites, :other)
   end
 end

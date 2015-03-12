@@ -1,7 +1,4 @@
-= simple_form_for @general,
-                  url: general_path,
-                  html: { class: 'form-horizontal' },
-                  wrapper: :horizontal_form do |f|
+= simple_form_for @general, url: general_path do |f|
   %h3
     = t('general.title')
     %span.pull-right
@@ -11,8 +8,19 @@
 
   %p.help-block= t('general.accept_conditions')
   = f.input :accept
+  = f.input :accept_travel
+  = f.input :accept_insurance
 
-  %h4.form-header= t('general.how_hear')
   %hr
+  %p.help-block= t('general.how_hear')
 
-  %p Please give me possible answers
+  = f.input :know_from_ces_www
+  = f.input :know_from_ces_facebook
+  = f.input :know_from_facebook
+  = f.input :know_from_newsletter
+  .checkbox-form-item
+    = f.input :other_websites, input_html: { rows: 3 }
+  = f.input :know_from_leaflet
+  = f.input :know_from_friends
+  .checkbox-form-item
+    = f.input :other, input_html: { rows: 3 }

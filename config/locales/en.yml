@@ -38,8 +38,8 @@ en:
     save: Save general information
     saved: General information has been successfully saved
     errors: There are errors in you general information, please correct them and save again
-    accept_conditions: Some text about policy, etc.
-    how_hear: How did your hear about the summer school?
+    accept_conditions: "In order to evaluate your application by the Recruitement Comission you are kindly asked to agree with the statements below:"
+    how_hear: "Also please let us know how did you learn about the Resproject Summer School:"
   profile:
     title: Personal data
     save: Save personal data

@@ -50,10 +50,20 @@ ActiveRecord::Schema.define(version: 20150306124241) do
   end
 
   create_table "generals", force: :cascade do |t|
-    t.boolean  "accept"
-    t.integer  "user_id",    null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "accept",                 default: false
+    t.boolean  "accept_travel",          default: false
+    t.boolean  "accept_insurance",       default: false
+    t.boolean  "know_from_ces_www",      default: false
+    t.boolean  "know_from_ces_facebook", default: false
+    t.boolean  "know_from_facebook",     default: false
+    t.boolean  "know_from_newsletter",   default: false
+    t.text     "other_websites"
+    t.boolean  "know_from_leaflet",      default: false
+    t.boolean  "know_from_friends",      default: false
+    t.text     "other"
+    t.integer  "user_id",                                null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
   end
 
   create_table "languages", force: :cascade do |t|
