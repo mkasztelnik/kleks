@@ -15,9 +15,6 @@ RSpec.describe Profile do
     subject { build(:profile, need_visa: true) }
 
     it { should validate_presence_of :passport_number }
-    it { should validate_presence_of :passport_date_of_issue }
-    it { should validate_presence_of :passport_place_of_issue }
-    it { should validate_presence_of :passport_issuing_agency }
   end
 
   it 'has first and last names delegated from the user' do

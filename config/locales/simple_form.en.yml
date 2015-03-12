@@ -26,11 +26,8 @@ en:
         know_from_friends: Friends
         other: Other
       profile:
-        need_visa: I need visa
+        need_visa: In order to participate in the Resproject Summer School I need visa
         passport_number: Passport number
-        passport_date_of_issue: Passport date of issue
-        passport_place_of_issue: Passport place of issue
-        passport_issuing_agency: Passport issuing agency
         gender: Sex
       motivation:
         text: "Personal statement"

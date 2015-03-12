@@ -110,19 +110,16 @@ ActiveRecord::Schema.define(version: 20150306124241) do
 
   create_table "profiles", force: :cascade do |t|
     t.string   "middle_name"
-    t.date     "date_of_birth",                           null: false
-    t.string   "place_of_birth",                          null: false
-    t.string   "citizenship",                             null: false
-    t.string   "country",                                 null: false
-    t.boolean  "need_visa",               default: false
+    t.date     "date_of_birth",                   null: false
+    t.string   "place_of_birth",                  null: false
+    t.string   "citizenship",                     null: false
+    t.string   "country",                         null: false
+    t.boolean  "need_visa",       default: false
     t.string   "passport_number"
-    t.date     "passport_date_of_issue"
-    t.string   "passport_place_of_issue"
-    t.string   "passport_issuing_agency"
-    t.integer  "user_id",                                 null: false
-    t.integer  "address_id",                              null: false
-    t.datetime "created_at",                              null: false
-    t.datetime "updated_at",                              null: false
+    t.integer  "user_id",                         null: false
+    t.integer  "address_id",                      null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   create_table "publications", force: :cascade do |t|

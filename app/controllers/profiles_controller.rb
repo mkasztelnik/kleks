@@ -32,8 +32,7 @@ class ProfilesController < ApplicationController
       permit(:first_name, :last_name, :middle_name, :gender,
              :date_of_birth, :place_of_birth, :citizenship, :country,
              :need_visa,
-             :passport_number, :passport_date_of_issue,
-             :passport_place_of_issue, :passport_issuing_agency,
+             :passport_number,
              address_attributes: [
                 :address, :city,
                 :country, :state, :postcode

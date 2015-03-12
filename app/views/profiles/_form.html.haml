@@ -41,11 +41,6 @@
   #need-visa{ class: ('hidden' unless @profile.need_visa) }
     %p.help-block= t('profile.visa_description')
     = f.input :passport_number
-    = f.input :passport_date_of_issue,
-              as: :string,
-              input_html: { data: {behaviour: 'datepicker' } }
-    = f.input :passport_place_of_issue
-    = f.input :passport_issuing_agency
 
   .bottom-buttons
     %span.pull-right

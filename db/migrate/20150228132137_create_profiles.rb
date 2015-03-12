@@ -9,9 +9,6 @@ class CreateProfiles < ActiveRecord::Migration
 
       t.boolean :need_visa,                 default: false
       t.string :passport_number
-      t.date   :passport_date_of_issue
-      t.string :passport_place_of_issue
-      t.string :passport_issuing_agency
 
       t.references :user,                   null: false
       t.references :address,                null: false
