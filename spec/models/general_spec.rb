@@ -9,4 +9,10 @@ RSpec.describe General, type: :model do
 
     expect(general).to be_valid
   end
+
+  it 'need at last one know from selected' do
+    general = build(:general, know_from_ces_www: false)
+
+    expect(general).to_not be_valid
+  end
 end
