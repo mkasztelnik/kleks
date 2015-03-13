@@ -67,18 +67,18 @@ ActiveRecord::Schema.define(version: 20150306124241) do
   end
 
   create_table "languages", force: :cascade do |t|
-    t.string   "understanding_level",                 null: false
-    t.string   "speaking_level",                      null: false
-    t.string   "writing_level",                       null: false
+    t.string   "understanding_level"
+    t.string   "speaking_level"
+    t.string   "writing_level"
     t.boolean  "native",              default: false
     t.boolean  "study",               default: false
     t.string   "study_program"
     t.string   "study_url"
-    t.boolean  "certificate"
+    t.boolean  "certificate",         default: false
     t.string   "certificate_name"
     t.integer  "certificate_year"
     t.string   "certificate_score"
-    t.boolean  "other"
+    t.boolean  "other",               default: false
     t.text     "other_description"
     t.integer  "user_id",                             null: false
     t.datetime "created_at",                          null: false

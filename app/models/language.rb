@@ -5,28 +5,30 @@ class Language < ActiveRecord::Base
 
   validates :understanding_level,
             presence: true,
-            inclusion: { in: LEVELS }
+            inclusion: { in: LEVELS },
+            unless: :native
 
   validates :speaking_level,
             presence: true,
-            inclusion: { in: LEVELS }
+            inclusion: { in: LEVELS },
+            unless: :native
 
   validates :writing_level,
             presence: true,
-            inclusion: { in: LEVELS }
-
+            inclusion: { in: LEVELS },
+            unless: :native
 
   validates :study_program,
             presence: true,
-            if: :study
+            if: :study?
 
   validates :study_url,
             presence: true,
-            if: :study
+            if: :study?
 
   validates :certificate_name,
             presence: true,
-            if: :certificate
+            if: :certificate?
 
   validates :certificate_year,
             presence: true,
@@ -34,15 +36,15 @@ class Language < ActiveRecord::Base
               only_integer: true,
               less_than_or_equal_to: Time.now.year
             },
-            if: :certificate
+            if: :certificate?
 
   validates :certificate_score,
             presence: true,
-            if: :certificate
+            if: :certificate?
 
   validates :other_description,
             presence: true,
-            if: :other
+            if: :other?
 
   validate :at_least_one_expertise
 
@@ -52,6 +54,8 @@ class Language < ActiveRecord::Base
   enumerize :speaking_level, in: LEVELS
   enumerize :writing_level, in: LEVELS
 
+  private
+
   def at_least_one_expertise
     unless native || study || certificate || other
       msg = I18n.t('language.one_expertise_needed')
@@ -60,5 +64,17 @@ class Language < ActiveRecord::Base
       errors.add(:certificate, msg)
       errors.add(:other, msg)
     end
+  end
+
+  def study?
+    !native && study
+  end
+
+  def certificate?
+    !native && certificate
+  end
+
+  def other?
+    !native && other
   end
 end

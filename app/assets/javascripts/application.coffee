@@ -75,6 +75,13 @@ $ ->
     else
       section.addClass('hidden')
 
+  $(document).on 'click', '[data-unhidden]', (e)->
+    section = $('#' + $(this).attr('data-unhidden'))
+    if this.checked
+      section.addClass('hidden')
+    else
+      section.removeClass('hidden')
+
   $.cookieCuttr
     cookieNotificationLocationBottom: true,
     cookieAnalytics: false,

@@ -9,29 +9,29 @@
         = icon('save', t('language.save'))
   %hr
 
-  %p.help-block= t('help.language')
+  = f.input :native, input_html: { 'data-unhidden' => 'no-native' }
+  #no-native{ class: ('hidden' if @language.native) }
+    %hr
+    = f.input :study, input_html: { 'data-hidden' => 'study-section' }
+    #study-section{ class: ('hidden' unless @language.study) }
+      = f.input :study_program, as: :text, input_html: { rows: 2 }
+      = f.input :study_url
+    %hr
 
-  = f.input :understanding_level
-  = f.input :speaking_level
-  = f.input :writing_level
+    = f.input :certificate, input_html: { 'data-hidden' => 'certificate-section' }
+    #certificate-section{ class: ('hidden' unless @language.certificate) }
+      %p.help-block= t('help.certificate')
+      = f.input :certificate_name
+      = f.input :certificate_year
+      = f.input :certificate_score
+    %hr
 
-  = f.input :native
-  %hr
+    = f.input :other, input_html: { 'data-hidden' => 'other-section' }
+    #other-section{ class: ('hidden' unless @language.other) }
+      = f.input :other_description, wrapper: :without_label, input_html: { rows: 4 }
+    %hr
 
-  = f.input :study, input_html: { 'data-hidden' => 'study-section' }
-  #study-section{ class: ('hidden' unless @language.study) }
-    = f.input :study_program, as: :text, input_html: { rows: 2 }
-    = f.input :study_url
-  %hr
-
-  = f.input :certificate, input_html: { 'data-hidden' => 'certificate-section' }
-  #certificate-section{ class: ('hidden' unless @language.certificate) }
-    %p.help-block= t('help.certificate')
-    = f.input :certificate_name
-    = f.input :certificate_year
-    = f.input :certificate_score
-  %hr
-
-  = f.input :other, input_html: { 'data-hidden' => 'other-section' }
-  #other-section{ class: ('hidden' unless @language.other) }
-    = f.input :other_description, wrapper: :without_label, input_html: { rows: 4 }
+    %p.help-block= t('help.language')
+    = f.input :understanding_level
+    = f.input :speaking_level
+    = f.input :writing_level
