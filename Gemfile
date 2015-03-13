@@ -41,6 +41,10 @@ group :development, :test do
   gem 'dotenv-rails'
 end
 
+group :development do
+  gem 'meta_request'
+end
+
 group :test do
   gem 'spring-commands-rspec'
   gem 'capybara'
