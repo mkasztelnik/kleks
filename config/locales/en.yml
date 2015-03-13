@@ -23,7 +23,7 @@ en:
   save: Save
   close: Close
   title: Kleks
-  code_name: CES Summer School
+  code_name: RES Project Summer School
   logout: Logout
   help: Help
   link: Hyperlink
@@ -86,10 +86,10 @@ en:
     show: Conference
   training:
     title: Trainings courses and summer schools
-    new: Add new training
-    edit: Edit training
-    destroy_confirmation: Are you sure you want to remove this training?
-    empty: No training given
+    new: Add new training or summer school
+    edit: Edit training or summer school
+    destroy_confirmation: Are you sure you want to remove this training or summer school?
+    empty: No training or summer school given
     show: Training
   other:
     title: Others
