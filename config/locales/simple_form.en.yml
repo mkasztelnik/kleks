@@ -39,7 +39,7 @@ en:
         study: 'English is not my native language, but I have completed a University-level degree taught <span class="very-important">entirely</span> in English'
         study_url: Programme website url
       address:
-        address: Street & number
+        address: Address
       publication:
         publication_title: Article/chapter title
         title: Publication title/journal
@@ -57,19 +57,24 @@ en:
     #       email: 'E-mail.'
     hints:
       profile:
-        passport_issuing_agency: "Some hints for issuing agency input"
       motivation:
-        text: 'Maximum numer of characters: 2500.'
+        text: 'Maximum numer of characters including spaces: 2500'
       presentation:
-        abstract: "Maximum number of characters: 1500"
+        abstract: "Maximum number of characters including spaces: 1500"
         keywords: Maximum 4 keywords separated by comma
     #   defaults:
     #     username: 'User name to sign in.'
     #     password: 'No special characters, please.'
     # include_blanks:
     placeholders:
+      address:
+        address: Street & number
       profile:
-        middle_name: "Middle name"
+        date_of_birth: yyyy-mm-dd
+      education:
+        program_name: e.g. Sociology, Political Study, Economy
+        start_date: from
+        end_date: to
     #   defaults:
     #     age: 'Rather not say'
     # prompts:

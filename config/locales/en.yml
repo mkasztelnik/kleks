@@ -48,7 +48,7 @@ en:
     address: Coresspondence adress
     visa_description: In case you will need a visa to participate in the Summer School please include data below which will be used for the invitation letter
   motivation:
-    title: Motivation
+    title: Personal statement
     save: Save your motivation
     saved: Your motivation has been sucessfully saved
     errors: There are errors in your motivation text, please correct it and save again
@@ -69,7 +69,7 @@ en:
     type_invalid: "%{value} is no a valid education type"
     empty: No education given
   academic:
-    title: Academic experience
+    title: Academic and non-academic experience
   publication:
     title: Publications
     new: Add new publication
@@ -85,7 +85,7 @@ en:
     empty: No conference given
     show: Conference
   training:
-    title: Trainings
+    title: Trainings courses and summer schools
     new: Add new training
     edit: Edit training
     destroy_confirmation: Are you sure you want to remove this training?
@@ -99,12 +99,12 @@ en:
     empty: No other academic experience given
     show: Other academic experience
   work:
-    title: Relevant work experience
+    title: Work experience
     new: Add new work experience
     edit: Edit work experience
     destroy_confirmation: Are you sure you want to remove this work experience?
-    empty : No relevant work experience given
-    show: Relevant work experience
+    empty : No work experience given
+    show: Work experience
   language:
     title: English language
     save: Save information about english language

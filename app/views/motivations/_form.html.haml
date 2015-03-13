@@ -8,4 +8,4 @@
 
   %p.help-block= t('help.motivation', title: t('school_title')).html_safe
 
-  = f.input :text, input_html: { rows: 14 }
+  = f.input :text, wrapper: :without_label, input_html: { rows: 14 }

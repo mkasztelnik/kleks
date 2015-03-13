@@ -29,6 +29,7 @@
   %hr
 
   = f.simple_fields_for :address do |address|
+    %p.help-block= t('help.address')
     = address.input :address
     = address.input :city
     = address.input :country

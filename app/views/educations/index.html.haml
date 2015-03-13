@@ -1,15 +1,13 @@
-%h3
-  = t('education.title')
-  - if can?(:new, current_user.educations.build)
-    .pull-right
-      = link_to new_education_path,
-                class: "btn btn-success",
-                data: { toggle: "modal", target: "#ajax-modal" },
-                remote: true do
-        = icon('plus', t('education.new'))
+%h3= t('education.title')
 %hr
 
 %p.help-block= t('help.education')
+- if can?(:new, current_user.educations.build)
+  = link_to new_education_path,
+            class: "btn btn-success",
+            data: { toggle: "modal", target: "#ajax-modal" },
+            remote: true do
+    = icon('plus', t('education.new'))
 
 %ul.well-list#educations-list
   - @educations.each do |item|

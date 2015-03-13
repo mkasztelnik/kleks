@@ -1,5 +1,6 @@
 en:
   help:
+    address: Address should be valid until July 2015
     motivation: 'Check Resproject Summer School 2015 "%{title}" <a href="#">program</a> and outline your motivation to participate in the project: which workshops/seminars you find interesting and why, how the school complements and develops your studies, how it relates to your career path, how it relates to your personal, research and academic interests. Explain why you think you are a good candidate, how do you think you can contribute to the program and what do you expect to benefit from the summer school. '
     presentation: "As a part of the summer school, all participants will be asked to present their own research related to the topic of summer school. Please submit a short abstract for your presentation and maximum 4 keywords."
     education: "Please complete the following information on your educational background (both completed and ongoing)."
