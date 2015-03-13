@@ -31,6 +31,8 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'cancancan'
 
+gem 'newrelic_rpm'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
