@@ -1,3 +1,28 @@
-%h3
-  = t('general.title')
+%h3= t('general.title')
 %hr
+
+%p.help-block= t('general.accept_conditions')
+%ul
+  %li= t('simple_form.labels.general.accept')
+  %li= t('simple_form.labels.general.accept_travel')
+  %li= t('simple_form.labels.general.accept_insurance')
+%hr
+
+%p.help-block= t('general.how_hear')
+%ul
+  - if @general.know_from_ces_www
+    %li= t('simple_form.labels.general.know_from_ces_www').html_safe
+  - if @general.know_from_ces_facebook
+    %li= t('simple_form.labels.general.know_from_ces_facebook').html_safe
+  - if @general.know_from_facebook
+    %li= t('simple_form.labels.general.know_from_facebook')
+  - if @general.know_from_newsletter
+    %li= t('simple_form.labels.general.know_from_newsletter')
+  - unless @general.other_websites.blank?
+    %li= @general.other_websites
+  - if @general.know_from_leaflet
+    %li= t('simple_form.labels.general.know_from_leaflet')
+  - if @general.know_from_friends
+    %li= t('simple_form.labels.general.know_from_friends')
+  - unless @general.other.blank?
+    %li= @general.other
