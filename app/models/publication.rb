@@ -7,10 +7,7 @@ class Publication < ActiveRecord::Base
 
   validates :year,
             presence: true,
-            numericality: {
-              only_integer: true,
-              less_than_or_equal_to: Time.now.year
-            }
+            numericality: { only_integer: true }
 
   validates :user,
             presence: true
