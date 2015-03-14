@@ -1,11 +1,12 @@
 = simple_form_for @motivation, url: motivation_path do |f|
-  %h3
-    = t('motivation.title')
-    %span.pull-right
-      %button.btn.btn-success(type="submit")
-        = icon('save', t('motivation.save'))
+  %h3= t('motivation.title')
   %hr
 
   %p.help-block= t('help.motivation', title: t('school_title')).html_safe
 
   = f.input :text, wrapper: :without_label, input_html: { rows: 14 }
+
+  .bottom-buttons
+    %span.pull-right
+      %button.btn.btn-lg.btn-success(type="submit")
+        = icon('save', t('motivation.save'))

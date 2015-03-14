@@ -2,11 +2,7 @@
                   url: profile_path,
                   html: { class: 'form-horizontal' },
                   wrapper: :horizontal_form do |f|
-  %h3
-    = t('profile.title')
-    %span.pull-right
-      %button.btn.btn-success#profile-submit(type="submit")
-        = icon('save', t('profile.save'))
+  %h3= t('profile.title')
   %hr
 
 
@@ -45,5 +41,5 @@
 
   .bottom-buttons
     %span.pull-right
-      %button.btn.btn-success(type="submit")
+      %button.btn.btn-lg.btn-success(type="submit")
         = icon('save', t('profile.save'))

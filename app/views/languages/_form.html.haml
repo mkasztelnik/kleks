@@ -2,11 +2,7 @@
                   url: language_path,
                   html: { class: 'form-horizontal' },
                   wrapper: :horizontal_form do |f|
-  %h3
-    = t('language.title')
-    %span.pull-right
-      %button.btn.btn-success(type="submit")
-        = icon('save', t('language.save'))
+  %h3= t('language.title')
   %hr
 
   = f.input :native, input_html: { 'data-unhidden' => 'no-native' }
@@ -35,3 +31,8 @@
     = f.input :understanding_level
     = f.input :speaking_level
     = f.input :writing_level
+
+  .bottom-buttons
+    %span.pull-right
+      %button.btn.btn-lg.btn-success(type="submit")
+        = icon('save', t('language.save'))

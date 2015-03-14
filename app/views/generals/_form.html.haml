@@ -1,9 +1,5 @@
 = simple_form_for @general, url: general_path do |f|
-  %h3
-    = t('general.title')
-    %span.pull-right
-      %button.btn.btn-success(type="submit")
-        = icon('save', t('general.save'))
+  %h3= t('general.title')
   %hr
 
   %p.help-block= t('general.accept_conditions')
@@ -24,3 +20,7 @@
   = f.input :know_from_friends
   .checkbox-form-item
     = f.input :other, input_html: { rows: 3 }
+  .bottom-buttons
+    %span.pull-right
+      %button.btn.btn-lg.btn-success(type="submit")
+        = icon('save', t('general.save'))
