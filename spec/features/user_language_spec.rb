@@ -14,7 +14,7 @@ RSpec.feature 'User language' do
     select('C1', from: 'Writing')
     check('Native')
 
-    click_button('Save information about english language')
+    click_button(I18n.t('language.save'))
 
     expect(page).to have_content 'sucessfully saved'
     expect_ready(page, 'language')
