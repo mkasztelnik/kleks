@@ -1,6 +1,5 @@
 class Education < ActiveRecord::Base
   extend Enumerize
-  include Countryable
 
   EDUCATION_TYPES = %w(ba ma phd)
 

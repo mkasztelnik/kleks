@@ -31,11 +31,14 @@ en:
         gender: Sex
       motivation:
         text: "Personal statement"
+      work:
+        institution: Place of work
+        responsibility: Position and responsibility
       language:
         understanding_level: Understanding
         speaking_level: Speaking
         writing_level: Writing
-        study_program: Program name
+        study_program: Programme name
         study: 'English is not my native language, but I have completed a University-level degree taught <span class="very-important">entirely</span> in English'
         study_url: Programme website url
       address:

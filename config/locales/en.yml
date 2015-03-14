@@ -87,16 +87,16 @@ en:
     show: Conference
   training:
     title: Trainings courses and summer schools
-    new: Add new training or summer school
-    edit: Edit training or summer school
+    new: Add new training course
+    edit: Edit training course
     destroy_confirmation: Are you sure you want to remove this training or summer school?
     empty: No training or summer school given
     show: Training
   other:
     title: Others
-    new: Add other academic experience
-    edit: Edit other academic experience
-    destroy_confirmation: Are you sure you want to remove this academic experience?
+    new: Add other
+    edit: Edit other
+    destroy_confirmation: Are you sure you want to remove this experience?
     empty: No other academic experience given
     show: Other academic experience
   work:
@@ -108,7 +108,7 @@ en:
     show: Work experience
   language:
     title: English language
-    save: Save information about english language
+    save: Save information about English language
     saved: Information about english language has been sucessfully saved
     errors: There are errors in english language details, please correct them and save again
     one_expertise_needed: At least one relevant element is needed
