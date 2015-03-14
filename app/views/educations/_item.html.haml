@@ -3,8 +3,7 @@
     = link_to_if can?(:edit, item), item.title, [:edit, item], title: item.title, remote: true do
       = link_to item.title, item, remote: true
     %small.light
-      from #{item.start_date} to #{item.start_date}
-      on #{item.university_name}, #{item.country}
+      from #{item.start_date} to #{item.start_date}, #{item.university_name}, #{item.country}
 
   - if can?(:destroy, item)
     .pull-right
