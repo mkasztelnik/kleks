@@ -1,26 +1,6 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   save: Save
+  edit: Save changes
   close: Close
   title: Kleks
   code_name: RES Project Summer School
@@ -37,28 +17,28 @@ en:
     title: General
     save: Save general information
     saved: General information has been successfully saved
-    errors: There are errors in you general information, please correct them and save again
-    accept_conditions: "In order to evaluate your application by the Recruitement Comission you are kindly asked to agree with all the statements below:"
+    errors: This section could not be saved. Please provide missing information and try to save it again.
+    accept_conditions: "In order to assess your application by the Recruitement Committee you are kindly asked to agree with all the statements below:"
     how_hear: "Also please let us know how did you learn about the Resproject Summer School:"
     one_know_from_needed: Please select how you hear about us
   profile:
     title: Personal data
     save: Save personal data
     saved: Personal data has been sucessfully saved
-    errors: There are errors in your personal data, please correct them and save again
+    errors: This section could not be saved. Please provide missing information and try to save it again.
     address: Coresspondence adress
-    visa_description: In case you will need a visa to participate in the Resproject Summer School please include data below which will be used for the invitation letter.
+    visa_description: In case you need a visa to participate in the RES Project Summer School please  provide your passport number which will be included in the invitation letter.
   motivation:
     title: Personal statement
     save: Save your motivation
     saved: Your motivation has been sucessfully saved
-    errors: There are errors in your motivation text, please correct it and save again
+    errors: This section could not be saved. Please provide missing information and try to save it again.
     to_long: "%{count} characters is the maximum allowed for the motivation text"
   presentation:
     title: Presentation abstract
     save: Save your presentation abstract
     saved: Your presentation abstract has been sucessfully saved
-    errors: There are errors in your presentation abstract, please correct it and save again
+    errors: This section could not be saved. Please provide missing information and try to save it again.
     abstract_to_long: "%{count} characters is the maximum allowed for the presentaiton abstract"
     keywords_to_long: "You can use maximum %{count} keywords"
   education:
@@ -109,18 +89,18 @@ en:
   language:
     title: English language
     save: Save information about English language
-    saved: Information about english language has been sucessfully saved
-    errors: There are errors in english language details, please correct them and save again
+    saved: Information about English language has been sucessfully saved
+    errors: This section could not be saved. Please provide missing information and try to save it again.
     one_expertise_needed: At least one relevant element is needed
   application:
     ready: Application is ready, you can submit it. Please note that after submition <strong>no modification will be allowed.</strong>
     not_ready: Application is not ready, fill all required sections
     submitted: Your application is submitted sucessfully
-    not_ready_html: Application is <strong>not ready</strong>, fill all required sections
+    not_ready_html: Application is <strong>not ready</strong>, fill in all required sections
     submitted_html: Your application is submitted <strong>sucessfully</strong>
     submit: Submit your application
     submit_confirmation: Are you sure you want to submit your application? Please note that after submition no modification will be allowed.
-    can_change_until_submit: 'You may update all details of your application until the time when you will submit your application. After submissin no furher modification will be possible. Application <span class="very-important">must</span> be submitted at the latest on <strong>%{close_date}</strong>. Saved application will not be considered - you must "Submit your application".'
+    can_change_until_submit: 'You may update information in all sections before submitting the application. Once you have filled out your entire onlince application, you <span class="very-important">must</span> submit to officially turn your application in. After submitting application, all sections will be read-only. Make sure you check over your application information before submitting it to avoid any errors as these cannot be corrected later. You are able to submit your application up until <strong>%{close_date}</strong>. Saved application will not be considered - you <span class="very-important">must</span> "Submit your application".'
     submission_closed: Application submission is closed since the deadline has passed on <strong>%{close_date}</strong>. Your application was <strong>not submitted</strong>.
 
   reviews:

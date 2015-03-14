@@ -1,15 +1,15 @@
 en:
   help:
     registration: Please remember email will be our contact with you during the Resproject Summer School and you cannot change it later.
-    address: Address should be valid until July 2015
+    address: The correspondence address should be valid until July 2015.
     when_need_visa: "Please check if applicable:"
-    motivation: 'Check Resproject Summer School 2015 "%{title}" <a href="#">program</a> and outline your motivation to participate in the project: which workshops/seminars you find interesting and why, how the school complements and develops your studies, how it relates to your career path, how it relates to your personal, research and academic interests. Explain why you think you are a good candidate, how do you think you can contribute to the program and what do you expect to benefit from the summer school. '
-    presentation: "As a part of the Resproject Summer School, all participants will be asked to present their own research related to the topic of summer school. Please submit a short abstract for your presentation and maximum 4 keywords."
-    education: "Please complete the following information on your educational background (both completed and ongoing)."
-    language: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    motivation: 'Check RES Project Summer School 2015 "%{title}" <a href="#">program</a> and outline your motivation to participate in the project: which workshops/seminars you find interesting and why, how the school complements and develops your studies, how it relates to your career path, your personal, research and academic interests. Explain why you think you are a good candidate, how do you think you can contribute to the program and what do you expect to benefit from the summer school. '
+    presentation: "As a part of the RES Project Summer School, all participants will be asked to present their own research related to the topic of summer school. Please submit a short abstract for your presentation and maximum 4 keywords."
+    education: "Please complete information on your educational background (both completed and ongoing)."
+    language: "Self-­assessment of English language skills."
     certificate: "Applicants whose first language is not English should prove their English language proficiency with a recognised certificate documenting command of the English language"
-    publication: 'Please list your academic and non-academic publications relevant to this application. All non-relevant publications please indicate in section "other".'
+    publication: 'Please list your academic and non-academic publications. All non-relevant publications please indicate in section "other".'
     conference: "Please list all national and international conferences you have participated in."
-    training: "Please list your training courses (e.g. summer/winter school,   fellowship training, workshops, internships, sigle courses). Indicate the title, institution, appropriate dates and briefly describe what experience you have gained."
-    other: "Starting with the most recent please indicate any honours, awards, scholarships, grants, fellowships, honorary degrees or distinctions received over the course of your career or any other activities (e.g. elections to honorary societies, memberships, community Service) which does not fit into other categories."
-    work: "Please complete the following information on your relevant work experience."
+    training: "Please list your training courses (e.g. summer/winter schools,   fellowship trainings, workshops, online courses)."
+    other: "Starting with the most recent, please indicate honours, awards, scholarships, grants, fellowships, honorary degrees or distinctions received over the course of your career or any other activities (e.g. elections to honorary societies, memberships, community service)."
+    work: "Please complete the following information on your relevant work experience, internships and voluntary work."

@@ -10,8 +10,7 @@ class TrainingsController < AjaxController
 
   def training_params
     params.require(:training).
-      permit(:title, :institution, :gained_experience,
-             :country, :start_date, :end_date)
+      permit(:title, :institution, :country, :start_date, :end_date)
   end
 
   alias_method :item_params, :training_params

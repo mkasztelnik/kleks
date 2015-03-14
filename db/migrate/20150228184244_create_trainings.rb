@@ -3,7 +3,6 @@ class CreateTrainings < ActiveRecord::Migration
     create_table :trainings do |t|
       t.string :title
       t.string :institution, null: false
-      t.text :gained_experience, null: false
       t.date :start_date, null: false
       t.date :end_date, null: false
       t.string :country, null: false

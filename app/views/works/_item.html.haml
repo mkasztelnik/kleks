@@ -1,12 +1,12 @@
 %li.clearfix(id="work-#{item.id}")
   .left
     = link_to_if can?(:edit, item),
-                 item.title,
-                 [:edit, item], title: item.title,
+                 item.institution,
+                 [:edit, item], title: item.institution,
                  remote: true do
-      = link_to item.title, item, remote: true
+      = link_to item.institution, item, remote: true
     %small.light
-      = item.responsibility
+      (#{item.country_name}, #{item.dates}): #{item.responsibility}
 
   - if can?(:destroy, item)
     .pull-right

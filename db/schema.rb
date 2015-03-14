@@ -151,14 +151,13 @@ ActiveRecord::Schema.define(version: 20150306124241) do
 
   create_table "trainings", force: :cascade do |t|
     t.string   "title"
-    t.string   "institution",       null: false
-    t.text     "gained_experience", null: false
-    t.date     "start_date",        null: false
-    t.date     "end_date",          null: false
-    t.string   "country",           null: false
-    t.integer  "user_id",           null: false
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.string   "institution", null: false
+    t.date     "start_date",  null: false
+    t.date     "end_date",    null: false
+    t.string   "country",     null: false
+    t.integer  "user_id",     null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,8 +1,29 @@
 en:
-  school_title: "Democracy, expertise and power: making new Europe in the era of globalisation"
+  school_title: "Democracy, Expertise and Power: Making New Europe in the Era of Globalisation"
   landing:
-    title: Resproject Summer School 2015
+    title: RES Project Summer School 2015
     description: |
-      This website will lead you to the application form for the Resproject Summer School 2015: „Democracy, expertise and power: making new Europe in the era of globalisation” which will take place 15 – 26 June 2015 in Kraków, Poland. Inside you will find several application elements to fill out. The deadline to send the application is <strong>%{close_date}</strong>.
+      This website will lead you to the application form for the RES Project Summer School 2015: „%{title}” which will take place 15 – 24 June 2015 in Kraków, Poland. Inside you will find application sections to fill out. The deadline to submit the application is <strong>%{close_date}</strong>.
+    organizers_title: Organizers
     organizers: |
-      The Resproject Summer School is organised by <a href="http://www.ces.uj.edu.pl/academics/ma-in-european-studies/central-eastern-european-studies-research-track">Centre for European Studies, Jagiellonian University (CES)</a>  in collaboration with <a href="http://www.sv.uio.no/arena/english/about/news-and-events/news/news-2014/ma-european-studies-admissions-open.html">ARENA – Centre for European Studies, University of Oslo</a> and it is one of the activities within a wider project on: “Research and Expertise in Society”. The project is supported by a grant from Iceland, Liechtenstein and Norway through the EEA and Norway Grants and co-financed by the Polish funds.
+      The RES Project Summer School is organised by <a href="http://www.ces.uj.edu.pl/academics/ma-in-european-studies/central-eastern-european-studies-research-track">Centre for European Studies, Jagiellonian University (CES)</a>  in collaboration with <a href="http://www.sv.uio.no/arena/english/about/news-and-events/news/news-2014/ma-european-studies-admissions-open.html">ARENA – Centre for European Studies, University of Oslo</a> as a part of „Research and Expertise in Society” project.
+    sponsors_title: Sponsors
+    sponsors: The project is supported by a grant from Iceland, Liechtenstein and Norway through the EEA and Norway Grants and co-financed by the Polish funds.
+    patronage_title: Patronage
+    patronage: The RES Project Summer School is organized under the patronage of New Eastern Europe.
+    contact_title: Contact details
+    contact: |
+      <p>
+        Please use the contact details below for telephone and email enquiries.
+        <br />
+        Centre for European Studies
+        <br />
+        Ul. Garbarska 7a
+        <br />
+        31-131 Kraków
+      </p>
+      <p>
+        <strong>telephone:</strong> +48 12 429 62 07
+        <br />
+        <strong>e-mail:</strong> <a href="mailto:resproject@uj.edu.pl">resproject@uj.edu.pl</a>
+      </p>

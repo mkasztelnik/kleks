@@ -21,10 +21,10 @@ class Work < ActiveRecord::Base
   belongs_to :user,
              required: true
 
-  def title
-    title = "#{institution} in #{country_name} from #{start_date}"
-    title = "#{title} to #{end_date}" if end_date
+  def dates
+    msg = "from #{start_date}"
+    msg = "#{msg} to #{end_date}" if end_date
 
-    title
+    msg
   end
 end

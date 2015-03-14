@@ -13,4 +13,8 @@ class Publication < ActiveRecord::Base
             presence: true
 
   belongs_to :user
+
+  def title
+    "#{authors} (#{year}), #{publication_title}"
+  end
 end

@@ -7,9 +7,6 @@ class Training < ActiveRecord::Base
   validates :institution,
             presence: true
 
-  validates :gained_experience,
-            presence: true
-
   validates :start_date,
               presence: true,
               date: true
