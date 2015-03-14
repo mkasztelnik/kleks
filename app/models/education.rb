@@ -33,6 +33,6 @@ class Education < ActiveRecord::Base
   enumerize :education_type, in: EDUCATION_TYPES
 
   def title
-    "#{education_type} #{program_name}"
+    "#{education_type_text} #{program_name}"
   end
 end

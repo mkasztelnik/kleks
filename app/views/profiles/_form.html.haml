@@ -33,7 +33,7 @@
     = address.input :postcode
 
   %hr
-
+  %p.help-block= t('help.when_need_visa')
   = f.input :need_visa, input_html: { 'data-hidden' => 'need-visa' }
   #need-visa{ class: ('hidden' unless @profile.need_visa) }
     %p.help-block= t('profile.visa_description')

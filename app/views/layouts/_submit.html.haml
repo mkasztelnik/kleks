@@ -9,7 +9,7 @@
       - else
         = render('layouts/application_not_ready')
       .alert.alert-info.alert-submit{ role: 'alert' }
-        = t('application.can_change_until_submit', close_date: close_human_date)
+        = t('application.can_change_until_submit', close_date: close_human_date).html_safe
     - else
       .alert.alert-danger.alert-submit{ role: 'alert' }
         = t('application.submission_closed', close_date: close_human_date).html_safe

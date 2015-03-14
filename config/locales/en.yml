@@ -38,7 +38,7 @@ en:
     save: Save general information
     saved: General information has been successfully saved
     errors: There are errors in you general information, please correct them and save again
-    accept_conditions: "In order to evaluate your application by the Recruitement Comission you are kindly asked to agree with the statements below:"
+    accept_conditions: "In order to evaluate your application by the Recruitement Comission you are kindly asked to agree with all the statements below:"
     how_hear: "Also please let us know how did you learn about the Resproject Summer School:"
     one_know_from_needed: Please select how you hear about us
   profile:
@@ -47,7 +47,7 @@ en:
     saved: Personal data has been sucessfully saved
     errors: There are errors in your personal data, please correct them and save again
     address: Coresspondence adress
-    visa_description: In case you will need a visa to participate in the Summer School please include data below which will be used for the invitation letter
+    visa_description: In case you will need a visa to participate in the Resproject Summer School please include data below which will be used for the invitation letter.
   motivation:
     title: Personal statement
     save: Save your motivation
@@ -120,7 +120,7 @@ en:
     submitted_html: Your application is submitted <strong>sucessfully</strong>
     submit: Submit your application
     submit_confirmation: Are you sure you want to submit your application? Please note that after submition no modification will be allowed.
-    can_change_until_submit: "Until the closing date for submissions (%{close_date}), you can update your details. The last uploaded version must be submitted before the deadline – otherwise it will not be considered for review."
+    can_change_until_submit: 'You may update all details of your application until the time when you will submit your application. After submissin no furher modification will be possible. Application <span class="very-important">must</span> be submitted at the latest on <strong>%{close_date}</strong>. Saved application will not be considered - you must "Submit your application".'
     submission_closed: Application submission is closed since the deadline has passed on <strong>%{close_date}</strong>. Your application was <strong>not submitted</strong>.
 
   reviews:

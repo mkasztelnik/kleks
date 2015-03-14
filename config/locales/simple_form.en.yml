@@ -14,10 +14,10 @@ en:
       defaults:
         date: Dates
       general:
-        accept: I hereby declare that all the facts and information provided for this application are true. I allow my personal data stated in the abovementioned application to be processed for the purpose of recruitment for the Resproject Summer School 2015
-        accept_travel: I am aware of that the organizers cover accomodation and seminar materials and that I will be obligate to cover the travel costs (including eventual visa costs) to and from Kraków as well as living expenses during the programme.
-        accept_insurance: I am aware that I am obligated to have a travel insurance that covers hospitalisation in Poland for the duration of the programme.
-        know_from_ces_www: 'Centre for European Studies, Jagiellonian University <a href="www.ces.uj.edu.p">website</a>.'
+        accept: I hereby declare that all the facts and information provided for this application are true and the best to my knowledge. I allow my personal data stated in the abovementioned application to be processed for the purpose of recruitment for the Resproject Summer School 2015
+        accept_travel: I am aware of that the organizers cover accommodation and seminar materials and that I will be obligated to cover the travel costs (including eventual visa costs) to and from Kraków as well as living expenses during my stay in Kraków.
+        accept_insurance: I am aware that I am obligated to have a travel insurance that covers hospitalisation in Poland for the duration of the Summer School in Kraków.
+        know_from_ces_www: 'Centre for European Studies, Jagiellonian University <a href="http://www.ces.uj.edu.pl">website</a>.'
         know_from_ces_facebook: 'Centre for European Studies, Jagiellonian University <a href="https://www.facebook.com/groups/2234395964">Facebook fan page</a>.'
         know_from_facebook: Facebook
         know_from_newsletter: Newsletter
@@ -45,7 +45,7 @@ en:
         title: Publication title/journal
         authors: Author(s)
       conference:
-        title: Presentation/ poster title
+        title: Presentation or poster title
     # Examples
     # labels:
     #   defaults:
@@ -56,23 +56,36 @@ en:
     #     edit:
     #       email: 'E-mail.'
     hints:
+      general:
+        other_websites: Please enter the website from which you have learnt about the Resproject Summer School 2015.
+        other: Please indicate any other way not mentioned above on how you have learnt about the Resproject Summer School 2015.
       profile:
+        first_name: Please indicate name as on your passport.
+        middle_name: (if applicable) Please indicate name as on your passport.
+        last_name: Please indicate full surname as on your passport.
+        country: Country of your current residence.
+        citizenship: If you have more than one citizenship please enter  the citizenship on which you will travel to Poland.
       motivation:
-        text: 'Maximum numer of characters including spaces: 2500'
+        text: 'Maximum numer of characters (including spaces): 2500.'
       presentation:
-        abstract: "Maximum number of characters including spaces: 1500"
-        keywords: Maximum 4 keywords separated by comma
+        abstract: "Maximum number of characters (including spaces): 1500."
+        keywords: Maximum 4 keywords separated by comma.
+      education:
+        country:  In case of double/joint degree please state the Haed University. Other Universities where you have studied please mention in the "Program name" box above.
+      conference:
+        title: Please enter the title of your presentation, poster or "not applicable".
     #   defaults:
     #     username: 'User name to sign in.'
     #     password: 'No special characters, please.'
     # include_blanks:
     placeholders:
       address:
-        address: Street & number
+        address: street, number and other needed information
       profile:
         date_of_birth: yyyy-mm-dd
+        place_of_birth: City / Country
       education:
-        program_name: e.g. Sociology, Political Study, Economy
+        program_name: e.g. Double degree in European Studies specialisation Central and Eastern European Studies (university of Glasgow and Jagielloanian University), Political Science etc.
         start_date: from
         end_date: to
     #   defaults:
