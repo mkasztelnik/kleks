@@ -3,6 +3,6 @@ module TimeHelper
     cet = ActiveSupport::TimeZone['CET']
     time = Rails.configuration.close_time
 
-    cet.at(time).strftime("%a, %e %b %Y, %H:%M %Z")
+    cet.at(time).strftime("%A, %e %b %Y, %H:%M %Z")
   end
 end
