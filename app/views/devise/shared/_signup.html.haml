@@ -31,6 +31,7 @@
                            required: true
       %div
         = f.submit "Sign up", class: "btn-create btn"
-        .pull-right.prepend-top-5
+        %center.pull-right.prepend-top-5
           %span.light Did not receive confirmation email?
+          %br
           = link_to "Send again", new_confirmation_path(resource_name)
