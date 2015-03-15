@@ -27,7 +27,7 @@ en:
     saved: Personal data has been sucessfully saved
     errors: This section could not be saved. Please provide missing information and try to save it again.
     address: Coresspondence adress
-    visa_description: In case you need a visa to participate in the RES Project Summer School please  provide your passport number which will be included in the invitation letter.
+    visa_description: In case you need a visa to participate in the RES Project Summer School please  provide your passport number which will be included in the invitation letter. Invitation letter will be send to the correspondence address you provide above.
   motivation:
     title: Personal statement
     save: Save your motivation
@@ -100,7 +100,7 @@ en:
     submitted_html: Your application is submitted <strong>sucessfully</strong>
     submit: Submit your application
     submit_confirmation: Are you sure you want to submit your application? Please note that after submition no modification will be allowed.
-    can_change_until_submit: 'You may update information in all sections before submitting the application. Once you have filled out your entire onlince application, you <span class="very-important">must</span> submit to officially turn your application in. After submitting application, all sections will be read-only. Make sure you check over your application information before submitting it to avoid any errors as these cannot be corrected later. You are able to submit your application up until <strong>%{close_date}</strong>. Saved application will not be considered - you <span class="very-important">must</span> "Submit your application".'
+    can_change_until_submit: 'You may update information in all sections before submitting the application. Once you have filled out your entire online application, you <span class="very-important">must</span> submit to officially turn your application in. After submitting application, all sections will be read-only. Make sure you check over your application information before submitting it to avoid any errors as these cannot be corrected later. You are able to submit your application up until <strong>%{close_date}</strong>. Saved application will not be considered - you <span class="very-important">must</span> "Submit your application".'
     submission_closed: Application submission is closed since the deadline has passed on <strong>%{close_date}</strong>. Your application was <strong>not submitted</strong>.
 
   reviews:

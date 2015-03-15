@@ -14,7 +14,7 @@ en:
       defaults:
         date: Dates
       general:
-        accept: I hereby declare that all the facts and information provided for this application are true and the best to my knowledge. I allow my personal data stated in the application to be processed for the purpose of recruitment for the RES Project Summer School 2015
+        accept: I hereby declare that all the facts and information provided for this application are true and the best to my knowledge. I allow my personal data stated in the application to be processed for the purpose of recruitment for the RES Project Summer School 2015.
         accept_travel: I am aware of that the organizers cover accommodation and seminar materials and that I will be obligated to cover the travel costs (including eventual visa costs) to and from Kraków as well as living expenses during my stay in Kraków.
         accept_insurance: I am aware that I am obligated to have a travel insurance that covers hospitalisation in Poland for the duration of the Summer School in Kraków.
         know_from_ces_www: 'Centre for European Studies, Jagiellonian University <a href="http://www.ces.uj.edu.pl">website</a>.'
@@ -65,7 +65,7 @@ en:
         other_websites: Please enter the website from which you have learnt about the RES Project Summer School 2015.
         other: Please indicate any other way not mentioned above how you have learnt about the RES Project Summer School 2015.
       profile:
-        first_name:  The name must be the same as the name in your passport or other indentification document.
+        first_name:  The name must be the same as the name in your passport or other identification document.
         middle_name: (if applicable) The middle name must be the same as the name in your passport or other indentification document.
         last_name:  The surname must be the same as the surname in your passport or other indentification document.
         country: Country of your current residence.
@@ -80,6 +80,8 @@ en:
         date: "In case of ongoing programme, please provide information about the planned end date."
       conference:
         title: Please enter the title of your presentation, poster or "not applicable".
+      work:
+        institution: Name of the company.
     #   defaults:
     #     username: 'User name to sign in.'
     #     password: 'No special characters, please.'
