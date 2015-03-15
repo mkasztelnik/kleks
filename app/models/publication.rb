@@ -17,4 +17,9 @@ class Publication < ActiveRecord::Base
   def title
     "#{authors} (#{year}), #{publication_title}"
   end
+
+  def subtitle
+    editors_txt = editors.blank? ? "" : "#{editors},"
+    "in  #{editors_txt} #{publisher} (#{language})"
+  end
 end

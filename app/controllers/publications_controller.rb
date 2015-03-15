@@ -11,7 +11,7 @@ class PublicationsController < AjaxController
   def publication_params
     params.require(:publication).
       permit(:title, :publication_title, :authors,
-             :year, :language, :publisher)
+             :year, :language, :publisher, :editors)
   end
 
   alias_method :item_params, :publication_params

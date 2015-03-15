@@ -49,6 +49,7 @@ en:
         publication_title: Article/chapter title
         title: Publication title/journal
         authors: Author(s)
+        editors: Book editor(s)
       conference:
         title: Presentation or poster title
     # Examples
