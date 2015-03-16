@@ -14,6 +14,10 @@
     %li= t('simple_form.labels.general.know_from_ces_www').html_safe
   - if @general.know_from_ces_facebook
     %li= t('simple_form.labels.general.know_from_ces_facebook').html_safe
+  - if @general.know_from_arena
+    %li= t('simple_form.labels.general.know_from_arena').html_safe
+  - if @general.know_from_nee_website
+    %li= t('simple_form.labels.general.know_from_nee_website').html_safe
   - if @general.know_from_facebook
     %li= t('simple_form.labels.general.know_from_facebook')
   - if @general.know_from_newsletter
