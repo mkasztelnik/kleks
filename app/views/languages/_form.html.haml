@@ -4,6 +4,7 @@
                   wrapper: :horizontal_form do |f|
   %h3= t('language.title')
   %hr
+  %p.help-block= t('help.language')
 
   = f.input :native, input_html: { 'data-unhidden' => 'no-native' }
   #no-native{ class: ('hidden' if @language.native) }

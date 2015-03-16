@@ -14,6 +14,7 @@
             %hr
           %h2= t('school_title')
           %p.description= t('landing.description', close_date: close_human_date, title: t('school_title')).html_safe
+          %p.description= t('landing.eligibility').html_safe
           %h3= t('landing.organizers_title')
           %p= t('landing.organizers').html_safe
 
@@ -21,7 +22,7 @@
           %p= t('landing.sponsors')
 
           %h3= t('landing.patronage_title')
-          %p= t('landing.patronage')
+          %p= t('landing.patronage').html_safe
 
           %h3= t('landing.contact_title')
           %p= t('landing.contact').html_safe

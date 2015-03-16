@@ -3,14 +3,15 @@ en:
   landing:
     title: RES Project Summer School 2015
     description: |
-      This website will lead you to the application form for the RES Project Summer School 2015: „%{title}” which will take place 15 – 24 June 2015 in Kraków, Poland. Inside you will find application sections to fill out. The deadline to submit the application is <strong>%{close_date}</strong>.
+      This website will lead you to the application form for the RES Project Summer School 2015: "%{title}" which will take place 15 – 24 June 2015 in Kraków, Poland. Inside you will find application sections to fill out. The deadline to submit the application is <strong>%{close_date}</strong>.
+    eligibility: "<strong>Eligibility:</strong> BA (after completing 2 year), MA, Phd in progress students"
     organizers_title: Organizers
     organizers: |
-      The RES Project Summer School is organised by <a href="http://www.ces.uj.edu.pl/academics/ma-in-european-studies/central-eastern-european-studies-research-track">Centre for European Studies, Jagiellonian University (CES)</a>  in collaboration with <a href="http://www.sv.uio.no/arena/english/about/news-and-events/news/news-2014/ma-european-studies-admissions-open.html">ARENA – Centre for European Studies, University of Oslo</a> as a part of „Research and Expertise in Society” project.
+      The RES Project Summer School is organised by <a href="http://www.ces.uj.edu.pl/academics/ma-in-european-studies/central-eastern-european-studies-research-track">Centre for European Studies, Jagiellonian University (CES)</a>  in collaboration with <a href="http://www.sv.uio.no/arena/english/about/news-and-events/news/news-2014/ma-european-studies-admissions-open.html">ARENA – Centre for European Studies, University of Oslo</a> as a part of "Research and Expertise in Society" project. The project is aimed at improving the educational potential of the partners' institutes through the creation of the graduate research track within an MA programme in European Studies in Kraków: Central and Eastern European Studies: Research Track which would Combie research and didactics as well as a cooperation between science and business.
     sponsors_title: Sponsors
     sponsors: The project is supported by a grant from Iceland, Liechtenstein and Norway through the EEA and Norway Grants and co-financed by the Polish funds.
-    patronage_title: Patronage
-    patronage: The RES Project Summer School is organized under the patronage of New Eastern Europe.
+    patronage_title: Media Patronage
+    patronage: The RES Project Summer School is organized under the patronage of <a href="http://www.neweasterneurope.eu">New Eastern Europe</a>.
     contact_title: Contact details
     contact: |
       <p>
@@ -23,6 +24,7 @@ en:
         31-131 Kraków
       </p>
       <p>
+        <a href="http://www.ces.uj.edu.pl">www.ces.uj.edu.pl</a><br />
         <strong>telephone:</strong> +48 12 429 62 07
         <br />
         <strong>e-mail:</strong> <a href="mailto:resproject@uj.edu.pl">resproject@uj.edu.pl</a>
