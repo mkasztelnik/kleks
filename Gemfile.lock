@@ -96,6 +96,9 @@ GEM
     enumerize (0.10.0)
       activesupport (>= 3.2)
     erubis (2.7.0)
+    exception_notification (4.0.1)
+      actionmailer (>= 3.0.4)
+      activesupport (>= 3.0.4)
     execjs (2.3.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
@@ -345,6 +348,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   enumerize
+  exception_notification
   factory_girl_rails (~> 4.0)
   faker
   font-awesome-sass (~> 4.3.0)

@@ -88,4 +88,10 @@ Rails.application.configure do
     enable_starttls_auto: true,
     tls:                  true
   }
+
+  config.middleware.use ExceptionNotification::Rack, :email => {
+    :email_prefix => "[Err KLEKS] ",
+    :sender_address => %{"notifier" <#{ENV['EMAIL_USERNAME']}@uj.edu.pl>},
+    :exception_recipients => %w{mkasztelnik@gmail.com}
+  }
 end

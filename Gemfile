@@ -32,6 +32,7 @@ gem 'omniauth-google-oauth2'
 gem 'cancancan'
 
 gem 'newrelic_rpm'
+gem 'exception_notification'
 
 group :development, :test do
   gem 'byebug'
