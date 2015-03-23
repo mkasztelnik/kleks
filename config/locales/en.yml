@@ -2,7 +2,7 @@ en:
   save: Save
   edit: Save changes
   close: Close
-  title: Kleks
+  title: RES Project Summer School
   code_name: RES Project Summer School
   logout: Logout
   help: Help
@@ -18,16 +18,16 @@ en:
     save: Save general information
     saved: General information has been successfully saved
     errors: This section could not be saved. Please provide missing information and try to save it again.
-    accept_conditions: "In order to assess your application by the Recruitement Committee you are kindly asked to agree with all the statements below:"
-    how_hear: "Also please let us know how did you learn about the Resproject Summer School:"
-    one_know_from_needed: Please select how you hear about us
+    accept_conditions: "In order for the Recruiting Committee to assess your application you are kindly asked to agree with all the statements below:"
+    how_hear: "Also please let us know how you learned about the RES/PROJECT SUMMER SCHOOL 2015:"
+    one_know_from_needed: Please select how you heard about us
   profile:
     title: Personal data
     save: Save personal data
     saved: Personal data has been sucessfully saved
     errors: This section could not be saved. Please provide missing information and try to save it again.
-    address: Coresspondence adress
-    visa_description: In case you need a visa to participate in the RES Project Summer School please  provide your passport number which will be included in the invitation letter. Invitation letter will be send to the correspondence address you provide above.
+    address: Correspondence adress
+    visa_description: In case you need a visa to participate in the RES/PROJECT SUMMER SCHOOL 2015 please  provide your passport number which will be included in the invitation letter. Invitation letter will be sent to the correspondence address you provide above.
   motivation:
     title: Personal statement
     save: Save your motivation
@@ -37,9 +37,9 @@ en:
   presentation:
     title: Presentation abstract
     save: Save your presentation abstract
-    saved: Your presentation abstract has been sucessfully saved
+    saved: Your presentation abstract has been successfully saved
     errors: This section could not be saved. Please provide missing information and try to save it again.
-    abstract_to_long: "%{count} characters is the maximum allowed for the presentaiton abstract"
+    abstract_to_long: "%{count} characters is the maximum allowed for the presentation abstract"
     keywords_to_long: "You can use maximum %{count} keywords"
   education:
     title: Education
@@ -47,7 +47,7 @@ en:
     edit: Edit education
     show: Education
     destroy_confirmation: Are you sure you want to remove this education?
-    type_invalid: "%{value} is no a valid education type"
+    type_invalid: "%{value} is not a valid education type"
     empty: No education given
   academic:
     title: Academic and non-academic experience
@@ -66,7 +66,7 @@ en:
     empty: No conference given
     show: Conference
   training:
-    title: Trainings courses and summer schools
+    title: Training courses and summer schools
     new: Add new training course
     edit: Edit training course
     destroy_confirmation: Are you sure you want to remove this training or summer school?
@@ -93,21 +93,21 @@ en:
     errors: This section could not be saved. Please provide missing information and try to save it again.
     one_expertise_needed: At least one relevant element is needed
   application:
-    ready: Application is ready, you can submit it. Please note that after submition <strong>no modification will be allowed.</strong>
-    not_ready: Application is not ready, fill all required sections
-    submitted: Your application is submitted sucessfully
-    not_ready_html: Application is <strong>not ready</strong>, fill in all required sections
-    submitted_html: Your application is submitted <strong>sucessfully</strong>
+    ready: Application is ready, you can submit it. Please note that after submission <strong>no modification will be allowed.</strong>
+    not_ready: Application is not ready, please fill in all required sections
+    submitted: Your application has been submitted successfully
+    not_ready_html: Application is <strong>not ready</strong>, please fill in all required sections
+    submitted_html: Your application has been submitted <strong>successfully</strong>
     submit: Submit your application
-    submit_confirmation: Are you sure you want to submit your application? Please note that after submition no modification will be allowed.
-    can_change_until_submit: 'You may update information in all sections before submitting the application. Once you have filled out your entire online application, you <span class="very-important">must</span> submit to officially turn your application in. After submitting application, all sections will be read-only. Make sure you check over your application information before submitting it to avoid any errors as these cannot be corrected later. You are able to submit your application up until <strong>%{close_date}</strong>. Saved application will not be considered - you <span class="very-important">must</span> "Submit your application".'
-    submission_closed: Application submission is closed since the deadline has passed on <strong>%{close_date}</strong>. Your application was <strong>not submitted</strong>.
+    submit_confirmation: Are you sure you want to submit your application? Please note that after submission no modification will be allowed.
+    can_change_until_submit: 'You may update information in all sections before submitting the application. Once you have filled out your entire online application, you <span class="very-important">must</span> click submit to officially turn your application in. After submitting your application, all sections will be read-only. Make sure you check over your application information before submitting it to avoid any errors as these cannot be corrected later. You are able to submit your application up until <strong>%{close_date}</strong>. Saved application will not be considered - you <span class="very-important">must</span> click "Submit your application".'
+    submission_closed: Application submission is closed since the deadline passed on <strong>%{close_date}</strong>. Your application was <strong>not submitted</strong>.
 
   reviews:
     title: Reviewer assigment
     save: Save review assigments
-    assigned: Reviewers have been sucessfully assigned to applicants
+    assigned: Reviewers have been successfully assigned to applicants
   review:
     title: Do the review
     registered: Number of registered users
-    submitted: Number of subbmited applications
+    submitted: Number of submitted applications
