@@ -18,7 +18,7 @@ RSpec.describe SubmitController do
     expect(user.submitted).to be_truthy
     expect(response).to have_http_status(:redirect)
     expect(response).to redirect_to root_path
-    expect(flash[:notice]).to match(/submitted sucessfully/)
+    expect(flash[:notice]).to match(/submitted successfully/)
   end
 
   it 'rejest to submit not ready application' do

@@ -15,7 +15,7 @@ RSpec.feature 'User presentation' do
 
     click_button('Save your presentation abstract')
 
-    expect(page).to have_content 'sucessfully saved'
+    expect(page).to have_content 'successfully saved'
     expect_ready(page, 'presentation')
   end
 end
