@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  load_and_authorize_resource
   layout 'reviews'
 
   def index
