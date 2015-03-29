@@ -1,4 +1,6 @@
 class Address < ActiveRecord::Base
+  include Countryable
+
   validates :address,
             presence: true
 
