@@ -1,5 +1,6 @@
 %h3
   = t('education.title')
+  = render('review_process/score', url: review_educations_path(@review), field: :education_score)
 %hr
 
 %ul.well-list

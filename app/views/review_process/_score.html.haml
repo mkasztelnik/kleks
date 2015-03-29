@@ -1,0 +1,8 @@
+.pull-right
+  = form_for @review, url: url, html: { method: :put, class: 'form-inline' } do |f|
+    .form-group
+      .input-group
+        = number_field(:review, field, class: 'form-control')
+        %span.input-group-btn
+          %button.btn.btn-success(type="submit")
+            = icon('save', t('save'))

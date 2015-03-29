@@ -1,5 +1,6 @@
 %h3
   = t('work.title')
+  = render('review_process/score', url: review_works_path(@review), field: :work_score)
 %hr
 
 %ul.well-list

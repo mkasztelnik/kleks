@@ -26,12 +26,12 @@ Rails.application.routes.draw do
     scope module: :review_process do
       resource :general, only: :show
       resource :profile, only: :show
-      resource :motivation, only: :show
-      resource :presentation, only: :show
-      resources :educations, only: :index
-      resources :academics, only: :index
-      resources :works, only: :index
-      resource :language, only: :show
+      resource :motivation, only: [:show, :update]
+      resource :presentation, only: [:show, :update]
+      resource :educations, only: [:show, :update]
+      resource :academics, only: [:show, :update]
+      resource :works, only: [:show, :update]
+      resource :language, only: [:show, :update]
     end
   end
 end

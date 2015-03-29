@@ -1,4 +1,6 @@
-%h3= t('academic.title')
+%h3
+  = t('academic.title')
+  = render('review_process/score', url: review_academics_path(@review), field: :academic_score)
 %hr
 
 %h4= t('publication.title')
