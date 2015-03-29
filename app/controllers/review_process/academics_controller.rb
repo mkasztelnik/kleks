@@ -1,7 +1,6 @@
 module ReviewProcess
   class AcademicsController < ReviewProcess::ApplicationController
     def show
-      @educations = @review.educations
     end
 
     private

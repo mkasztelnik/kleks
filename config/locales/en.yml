@@ -115,3 +115,6 @@ en:
   score:
     saved: New score saved
     error: Unable to save new score
+  user:
+    title: Applicants
+    empty: This section is not filled by the user yet

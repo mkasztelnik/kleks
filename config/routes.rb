@@ -34,4 +34,17 @@ Rails.application.routes.draw do
       resource :language, only: [:show, :update]
     end
   end
+
+  resources :users, only: [:index, :show] do
+    scope module: :user_previews do
+      resource :general, only: :show
+      resource :profile, only: :show
+      resource :motivation, only: :show
+      resource :presentation, only: :show
+      resource :educations, only: :show
+      resource :academics, only: :show
+      resource :works, only: :show
+      resource :language, only: :show
+    end
+  end
 end

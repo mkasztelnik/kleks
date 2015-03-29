@@ -1,0 +1,15 @@
+!!! 5
+%html
+  = render 'layouts/head'
+  %body
+    = render 'layouts/user_navbar'
+    .container
+      .row
+        .col-md-3
+          = render('layouts/user_left_menu')
+        .col-md-9
+          = render 'layouts/flash'
+          = yield
+      #push
+    = render 'layouts/modal'
+    = render 'layouts/footer'

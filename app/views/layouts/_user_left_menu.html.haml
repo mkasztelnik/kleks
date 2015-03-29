@@ -1,0 +1,29 @@
+%h3
+  = t('sections.title')
+%hr
+
+%ul.nav.nav-pills.nav-stacked
+  = nav_link(controller: :generals) do
+    = link_to user_general_path(user_id: @user.id) do
+      = t('general.title')
+  = nav_link(controller: :profiles) do
+    = link_to user_profile_path(user_id: @user.id) do
+      = t('profile.title')
+  = nav_link(controller: :motivations) do
+    = link_to user_motivation_path(user_id: @user.id) do
+      = t('motivation.title')
+  = nav_link(controller: :presentations) do
+    = link_to user_presentation_path(user_id: @user.id) do
+      = t('presentation.title')
+  = nav_link(controller: :educations) do
+    = link_to user_educations_path(user_id: @user.id) do
+      = t('education.title')
+  = nav_link(controller: :academics) do
+    = link_to user_academics_path(user_id: @user.id) do
+      = t('academic.title')
+  = nav_link(controller: :works) do
+    = link_to user_works_path(user_id: @user.id) do
+      = t('work.title')
+  = nav_link(controller: :languages) do
+    = link_to user_language_path(user_id: @user.id) do
+      = t('language.title')

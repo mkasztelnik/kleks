@@ -1,0 +1,19 @@
+%h3
+  = t('academic.title')
+%hr
+
+%h4= t('publication.title')
+%ul.well-list
+  = render(partial: 'publications/item', collection: @user.publications) || render('review_process/empty', message: t('publication.empty'))
+
+%h4= t('academic.conferences')
+%ul.well-list
+  = render(partial: 'conferences/item', collection: @user.conferences) || render('review_process/empty', message: t('conference.empty'))
+
+%h4= t('academic.trainings')
+%ul.well-list
+  = render(partial: 'trainings/item', collection: @user.trainings) || render('review_process/empty', message: t('training.empty'))
+
+%h4= t('academic.others')
+%ul.well-list
+  = render(partial: 'others/item', collection: @user.others) || render('review_process/empty', message: t('other.empty'))

@@ -2,14 +2,14 @@
   .container
     = link_to t('code_name'), root_path, class: 'navbar-brand'
 
-    =select('reviews', :id, current_user.application_reviews.collect { |r| [r.user.name, r.id] }, { selected: @review.id }, class: 'col-xs-3 nav-select')
+    =select('users', :id, User.applicants.collect { |u| [u.name, u.id] }, { selected: @user.id }, class: 'col-xs-3 nav-select')
 
     = render('layouts/status')
 
     .pull-right
       %ul.nav.navbar-nav
         - if user_signed_in?
-          %li
+          %li.active
             = link_to users_path,
                       data: { placement: 'bottom' },
                       title: t('user.title') do
@@ -17,12 +17,11 @@
 
           - first_review = current_user.application_reviews.first
           - if first_review
-            %li.active
+            %li
               = link_to first_review,
                         data: { placement: 'bottom' },
                         title: t('review.title') do
                 = icon('eye')
-
           %li
             = link_to reviews_path,
                       data: { placement: 'bottom' },
@@ -36,10 +35,10 @@
                       title: t('logout'), method: :delete do
               =icon 'sign-out'
   :javascript
-    $("#reviews_id").select2({
+    $("#users_id").select2({
       width: 'resolve',
     })
 
-    $("#reviews_id").on('change', function(e) {
-      window.location = '#{reviews_path}/' + e.val
+    $("#users_id").on('change', function(e) {
+      window.location = '#{users_path}/' + e.val
     });

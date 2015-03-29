@@ -6,6 +6,12 @@
 
     %ul.nav.navbar-nav.pull-right.pull-right
       - if user_signed_in?
+        %li
+          = link_to users_path,
+                    data: { placement: 'bottom' },
+                    title: t('user.title') do
+            = icon('users')
+
         - first_review = current_user.application_reviews.first
         - if first_review
           %li
