@@ -6,24 +6,36 @@
   = nav_link(controller: :generals) do
     = link_to user_general_path(user_id: @user.id) do
       = t('general.title')
+      = check_if_ready(@user.general)
   = nav_link(controller: :profiles) do
     = link_to user_profile_path(user_id: @user.id) do
       = t('profile.title')
+      = check_if_ready(@user.profile)
   = nav_link(controller: :motivations) do
     = link_to user_motivation_path(user_id: @user.id) do
       = t('motivation.title')
+      = check_if_ready(@user.motivation)
   = nav_link(controller: :presentations) do
     = link_to user_presentation_path(user_id: @user.id) do
       = t('presentation.title')
+      = check_if_ready(@user.presentation)
   = nav_link(controller: :educations) do
     = link_to user_educations_path(user_id: @user.id) do
       = t('education.title')
+      = education_count(@user)
   = nav_link(controller: :academics) do
     = link_to user_academics_path(user_id: @user.id) do
       = t('academic.title')
+      = count_badge(@user.academic_count,
+                    id: 'academic-count',
+                    class: 'badge-success')
   = nav_link(controller: :works) do
     = link_to user_works_path(user_id: @user.id) do
       = t('work.title')
+      = count_badge(@user.works.count,
+                    id: 'work-count',
+                    class: 'badge-success')
   = nav_link(controller: :languages) do
     = link_to user_language_path(user_id: @user.id) do
       = t('language.title')
+      = check_if_ready(@user.language)

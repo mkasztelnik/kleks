@@ -11,8 +11,8 @@ module StatusHelper
     end
   end
 
-  def education_count
-    count = current_user.educations.count
+  def education_count(user = current_user)
+    count = user.educations.count
     success = count > 0 ? 'badge-success' : ''
     count_badge(count, id: 'education-count', class: success)
   end
