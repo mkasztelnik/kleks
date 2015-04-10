@@ -36,7 +36,7 @@ en:
     errors: This section could not be saved. Please provide missing information and try to save it again.
     to_long: "%{count} characters is the maximum allowed for the motivation text"
   presentation:
-    title: Presentation abstract
+    title: Presentation
     save: Save your presentation abstract
     saved: Your presentation abstract has been successfully saved
     errors: This section could not be saved. Please provide missing information and try to save it again.
