@@ -118,3 +118,7 @@ en:
   user:
     title: Applicants
     empty: This section is not filled by the user yet
+  emails:
+    title: Applicant emails
+    submitted: List of emails for applicants with application submitted
+    not_submitted: List of emails for applicants without application submitted

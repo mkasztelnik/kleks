@@ -22,7 +22,11 @@ Rails.application.routes.draw do
 
   post '/submit', to: 'submit#submit', as: :submit
 
-  resources :reviews, only: [:index, :show, :create] do
+  resources :reviews, only: [:index, :show, :create, :emails] do
+    collection do
+      get :emails
+    end
+
     scope module: :review_process do
       resource :general, only: :show
       resource :profile, only: :show

@@ -9,6 +9,11 @@
     .pull-right
       %ul.nav.navbar-nav
         - if user_signed_in?
+          %li
+            = link_to emails_reviews_path,
+                      data: { placement: 'bottom' },
+                      title: t('emails.title') do
+              = icon('at')
           %li.active
             = link_to users_path,
                       data: { placement: 'bottom' },

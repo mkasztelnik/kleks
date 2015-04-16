@@ -13,6 +13,14 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def emails
+    @submitted_emails = User.submitted.pluck(:email).join(', ')
+
+    @not_submitted_emails = User.applicants.
+                            where(submitted: false).
+                            pluck(:email).join(', ')
+  end
+
   def show
     redirect_to review_general_path(review_id: params[:id])
   end
