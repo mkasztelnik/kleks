@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '2.2.0'
+ruby '2.2.2'
 
-gem 'rails', '4.2.0'
+gem 'rails', '4.2.1'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -54,7 +54,6 @@ group :test do
   gem 'factory_girl_rails', '~> 4.0'
   gem 'shoulda-matchers', require: false
   gem 'guard-rspec', require: false
-  gem 'guard-spring'
   gem 'database_cleaner'
   gem 'faker'
 end
