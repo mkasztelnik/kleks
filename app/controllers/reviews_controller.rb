@@ -4,7 +4,9 @@ class ReviewsController < ApplicationController
 
   def index
     @reviewers = User.reviewers
-    @applicants = User.submitted.includes(:reviews).references(:reviews)
+    @applicants = User.submitted.
+                  includes(:reviews).references(:reviews).
+                  order(:last_name, :first_name)
 
     @existing_reviewers_hsh = {}
     @applicants.each do |applicant|
