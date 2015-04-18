@@ -1,4 +1,6 @@
 en:
+  omniauth:
+    email_missing: "It seems like you don't have email set on your %{provider} account, which is required. Please use another logging option."
   activerecord:
     errors:
       messages:

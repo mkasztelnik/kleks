@@ -38,4 +38,13 @@ RSpec.feature 'User authentication' do
 
     expect(page).not_to have_content user.name
   end
+
+  scenario 'user email address is empty' do
+    user = build(:user, provider: :facebook, email: nil)
+
+    sign_in_as(user)
+
+    expect(page.current_path).to eq new_user_session_path
+    expect(page).to have_content 'you don\'t have email set'
+  end
 end
