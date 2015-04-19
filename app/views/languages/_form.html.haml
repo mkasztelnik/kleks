@@ -9,7 +9,9 @@
   = f.input :native, input_html: { 'data-unhidden' => 'no-native' }
   #no-native{ class: ('hidden' if @language.native) }
     %hr
-    = f.input :study, input_html: { 'data-hidden' => 'study-section' }
+    = f.input :study,
+              input_html: { 'data-hidden' => 'study-section' },
+              label: t('simple_form.labels.language.study').html_safe
     #study-section{ class: ('hidden' unless @language.study) }
       = f.input :study_program, as: :text, input_html: { rows: 2 }
       = f.input :study_url
