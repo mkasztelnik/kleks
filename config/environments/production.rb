@@ -89,9 +89,9 @@ Rails.application.configure do
     tls:                  true
   }
 
-  config.middleware.use ExceptionNotification::Rack, :email => {
-    :email_prefix => "[Err KLEKS] ",
-    :sender_address => %{"notifier" <#{ENV['EMAIL_USERNAME']}@uj.edu.pl>},
-    :exception_recipients => %w{mkasztelnik@gmail.com}
+  config.middleware.use ExceptionNotification::Rack, email: {
+    email_prefix: '[Err KLEKS] ',
+    sender_address: %("notifier" <#{ENV['EMAIL_USERNAME']}@uj.edu.pl>),
+    exception_recipients: %w(mkasztelnik@gmail.com resproject@uj.edu.pl)
   }
 end
