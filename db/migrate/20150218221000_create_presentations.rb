@@ -10,6 +10,6 @@ class CreatePresentations < ActiveRecord::Migration
       t.timestamps null: false
     end
 
-    add_foreign_key :motivations, :users, index: true
+    add_foreign_key :presentations, :users, index: true
   end
 end

@@ -207,16 +207,16 @@ ActiveRecord::Schema.define(version: 20150316154216) do
 
   add_foreign_key "conferences", "users"
   add_foreign_key "educations", "users"
-  add_foreign_key "educations", "users"
   add_foreign_key "generals", "users"
   add_foreign_key "languages", "users"
   add_foreign_key "motivations", "users"
-  add_foreign_key "motivations", "users"
   add_foreign_key "others", "users"
+  add_foreign_key "presentations", "users"
   add_foreign_key "profiles", "addresses"
   add_foreign_key "profiles", "users"
   add_foreign_key "publications", "users"
   add_foreign_key "reviews", "users"
   add_foreign_key "reviews", "users", column: "reviewer_id"
   add_foreign_key "trainings", "users"
+  add_foreign_key "works", "users"
 end

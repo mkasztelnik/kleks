@@ -12,6 +12,6 @@ class CreateWorks < ActiveRecord::Migration
       t.timestamps null: false
     end
 
-    add_foreign_key :educations, :users, index: true
+    add_foreign_key :works, :users, index: true
   end
 end
