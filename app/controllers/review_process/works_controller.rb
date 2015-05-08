@@ -1,6 +1,6 @@
 module ReviewProcess
   class WorksController < ReviewProcess::ApplicationController
-    def index
+    def show
       @works = @review.works
     end
 
