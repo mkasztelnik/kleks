@@ -10,10 +10,14 @@
   %hr
   %p.help-block= t('general.how_hear')
 
-  = f.input :know_from_ces_www
-  = f.input :know_from_ces_facebook
-  = f.input :know_from_arena
-  = f.input :know_from_nee_website
+  = f.input :know_from_ces_www,
+            label: t('simple_form.labels.general.know_from_ces_www').html_safe
+  = f.input :know_from_ces_facebook,
+            label: t('simple_form.labels.general.know_from_ces_facebook').html_safe
+  = f.input :know_from_arena,
+            label: t('simple_form.labels.general.know_from_arena').html_safe
+  = f.input :know_from_nee_website,
+            label: t('simple_form.labels.general.know_from_nee_website').html_safe
   = f.input :know_from_facebook
   = f.input :know_from_newsletter
   .checkbox-form-item
