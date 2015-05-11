@@ -122,3 +122,8 @@ en:
     title: Applicant emails
     submitted: List of emails for applicants with application submitted
     not_submitted: List of emails for applicants without application submitted
+
+  rankings:
+    title: Ranking
+    elements: Reviewer scores
+    score: Score

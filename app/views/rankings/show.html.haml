@@ -1,0 +1,18 @@
+%h3
+  = t('rankings.title')
+%hr
+
+%table.table.table-bordered
+  %thead
+    %tr
+      %th
+      %th= t('rankings.elements')
+      %th= t('rankings.score')
+  %tbody
+    - @applicants.each do |applicant|
+      %tr
+        %th= applicant.name
+        %th
+          - applicant.reviews.each do |review|
+            = score_badge(review.score, review.reviewer)
+        %th= score_badge(applicant.score)

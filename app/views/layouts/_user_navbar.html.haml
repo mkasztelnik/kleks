@@ -32,6 +32,11 @@
                       data: { placement: 'bottom' },
                       title: t('reviews.title') do
               = icon('magnet')
+          %li
+            = link_to ranking_path,
+                      data: { placement: 'bottom' },
+                      title: t('rankings.title') do
+              = icon('bar-chart')
 
           %p.navbar-text= current_user.name
           %li

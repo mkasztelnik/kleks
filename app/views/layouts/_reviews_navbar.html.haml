@@ -31,6 +31,12 @@
                     title: t('reviews.title') do
             = icon('magnet')
 
+        = nav_link controller: :rankings do
+          = link_to ranking_path,
+                    data: { placement: 'bottom' },
+                    title: t('rankings.title') do
+            = icon('bar-chart')
+
         %p.navbar-text= current_user.name
         %li
           = link_to destroy_user_session_path,

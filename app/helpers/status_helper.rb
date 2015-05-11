@@ -24,4 +24,14 @@ module StatusHelper
       content_tag(:span, count, id: options[:id], class: classes)
     end
   end
+
+  def score_badge(score, tooltip_text = nil)
+    options = { class: "badge #{score ? 'badge-success' : ''}" }
+    if tooltip_text
+      options[:data] = { placement: 'bottom' }
+      options[:title] = tooltip_text
+    end
+
+    content_tag(:span, score || '?', options)
+  end
 end

@@ -51,4 +51,6 @@ Rails.application.routes.draw do
       resource :language, only: :show
     end
   end
+
+  resource :ranking, only: :show
 end

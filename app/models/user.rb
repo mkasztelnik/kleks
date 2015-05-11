@@ -38,7 +38,7 @@ class User < ActiveRecord::Base
 
   def self.from_omniauth(auth)
     where(email: auth.info.email).first_or_create do |user|
-      raise RegistrationClosed if user.new_record? && !Kleks.open?
+      fail RegistrationClosed if user.new_record? && !Kleks.open?
 
       user.provider = auth.provider
       user.uid = auth.uid
@@ -46,7 +46,7 @@ class User < ActiveRecord::Base
       user.last_name = auth.info.last_name || auth.info.family_name
       user.gender = auth.info.gender
       user.image = auth.info.image
-      user.password = Devise.friendly_token[0,20]
+      user.password = Devise.friendly_token[0, 20]
       user.confirm!
     end
   end
@@ -66,5 +66,31 @@ class User < ActiveRecord::Base
 
   def ready?(element)
     element && !element.new_record?
+  end
+
+  def score
+    if reviews_ready?
+      @score ||= calculate_score
+    end
+  end
+
+  def to_s
+    name
+  end
+
+  private
+
+  def calculate_score
+    count = 0
+    sum = reviews.inject(0) do |s, review|
+      count += 1
+      s + review.score
+    end
+
+    (sum.to_f / count).round(2) if count > 0
+  end
+
+  def reviews_ready?
+    !reviews.detect { |r| r.score.nil? }
   end
 end

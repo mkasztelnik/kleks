@@ -56,4 +56,32 @@ RSpec.describe User do
                          gender: 'male',
                          image: 'img')
   end
+
+  context 'score' do
+    it 'is calculated when all reviews are ready' do
+      user = create(:user)
+      review(user, 1)
+      review(user, 2)
+
+      expect(user.score).to eq 1.5
+    end
+
+    it 'is nil when at least one review is not ready' do
+      user = create(:user)
+      review(user, 1)
+      review(user, nil)
+
+      expect(user.score).to be_nil
+    end
+
+    def review(user, motivation_score)
+      create(:review, user: user,
+            motivation_score: motivation_score,
+            presentation_score: 0,
+            education_score: 0,
+            academic_score: 0,
+            work_score: 0,
+            language_score: 0)
+    end
+  end
 end
