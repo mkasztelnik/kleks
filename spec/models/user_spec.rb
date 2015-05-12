@@ -76,12 +76,41 @@ RSpec.describe User do
 
     def review(user, motivation_score)
       create(:review, user: user,
-            motivation_score: motivation_score,
-            presentation_score: 0,
-            education_score: 0,
-            academic_score: 0,
-            work_score: 0,
-            language_score: 0)
+             motivation_score: motivation_score,
+             presentation_score: 0,
+             education_score: 0,
+             academic_score: 0,
+             work_score: 0,
+             language_score: 0)
+    end
+  end
+
+  context 'highest education' do
+    it 'chooses highest degree' do
+      user = build(:user,
+                   educations: [
+                     build(:education, education_type: :ma),
+                     build(:education, education_type: :phd),
+                     build(:education, education_type: :ba)
+                   ])
+
+      expect(user.highest_education.education_type).to eq 'phd'
+    end
+
+    it 'chooses latest end date when 2 degrees equals' do
+      user = build(:user,
+                   educations: [
+                     build(:education,
+                            education_type: :ma,
+                            start_date: Date.new(2013, 1, 1),
+                            end_date: Date.new(2014, 1, 1)),
+                     build(:education,
+                            education_type: :ma,
+                            start_date: Date.new(2014, 1, 1),
+                            end_date: Date.new(2015, 1, 1))
+                   ])
+
+      expect(user.highest_education.end_date).to eq Date.new(2015, 1, 1)
     end
   end
 end

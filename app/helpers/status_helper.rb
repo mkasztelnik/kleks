@@ -34,4 +34,14 @@ module StatusHelper
 
     content_tag(:span, score || '?', options)
   end
+
+  def education_badge(education)
+    statuses = {
+      'ma' => 'badge-info',
+      'ba' => 'badge-warning',
+      'phd' => 'badge-success'}
+
+    content_tag(:span, education.education_type_text,
+                class: "badge #{statuses[education.education_type]}")
+  end
 end

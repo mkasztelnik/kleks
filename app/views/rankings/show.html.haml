@@ -6,12 +6,16 @@
   %thead
     %tr
       %th
+      %th= t('rankings.education')
       %th= t('rankings.elements')
       %th= t('rankings.score')
   %tbody
     - @applicants.each do |applicant|
       %tr
         %th= applicant.name
+        %th
+          - if highest_education = applicant.highest_education
+            #{education_badge(highest_education)} (#{highest_education.start_date} - #{highest_education.end_date})
         %th
           - applicant.reviews.each do |review|
             = score_badge(review.score, review.reviewer)

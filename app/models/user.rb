@@ -69,9 +69,14 @@ class User < ActiveRecord::Base
   end
 
   def score
-    if reviews_ready?
-      @score ||= calculate_score
-    end
+    @score ||= calculate_score if reviews_ready?
+  end
+
+  def highest_education
+    educations.sort do |a, b|
+      degree = education_weight(b) <=> education_weight(a)
+      degree == 0 ? b.end_date <=> a.end_date : degree
+    end.first
   end
 
   def to_s
@@ -79,6 +84,10 @@ class User < ActiveRecord::Base
   end
 
   private
+
+  def education_weight(education)
+    { 'ba' => 1, 'ma' => 2, 'phd' => 3 }[education.education_type]
+  end
 
   def calculate_score
     count = 0

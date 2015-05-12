@@ -4,7 +4,8 @@ class RankingsController < ApplicationController
 
   def show
     @applicants = User.submitted.
-                  includes(:reviews).references(:reviews).
+                  includes(:reviews, :educations).
+                  references(:reviews, :educations).
                   order(:last_name, :first_name)
 
     @applicants = @applicants.
