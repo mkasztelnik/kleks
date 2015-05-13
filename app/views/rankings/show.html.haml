@@ -12,7 +12,7 @@
   %tbody
     - @applicants.each do |applicant|
       %tr
-        %th= applicant.name
+        %th= name_with_gender(applicant)
         %th
           - if highest_education = applicant.highest_education
             #{education_badge(highest_education)} (#{highest_education.start_date} - #{highest_education.end_date})
