@@ -51,6 +51,19 @@ class User < ActiveRecord::Base
     end
   end
 
+  def self.ranking
+    applicants = User.submitted.
+                 includes(:reviews, :educations).
+                 references(:reviews, :educations).
+                 order(:last_name, :first_name)
+
+    applicants.sort { |a, b| (b.score || -1) <=> (a.score || -1) }
+  end
+
+  def phd?
+    highest_education.education_type_phd?
+  end
+
   def name
     "#{first_name} #{last_name}"
   end

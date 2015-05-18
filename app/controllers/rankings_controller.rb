@@ -3,12 +3,6 @@ class RankingsController < ApplicationController
   layout 'reviews'
 
   def show
-    @applicants = User.submitted.
-                  includes(:reviews, :educations).
-                  references(:reviews, :educations).
-                  order(:last_name, :first_name)
-
-    @applicants = @applicants.
-                  sort { |a, b| (b.score || -1) <=> (a.score || -1) }
+    @applicants = User.ranking
   end
 end
