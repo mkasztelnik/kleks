@@ -61,7 +61,8 @@ class User < ActiveRecord::Base
   end
 
   def phd?
-    highest_education.education_type_phd?
+    highest = highest_education
+    highest && highest.education_type_phd?
   end
 
   def name
