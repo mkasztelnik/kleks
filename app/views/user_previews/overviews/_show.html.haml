@@ -1,0 +1,10 @@
+%h1= user.name
+
+= render('user_previews/generals/show', general: user.general)
+= render('user_previews/profiles/show', profile: user.profile)
+= render('user_previews/motivations/show', motivation: user.motivation)
+= render('user_previews/presentations/show', presentation: user.presentation)
+= render('user_previews/educations/show', educations: user.educations)
+= render('user_previews/academics/show', user: user)
+= render('user_previews/works/show', works: user.works)
+= render('user_previews/languages/show', language: user.language)

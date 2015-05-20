@@ -1,4 +1,4 @@
 - if can? :update, @general
   = render('form')
 - else
-  = render('show')
+  = render('show', general: @general)

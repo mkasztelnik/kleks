@@ -1,4 +1,4 @@
 - if can?(:update, @language)
   = render('form')
 - else
-  = render('show')
+  = render('show', language: @language)

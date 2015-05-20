@@ -1,0 +1,4 @@
+- if motivation
+  = render('motivations/show', motivation: motivation)
+- else
+  = render('user_previews/empty', title: t('motivation.title'))

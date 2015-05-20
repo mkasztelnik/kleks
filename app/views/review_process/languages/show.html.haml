@@ -1,4 +1,4 @@
 =content_for :action do
   = render('review_process/score', url: review_language_path(@review), field: :language_score)
 
-= render('languages/show')
+= render('languages/show', language: @language)

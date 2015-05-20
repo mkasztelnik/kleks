@@ -1,4 +1,4 @@
 - if can?(:update, @presentation)
   = render('form')
 - else
-  = render('show')
+  = render('show', presentation: @presentation)

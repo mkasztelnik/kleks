@@ -39,3 +39,7 @@
     = link_to user_language_path(user_id: @user.id) do
       = t('language.title')
       = check_if_ready(@user.language)
+  %hr
+  = nav_link(controller: :overviews) do
+    = link_to user_overview_path(user_id: @user.id) do
+      = t('overview.title')

@@ -104,6 +104,9 @@ en:
     can_change_until_submit: 'You may update information in all sections before submitting the application. Once you have filled out your entire online application, you <span class="very-important">must</span> click submit to officially turn your application in. After submitting your application, all sections will be read-only. Make sure you check over your application information before submitting it to avoid any errors as these cannot be corrected later. You are able to submit your application up until <strong>%{close_date}</strong>. Saved application will not be considered - you <span class="very-important">must</span> click "Submit your application".'
     submission_closed: Application submission is closed since the deadline passed on <strong>%{close_date}</strong>. Your application was <strong>not submitted</strong>.
 
+  overview:
+    title: Overview
+
   reviews:
     title: Reviewer assigment
     save: Save review assigments

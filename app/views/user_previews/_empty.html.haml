@@ -1,3 +1,9 @@
+- title ||= ''
+- unless title.blank?
+  %h3
+    = title
+  %hr
+
 .alert.alert-warning{ role: 'alert' }
   %center
     = t('user.empty')

@@ -1,0 +1,4 @@
+- if presentation
+  = render('presentations/show', presentation: presentation)
+- else
+  = render('user_previews/empty', title: t('presentation.title'))

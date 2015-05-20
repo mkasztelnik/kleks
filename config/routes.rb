@@ -49,8 +49,10 @@ Rails.application.routes.draw do
       resource :academics, only: :show
       resource :works, only: :show
       resource :language, only: :show
+      resource :overview, only: :show
     end
   end
 
   resource :ranking, only: :show
+  resource :report, only: :show
 end

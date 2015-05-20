@@ -1,0 +1,6 @@
+%h3
+  = t('education.title')
+%hr
+
+%ul.well-list
+  = render(partial: 'educations/item', collection: educations) || render('review_process/empty', message: t('education.empty'))

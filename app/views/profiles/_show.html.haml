@@ -6,34 +6,34 @@
   %tbody
     %tr
       %td= t('simple_form.labels.profile.first_name')
-      %td= @profile.first_name
+      %td= profile.first_name
     %tr
       %td= t('simple_form.labels.profile.middle_name')
-      %td= @profile.middle_name
+      %td= profile.middle_name
     %tr
       %td= t('simple_form.labels.profile.last_name')
-      %td= @profile.last_name
+      %td= profile.last_name
     %tr
       %td= t('simple_form.labels.profile.email')
-      %td= @profile.email
+      %td= profile.email
     %tr
       %td= t('simple_form.labels.profile.gender')
-      %td= @profile.gender
+      %td= profile.gender
     %tr
       %td= t('simple_form.labels.profile.date_of_birth')
-      %td= @profile.date_of_birth
+      %td= profile.date_of_birth
     %tr
       %td= t('simple_form.labels.profile.place_of_birth')
-      %td= @profile.place_of_birth
+      %td= profile.place_of_birth
     %tr
       %td= t('simple_form.labels.profile.country')
-      %td= @profile.country_name
+      %td= profile.country_name
     %tr
       %td= t('simple_form.labels.profile.citizenship')
-      %td= @profile.citizenship
+      %td= profile.citizenship
     %tr
       %td= t('simple_form.labels.profile.need_visa')
-      %td #{@profile.need_visa ? t('yes') : t('no')}
+      %td #{profile.need_visa ? t('yes') : t('no')}
 
 %h4 Address
 %hr
@@ -42,21 +42,21 @@
   %tbody
     %tr
       %td= t('simple_form.labels.adress.address')
-      %td= @profile.address.address
+      %td= profile.address.address
     %tr
       %td= t('simple_form.labels.adress.city')
-      %td= @profile.address.city
+      %td= profile.address.city
     %tr
       %td= t('simple_form.labels.adress.country')
-      %td= @profile.address.country_name
+      %td= profile.address.country_name
     %tr
       %td= t('simple_form.labels.adress.state')
-      %td= @profile.address.state
+      %td= profile.address.state
     %tr
       %td= t('simple_form.labels.adress.postcode')
-      %td= @profile.address.postcode
+      %td= profile.address.postcode
 
-- if @profile.need_visa
+- if profile.need_visa
   %h4 Passport
   %hr
 
@@ -64,4 +64,4 @@
     %tbody
       %tr
         %td= t('simple_form.labels.profile.passport_number')
-        %td= @profile.passport_number
+        %td= profile.passport_number
